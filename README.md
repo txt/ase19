@@ -1,5 +1,7 @@
 # ase19
 
+<img align=right src="http://www.doreng.co.il/en/wp-content/uploads/sites/2/2017/09/pic5.jpg">
+
 Fall 2019,   
 CSC NC State,  
 Professor: Tim Menzies <http://menzies.us>
