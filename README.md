@@ -1,5 +1,9 @@
 # ase19
 
+Fall 2019,   
+CSC NC State,  
+Professor: Tim Menzies <http://menzies.us>
+
 
 This is a project-based class where students will use Python to build and extend their own AI tools for software engineering. While DevOps strives to "automated everything", automated software engineering strives to "automate automation". 
 
