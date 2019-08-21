@@ -137,12 +137,12 @@ The following grade scale will be used:
 
 <table><tr><td></td><td>591</td><td>791</td><td>marks</td></tr>
 <tr><td>Mid-term (Thursday October 10, 5:30pm)  </td><td>&check;</td><td>&check;</td><td>20</td></tr>
-<tr><td>Final (Tuesday Dec17, 1pm to 3pm)  </td><td>&check;</td><td>&check;</td><td>30</td></tr>
+<tr><td>Final (Tuesday Dec 17, 1pm to 3pm)  </td><td>&check;</td><td>&check;</td><td>30</td></tr>
 <tr><td>Homeworks 1,2,3,4,5 </td><td>&check;</td><td>&check;</td><td>25</td></tr>
 <tr><td>Homeworks 6,7,8,9,10 </td><td>&check;</td><td></td><td>25</td></tr>
 <tr><td>Project </td><td></td><td></td><td></td></tr>
-<tr><td> - poster (2 pages) </td><td></td><td>&check;</td><td>3</td></tr>
-<tr><td> - presentation (10 mins) </td><td></td><td>&check;</td><td>7</td></tr>
+<tr><td> - brief poster presentation (2 pages) </td><td></td><td>&check;</td><td>3</td></tr>
+<tr><td> - project presentation (10 mins) </td><td></td><td>&check;</td><td>7</td></tr>
 <tr><td> - report (8 pages) </td><td></td><td>&check;</td><td>15</td></tr>
 </table>
 
@@ -158,6 +158,55 @@ Pause.
 
 So, yes, you must submit SOMETHING each week or lose marks. But if you submit and don't get the grade,
 you CAN resubmit (at least, till mid-Nov).
+
+### Poster
+
+Solo poster (on current  directions in auto SE).
+
+Poster presentations will be scheduled through out the semester.
+
+- Posters are 2 pages pdf in [ACM format](https://www.acm.org/publications/proceedings-template)
+- Topic: Posters will explain some interesting aspect on some paper on some work NOT authored by Menzies.  Something on data mining and/or search-based SE and/or thorem proving **as applied to some SE task**
+- To find examples of that work, see papers **after 2012** from top SE-venues
+    - [Google scholar, top SE-venues](https://scholar.google.com/citations?view_op=top_venues&hl=en&vq=eng_softwaresystems)
+    - In particular, ICSE, TSE, JSS, IST, MSR, ESE, ASE,  TOSEM, ICSM (now ICSME)
+    - Poster may burrow definitions and graphics from the paper they are reviewing. BUT. Anything the student must be able to explain in further detail anything they put into their poster.
+- Presentation (5 mins talk, 5 mins questions)
+- No slides. -Instead, place your 2 page paper under the podium camera, then talk to the content.
+- **IMPORTANT** 
+    - Prior to class, post your paper to [the submit site](http://tiny.cc/fss18give). Otherwise, lose 1 mark.
+    - Front page of poster shiuld include your name(s) and full reference to paper.
+
+Examples:
+
+- https://github.com/aayushi-21/fss18/blob/master/fss_poster.pdf
+- https://github.com/FahmidMorshed/fss18/blob/master/Poster/CSC791_FSS2018_Poster.pdf
+- https://github.com/snaraya7/fss18/blob/master/poster/poster.pdf
+- https://github.com/rshu/CSC791_Poster/blob/master/main.pdf
+- And more. See column M of http://tiny.cc/fss18give
+
+### Project Presentations
+
+Big project (due end November) on automated SE. Data mining and/or optimization and/or theorem proving.
+
+- For project ideas, see https://arxiv.org/pdf/1812.01550.pdf
+
+Project presentations are report will be due between Nov 15 and Dec 6.
+
+- Project must present two implementations
+    - An initial implementation which you will critize using our [baseline criteria](lectures/baseline.md)
+    - A second implementation  where the you strive to improve that implementation, according to any of the baseline criteria.
+           - Note that merely doing some existing standard data mining project **will NOT** be sufficcient
+- Paper are 8+ pages pdf in [ACM format](https://www.acm.org/publications/proceedings-template)
+- The code review will be the lecturer reading the code checking that the implementation is above a minimum level of effort.
+     - Lecturer may call students/ teams at any time to his office for such reviews.
+- Presentations will start mid-November
+- Paper is not due till Dec 9.
+
+Examples:
+
+- See column F of http://tiny.cc/fss18give
+- Also, for a project report that went on to be a conference paper, see https://arxiv.org/pdf/1802.05319.pdf
 
 ### Attendance
 
