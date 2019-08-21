@@ -11,7 +11,7 @@
 
 
 # Syllabus
-https://raw.githubusercontent.com/txt/ase19/master/etc/img/girlbot.png">
+ 
 
 Fall 2019    
 CSC 591-021 (6620)    
@@ -71,11 +71,11 @@ Objectives: by the end of the course, students should be able to
 <img  align=right  width=177 src="etc/img/rs.png">
 
 + Rui Shu  
-+ Office Hours: TBD
++ Office Hours: Mon & Wed 2pm - 3pm
 + Location of Office Hours: EB2 3240
 + Email: rshu@ncsu.edu
-+ Github name: XXX
-+ Slack name: XXX
++ Github name: rshu
++ Slack name: Rui Shu
 
 <br clear=all>
 
