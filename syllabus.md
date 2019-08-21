@@ -12,6 +12,8 @@
 
 # Syllabus
 
+https://raw.githubusercontent.com/txt/ase19/master/etc/img/girlbot.png">
+
 Fall 2019    
 CSC 591-021 (6620)    
 CSC 791-021 (9182)   

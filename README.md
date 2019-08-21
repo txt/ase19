@@ -11,7 +11,7 @@
 
 
 
-<img align=right src="http://www.doreng.co.il/en/wp-content/uploads/sites/2/2017/09/pic5.jpg">
+<img align=right src="https://github.com/txt/fss18/blob/master/web/docs/img/girlrobot.jpg">
 
 Fall 2019,   
 CSC NC State,  
