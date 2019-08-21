@@ -1,3 +1,14 @@
+[home](http://tiny.cc/ase19) |
+[copyright](https://github.com/txt/ase19/blob/master/LICENSE.md) &copy;2019, tim&commat;menzies.us
+<br>
+[<img width=900 src="https://raw.githubusercontent.com/txt/ase19/master/etc/img/banner.png">](http://tiny.cc/ase19)<br>
+[syllabus](https://github.com/txt/ase19/blob/master/syllabus.md) |
+[src](https://menzies.us/fun) |
+[submit](http://tiny.cc/ase19give) |
+[chat](https://ase19.slack.com/)
+
+
+
 # ase19
 
 <img align=right src="http://www.doreng.co.il/en/wp-content/uploads/sites/2/2017/09/pic5.jpg">
