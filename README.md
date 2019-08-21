@@ -24,7 +24,7 @@ But what about SE for AI?
 AI software is still software. And software needs maintenance, validation, interfacing, usability additions, etc. That is why AI software needs software engineers!
 And not only that, AI software offers special functions that need specialized approaches by software engineers. So what does engineering look like when applied to AI?
 
-Time to find out.  
+Time to find out.
 Time to learn what happens after DevOps. 
 While DevOps strives to "automate everything," automated software engineering strives to "automate automation." 
 This subject will explore methods to augment standard software engineering practices with AI methods (data miners, optimizers, theorem provers) that peek over our shoulders to say "try this, and don't bother that."  
@@ -32,8 +32,8 @@ This subject will explore methods to augment standard software engineering pract
 
 ## Lectures
 
-## Homeworks
+## Homework / Project
 
 ## Project
 
-## Linkes
+## Links
