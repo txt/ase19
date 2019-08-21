@@ -24,7 +24,6 @@ Everyone else is studying AI, or applying AI to SE.
 
 - But what about SE for AI? 
 
-
 AI software is still software. And software needs maintenance, validation, interfacing, usability additions, etc. That is why AI software needs software engineers!
 
 - And not only that, AI software offers special functions that need specialized approaches by software engineers. So what does engineering look like when applied to AI?
@@ -131,17 +130,16 @@ The following grade scale will be used:
 
 591 students : you will do your work in a group of 2
 
-- Optionally, with permission of the lecturer, you can swap Homeworks 6,7,8,9,10 with the Project.
+- Optionally, with permission of the lecturer, masters students can swap Homeworks 6,7,8,9,10 with the Project.
 
-
-
-<table><tr><td></td><td>591</td><td>791</td><td>marks</td></tr>
+<table>
+<tr><td></td><td>591</td><td>791</td><td>marks</td></tr>
 <tr><td>Mid-term (Thursday October 10, 5:30pm)  </td><td>&check;</td><td>&check;</td><td>20</td></tr>
 <tr><td>Final (Tuesday Dec 17, 1pm to 3pm)  </td><td>&check;</td><td>&check;</td><td>30</td></tr>
 <tr><td>Homeworks 1,2,3,4,5 </td><td>&check;</td><td>&check;</td><td>25</td></tr>
 <tr><td>Homeworks 6,7,8,9,10 </td><td>&check;</td><td></td><td>25</td></tr>
 <tr><td>Project </td><td></td><td></td><td></td></tr>
-<tr><td> - brief poster presentation (2 pages) </td><td></td><td>&check;</td><td>3</td></tr>
+<tr><td> - brief poster presentation (2 pages, 5mins) </td><td></td><td>&check;</td><td>3</td></tr>
 <tr><td> - project presentation (10 mins) </td><td></td><td>&check;</td><td>7</td></tr>
 <tr><td> - report (8 pages) </td><td></td><td>&check;</td><td>15</td></tr>
 </table>
@@ -161,7 +159,7 @@ you CAN resubmit (at least, till mid-Nov).
 
 ### Poster
 
-Solo poster (on current  directions in auto SE).
+Solo poster (on current directions in auto SE).
 
 Poster presentations will be scheduled through out the semester.
 
@@ -185,9 +183,11 @@ Examples:
 - https://github.com/rshu/CSC791_Poster/blob/master/main.pdf
 - And more. See column M of http://tiny.cc/fss18give
 
-### Project Presentations
+### Project 
 
-Big project (due end November) on automated SE. Data mining and/or optimization and/or theorem proving.
+Big programming task (report to class due  November; written report due Dec 9 but feel free to submit early) on automated SE. 
+
+Topic: SE and (Data mining and/or optimization and/or theorem proving).
 
 - For project ideas, see https://arxiv.org/pdf/1812.01550.pdf
 
