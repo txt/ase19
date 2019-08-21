@@ -52,7 +52,7 @@ Objectives: by the end of the course, students should be able to
 
 ### Lecturer 
 
-<img width=200 align=right  src="http://menzies.us/img/smalltimm.png">
+<img width=100 align=right  src="http://menzies.us/img/timm.png">
 
 + Tim Menzies (Prof)
 + Office Hours: Tuesday, 2:00-4:00 and by request
@@ -67,7 +67,7 @@ Objectives: by the end of the course, students should be able to
 
 ### Teaching assistant
 
-<img width=200 align=right  src="etc/img/rs.png">
+<img  align=right  width=100 src="etc/img/rs.png">
 
 + Rui Shu  
 + Office Hours: TBD
