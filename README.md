@@ -29,7 +29,7 @@ And not only that, AI software offers special functions that need specialized ap
 Time to find out.  
 Time to learn what happens after DevOps. 
 While DevOps strives to "automate everything," automated software engineering strives to "automate automation." 
-- This subject will explore methods to augment standard software engineering practices with AI methods (data miners, optimizers, theorem provers) that peek over our shoulders to say "try this, and don't bother that."  
+This subject will explore methods to augment standard software engineering practices with AI methods (data miners, optimizers, theorem provers) that peek over our shoulders to say "try this, and don't bother that."  
  
 
 ## Lectures
