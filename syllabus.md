@@ -15,7 +15,6 @@
 Fall 2019    
 CSC 591-021 (6620)    
 CSC 791-021 (9182)   
-EB3, 2201    
 Tues, Thus, 4:30 to 5:45pm     
 rm 2232 Engineering Building 3  
 
