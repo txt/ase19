@@ -10,9 +10,6 @@
 [chat](https://ase19.slack.com/)
 
 
-
-
-
 # Syllabus
 
 Fall 2019    
@@ -65,8 +62,8 @@ Objectives: by the end of the course, students should be able to
 + E-Mail: tjmenzie@ncsu.edu
   + Only use this email for private matters. All other class communication should be via the class Slack group [http://ase19.slack.com](http://ase19.slack.com).
 + Phone: 304-376-2859
-       + **Do not use** this number, except in the most dire of 
-          circumstances (best way to contact me is via email).
+    + **Do not use** this number, except in the most dire of 
+      circumstances (best way to contact me is via email).
 
 ### Teaching assistant
 
