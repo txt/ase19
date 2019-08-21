@@ -128,20 +128,14 @@ The following grade scale will be used:
 + D+ (67-69), D (63-66), D-(60-62)
 + F (below 60).
 
-For all students:
+<table><tr><td></td><td>591</td><td>791</td></tr>
+<tr><td>Mid-term (Thursday March1, 6pm) : 20  marks </td><td>&check;</td><td>&check;</td></tr>
+<tr><td>Final (Tuesday Dec17, 1pm to 3pm) : 30  marks </td><td>&check;</td><td>&check;</td></tr>
+<tr><td>Homeworks 1,2,3,4,5: 5  marks each </td><td>&check;</td><td>&check;</td></tr>
+<tr><td>Homeworks 6,7,8,9,10: 5  marks each </td><td>&check;</td><td></td></tr>
+<tr><td>Project:  225  marks each </td><td></td><td>&check;</td></tr>
+</table>
 
-+ Mid-term (Thursday March1, 6pm) : 20  marks
-+ Final Exam (Tuesday December 17, 1pm to 3pm): 30 marks
-+ Homeworks: 5  homeworks, 5 marks each
-
-For masters students:
-
-+ More homework: 5 more homeworks, 5 marks each
-+ Or, with permission from lecturer, one large project (25 marks)
-     
-For Phd students,  
-
-+ Large project: 25 marks
 
 ### Student Groups
 
