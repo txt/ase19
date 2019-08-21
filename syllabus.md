@@ -138,8 +138,8 @@ The following grade scale will be used:
 <table><tr><td></td><td>591</td><td>791</td><td>marks</td></tr>
 <tr><td>Mid-term (Thursday October 10, 5:30pm)  </td><td>&check;</td><td>&check;</td><td>20</td></tr>
 <tr><td>Final (Tuesday Dec17, 1pm to 3pm)  </td><td>&check;</td><td>&check;</td><td>30</td></tr>
-<tr><td>Homeworks 1,2,3,4,5 </td><td>&check;</td><td>&check;</td><td>5\*5=25</td></tr>
-<tr><td>Homeworks 6,7,8,9,10 </td><td>&check;</td><td></td><td>5\*5=25</td></tr>
+<tr><td>Homeworks 1,2,3,4,5 </td><td>&check;</td><td>&check;</td><td>25</td></tr>
+<tr><td>Homeworks 6,7,8,9,10 </td><td>&check;</td><td></td><td>25</td></tr>
 <tr><td>Project </td><td></td><td></td><td></td></tr>
 <tr><td> - poster (2 pages) </td><td></td><td>&check;</td><td>3</td></tr>
 <tr><td> - presentation (10 mins) </td><td></td><td>&check;</td><td>7</td></tr>
