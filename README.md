@@ -19,14 +19,23 @@ Fall 2019,
 CSC NC State,  
 Professor: Tim Menzies <http://menzies.us>
 
+Everyone else is studying AI, or applying AI to SE.
+But what about SE for AI? 
 
-This is a project-based class where students will use Python to build and extend their own AI tools for software engineering. While DevOps strives to "automated everything", automated software engineering strives to "automate automation". 
 
-This subject will explore methods to augment standard software engineering practices with AI methods (data miners,  optimizers, theorem provers) that that peek over over our shoulders to say "try this, and don't bother  that".  
+AI software is still software. And software needs maintenance, validation, interfacing, usability additions, etc. That is why AI software needs software engineers!
+And not only that, AI software offers special functions that need specialized approaches by software engineers. So what does engineering look like when applied to AI?
 
-Objectives: by the end of the course, students should be able to
+Time to find out.  
+Time to learn what happens after DevOps. 
+While DevOps strives to "automate everything," automated software engineering strives to "automate automation." 
+- This subject will explore methods to augment standard software engineering practices with AI methods (data miners, optimizers, theorem provers) that peek over our shoulders to say "try this, and don't bother that."  
+ 
 
-1. Build and maintain complex Python programs.
-2. Build and modify and refactor and remix and repurpose AI software (data miners, optimizers, theorem provers) for SE tasks;
-3. Discuss issues associated with applying the above to help society, and customers, achieve their goals better, faster, and cheaper.
-4. Speak and write on complex technical issue.
+## Lectures
+
+## Homeworks
+
+## Project
+
+## Linkes

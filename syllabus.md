@@ -15,59 +15,40 @@
 
 # Syllabus
 
-Spring 2018  
-CSC 495 Special Topics in CS (11297)  
-EB3, 2201  
-Tues, Thus, 4:30 to 5:45pm   
-
-
-## Catalog description:
-
-
-General principles of programming languages. Parsing technology
-such as  tokenization, parse trees, syntactic analysis, semantic
-analysis, regular expressions. Higher-level concepts such as state
-machines, type theory, lambda calculus, functions, closures and
-objects, predicates, resolution theorem proving. Projects in building
-programs using different paradigms.
-Extra topics include domain-specific languages and various
-languages used in industry and research; e.g. Python, Julia, Clojure,
-Prolog, Elixr, Haskell, etc.
-
+Fall 2019    
+CSC 591-021 (6620)    
+CSC 791-021 (9182)   
+EB3, 2201    
+Tues, Thus, 4:30 to 5:45pm     
+rm 2232 Engineering Building 3  
 
 ## General description:
 
+Everyone else is studying AI, or applying AI to SE.
 
-Given a commercial software problem, how can we best select a
-programming language for that problem? Further, given the ever-changing
-nature of computer programming languages, what can we learn now
-that will help us in the future to better understand future programming
-languages? To answer these questions, this subject takes a pragmatic
-and a theoretical approach,  from a modeling perspective.
+- But what about SE for AI? 
 
 
-Lectures will cover:
+AI software is still software. And software needs maintenance, validation, interfacing, usability additions, etc. That is why AI software needs software engineers!
 
-- Python programming
-   - all exercises will be done in Python
-- Parsing (basic)
-   - technology including
-     tokenization, BNF, parse trees, syntactic analysis, semantic analysis,
-     regular expressions, macros
-- Styles
-   - From the Lopes text on programming styles
-   - good-old-times, forth, monolith, cookbook, pipeline, reflective, spreadsheet, actors, map-reduce....
-- Paradigms:
-   - classical single-style languages such as LISP (functional), Smalltak (OO),  and Prolog (logical).  
-   - theory of programming (lambda calculus, logic programming, finite-state machines, closures,
-     predicates, etc
-- Idioms (used in domain-specific languages)
-   - From the Fowler text on DSL.
-   - BNF, closure, decision table, dependency network, state machine, production rules....
+- And not only that, AI software offers special functions that need specialized approaches by software engineers. So what does engineering look like when applied to AI?
 
-As to the modeling perspective, students will use these tools to
-build interpreters of domain-specific languages that are understandable
-and maintainable by non-programmers.
+Time to find out.  
+
+- Time to learn what happens after DevOps. 
+- While DevOps strives to "automate everything," automated software engineering strives to "automate automation." 
+- This subject will explore methods to augment standard software engineering practices with AI methods (data miners, optimizers, theorem provers) that peek over our shoulders to say "try this, and don't bother that."  
+ 
+
+## Objectives
+
+
+Objectives: by the end of the course, students should be able to
+ 
+1. Build and maintain complex programs.
+2. Build and modify and refactor and remix and repurpose AI software (data miners, optimizers, theorem provers) for SE tasks.
+3. Discuss issues associated with applying the above to help society, and customers, achieve their goals better, faster, and cheaper.
+4. Speak and write on complex technical issue.
 
 
 ## Staff
@@ -81,22 +62,22 @@ and maintainable by non-programmers.
 + Location of Office Hours: EB2 room 3298 
 + Github name: timm
 + Slack name: timm
-+ E-Mail: tim.menzies@gmail.com 
-  + Only use this email for private matters. All other class communication should be via the class Slack group [http://plm18.slack.com](http://plm18.slack.com).
++ E-Mail: tjmenzie@ncsu.edu
+  + Only use this email for private matters. All other class communication should be via the class Slack group [http://ase19.slack.com](http://ase19.slack.com).
 + Phone: 304-376-2859
        + **Do not use** this number, except in the most dire of 
           circumstances (best way to contact me is via email).
 
 ### Teaching assistant
 
-<img width=200 align=right  src="http://ai4se.net/img/Patrick.png">
+<img width=200 align=right  src="etc/img/rs.png">
 
-+ Tianpei (Patrick) Xia 
-+ Office Hours: Wed 5pm to 7pm
++ Rui Shu  
++ Office Hours: TBD
 + Location of Office Hours: EB2 3240
-+ Email: txia4@ncsu.edu
-+ Github name: arennax
-+ Slack name: patrick_xia 
++ Email: rshu@ncsu.edu
++ Github name: XXX
++ Slack name: XXX
 
 <br clear=all>
 
@@ -105,7 +86,7 @@ and maintainable by non-programmers.
 ### Group Mailing List
 
 During term time, all communication will be via
-the Slack group https://plm18.slack.com.
+the Slack group https://ase19.slack.com.
 . Students are strongly encouraged to contribute their questions and answers to that shared resource.
 + Note that, for communication of a more private nature, contact the lecturer on the email shown above.
 
@@ -116,40 +97,13 @@ Note that this is a
 **programming-intensive** subject. A programming
 background is required in a contemporary language
 such as Java or C/C++ or Python. Hence, the
-prerequisite for this class is CSC326, Software
-Engineering. Significant software industry
+prerequisite for this class is some subject with significant
+programming component.
+Significant software industry
 experience may be substituted, at the instructor's
 discretion.  Students in this class will work in
 Python, but no background knowledge of that language
 will be assumed.
-
-### Suggested texts
-
-[Exercises in Programming Style](https://www.amazon.com/Exercises-Programming-Style-Cristina-Videira/dp/1482227371)     
-by Cristina Videira Lopes    
-Chapman and Hall/CRC; 1 edition (June 4, 2014)    
-ISBN-10: 1482227371
-
-- [code available on-line](https://github.com/crista/exercises-in-programming-style)
-- [Introductory slides](http://gotocon.com/dl/goto-aar-2013/slides/CristinaVideiraLopes_ExercisesInStyle.pdf)
-
-
-Domain-Specific Languages   
-by Martin Fowler   
-Addison-Wesley Professional; 1 edition (October 3, 2010)   
-ISBN-10: 0321712943 
-
-- [Catalog of DSL patterns](https://martinfowler.com/dslCatalog/)
-
-Thinks Python   
-by Allen Downey   
-O'Reilly Media; 2 edition (December 28, 2015)   
-ISBN-10: 1491939362
-
-- [PDF version](http://greenteapress.com/thinkpython2/thinkpython2.pdf)
-- [HTML version](http://greenteapress.com/thinkpython2/html/index.html)
-- [Code samples](https://github.com/AllenDowney/ThinkPython2/tree/master/code)
-
 
 ### Expected Workload 
 
@@ -177,21 +131,30 @@ The following grade scale will be used:
 + D+ (67-69), D (63-66), D-(60-62)
 + F (below 60).
 
-Grades will be added together using:
+For all students:
 
-+ Homeworks: 10 marks
 + Mid-term (Thursday March1, 6pm) : 20  marks
-+ Final Exam (Tuesday, May8, 1pm to 3pm): 20 marks
-+ Project: 50 marks. Details TBD.
-      
++ Final Exam (Tuesday December 17, 1pm to 3pm): 30 marks
++ Homeworks: 5  homeworks, 5 marks each
 
-### Project
+For masters students:
 
-Projects will be done in groups of three.
-For a task specified by the lecturer, students will implement a perfect language that uses
-the perfect mix of parser, style, paradigm, and idiom to generate a domain-specific
-language that non CS-programmers can understand and use.
++ More homework: 5 more homeworks, 5 marks each
++ Or, with permission from lecturer, one large project (25 marks)
+     
+For Phd students,  
 
++ Large project: 25 marks
+
+### Student Groups
+
+791 students must do a project,  in a  group of 1
+
+591 students : you will do your work in a group of 2
+
+### Homeworks/Projects
+
+Masters students are expected to do 10 homeworks, 
 
 ### Homework
 
