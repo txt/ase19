@@ -16,7 +16,7 @@ Fall 2019,
 CSC NC State,  
 Professor: Tim Menzies <http://menzies.us>
 
-<img align=right src="https://github.com/txt/fss18/blob/master/web/docs/img/girlrobot.jpg">
+<img align=right width=450 src="etc/img/girlbot.png">
 
 Everyone else is studying AI, or applying AI to SE.
 But what about SE for AI? 
