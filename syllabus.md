@@ -17,7 +17,7 @@ CSC 791-021 (9182)
 Tues, Thus, 4:30 to 5:45pm     
 rm 2232 Engineering Building 3  
 
-<img width=400 align=right src="https://images.squarespace-cdn.com/content/5430a9fce4b05b8673bd4bbc/1422564105822-PNOMNQBGX90EU79PC7MN/?content-type=image%2Fjpeg">
+<img width=400 align=right src="etc/img/iceking.jpg">
 
 ## General description:
 
