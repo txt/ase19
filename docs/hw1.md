@@ -31,6 +31,8 @@ In `Num`, write code that read a number one at a time, and incrementally
 update mean and standard deviation.  For pseudocode on how to do
 that, see [Num](http://menzies.us/fun/num).
 
+- Hint: you'll only need down to code line 35.
+
 Test your code:
 
 - build a list of 100 random numbers
