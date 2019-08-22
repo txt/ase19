@@ -31,7 +31,7 @@ This subject will explore methods to augment standard software engineering pract
 
 ## Lectures
 
-- [ignite](docs/ignite.md)
+- [ignite](docs/ignite.md#top)
 
 ## Homework / Project
 
