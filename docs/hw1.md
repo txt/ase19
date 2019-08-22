@@ -11,7 +11,12 @@
 
 Due 4pm Thursday.
 
-This one's not hard. More to practice how groups worth together.
+This one's not hard. What we are really doing here is 
+to
+
+- set up some basics
+- practice how groups worth together
+- show how you can submit homeworks.
 
 ### Set up
 
