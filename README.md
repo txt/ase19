@@ -1,4 +1,3 @@
-
 <a name=top>&nbsp;<p> </a>
 [home](http://tiny.cc/ase19#top) |
 [copyright](https://github.com/txt/ase19/blob/master/LICENSE.md#top) &copy;2019, tim&commat;menzies.us
@@ -33,7 +32,7 @@ This subject will explore methods to augment standard software engineering pract
 
 ## Lectures
 
-- [ignite](ignite.md)
+- [ignite](docs/ignite.md)
 
 ## Homework / Project
 

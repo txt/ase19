@@ -1,4 +1,3 @@
-
 <a name=top>&nbsp;<p> </a>
 [home](http://tiny.cc/ase19#top) |
 [copyright](https://github.com/txt/ase19/blob/master/LICENSE.md#top) &copy;2019, tim&commat;menzies.us
