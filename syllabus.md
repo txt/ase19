@@ -92,14 +92,14 @@ the Slack group https://ase19.slack.com.
 Note that this is a
 **programming-intensive** subject. A programming
 background is required in a contemporary language
-such as Java or C/C++ or Python. Hence, the
+such as Python, Rudy, Java etc.  Hence, the
 prerequisite for this class is some subject with significant
 programming component.
 Significant software industry
 experience may be substituted, at the instructor's
-discretion.  Students in this class will work in
-Python, but no background knowledge of that language
-will be assumed.
+discretion.  Students in this class can work in any language they like
+(but it is highly recommended that they use on they are already most productive in).
+
 
 ### Expected Workload 
 
