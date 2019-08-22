@@ -11,5 +11,7 @@ head="<a name=top>&nbsp;<p> </a>" n \
 "[chat](https://ase19.slack.com/) " n 
 }
 
-head && /^[ \t]*$/ { print head; head=""; next }
+BEGIN {Start=1}
+Start && /^[ \t]*$/ { print head; Start=0; next }
+Start               { next }
 1

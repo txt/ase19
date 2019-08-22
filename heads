@@ -1,8 +1,8 @@
 g=$(git rev-parse --git-dir)
 g=$(dirname $g)
-echo $g
 files=$(find $g -name "*.md")
-echo $files
 for f in $files; do
-  gawk -f $g/etc/header.awk $f
+  echo "# $f..."
+  gawk -f $g/etc/header.awk $f > /tmp/$$
+  mv /tmp/$$ $f
 done
