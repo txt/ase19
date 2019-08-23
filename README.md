@@ -46,7 +46,7 @@ This subject will explore methods to augment standard software engineering pract
   [label](docs/label.md#top) | 
   [train](docs/train.md#top) | 
   [eval](docs/eval.md#top) |
-  [deply](docs/deply.md#top) |     
+  [deply](docs/deply.md#top) |
   [monitor](docs/monitor.md#top)
 
 ## Homework / Project
