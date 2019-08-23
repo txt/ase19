@@ -31,12 +31,11 @@ This subject will explore methods to augment standard software engineering pract
 
 ## Lectures
 
-- Hello:  [ignite](docs/ignite.md#top) | 
+- Introduction:  [ignite](docs/ignite.md#top) | 
   [preface](docs/preface.md#top) | 
   [se4ai](docs/se4ai.md#top) |
   [tools](docs/tools.md#top) |
   [ethics](docs/ethics.md#top)
-- Ethics: [ignite](docs/ignite.md#top)
 - Algorithms:
     - Data mining: discretization | basic | advanced
     - Optimizers : landscapes | basic | advanced | opt+mine
@@ -45,8 +44,8 @@ This subject will explore methods to augment standard software engineering pract
   [collect](docs/collect.md#top) | 
   [cleanse](docs/cleanse.md#top) | 
   [label](docs/label.md#top) | 
-  [train](docs/train.md#top) |     
-  [eval](docs/eval.md#top) | 
+  [train](docs/train.md#top) | 
+  [eval](docs/eval.md#top) |
   [deply](docs/deply.md#top) |     
   [monitor](docs/monitor.md#top)
 
