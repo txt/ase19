@@ -81,13 +81,15 @@ and some goals then there are many ways we use that data to achieve some, or all
 To say that another way, we have many choices on how we put the world together:
 
 <img align=left center src="../etc/img/dots1.png" width=500>
-<em>Randall Munroe <br>   https://xkcd.com/2048/</em>
+Randall Munroe    
+https://xkcd.com/2048/
 <br clear=all>
 
 Some of those ways are quite silly:
 
 <img align=left src="../etc/img/dots2.png" width=500> 
-<em>Randall Munroe     <br> https://xkcd.com/1725/ </em>
+Randall Munroe     
+https://xkcd.com/1725/
 <br clear=all>
 
 And some of those choices are very important. 
