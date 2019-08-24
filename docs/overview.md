@@ -80,13 +80,15 @@ The point of all these algorithms is _choice_. Given some data (or model generat
 and some goals then there are many ways we use that data to achieve some, or all of those goals.
 To say that another way, we have many choices on how we put the world together:
 
-<img align=center src="../etc/img/dots1.png" width=500>
+<img align=left center src="../etc/img/dots1.png" width=500>
+Randall Munroe
+https://xkcd.com/2048/
 
 Some of those ways are quite silly:
 
-<center>
-<img align=center src="../etc/img/dots2.png" width=500>
-</center>
+<img align=left src="../etc/img/dots2.png" width=500> 
+Randall Munroe
+https://xkcd.com/1725/
 
 
 - Optimizers can better control the data  miners.
