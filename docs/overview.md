@@ -80,11 +80,14 @@ The point of all these algorithms is _choice_. Given some data (or model generat
 and some goals then there are many ways we use that data to achieve some, or all of those goals.
 To say that another way, we have many choices on how we put the world together:
 
-[![](../etc/img/dots1.png)](https://xkcd.com/2048/)
+[<img src="../etc/img/dots1.png" width=500>](https://xkcd.com/2048/)
 
 Some of those ways are quite silly:
 
-[![](../etc/img/dots2.png)](https://xkcd.com/1725/)
+[![](img align=left src="../etc/img/dots2.png" width=500> 
+Randall Munroe
+https://xkcd.com/1725/
+<br clear=all>
 
 And some of those choices are very important. 
 For example [Linares-Vásquez et al.](REFS.md#lin-2015)
