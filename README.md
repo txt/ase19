@@ -32,7 +32,7 @@ This subject will explore methods to augment standard software engineering pract
 ## Lectures
 
 - Introduction:  [ignite](docs/ignite.md#top) | 
-  [preface](docs/preface.md#top) | 
+  [overview](docs/overview.md#top) | 
   [se4ai](docs/se4ai.md#top) |
   [tools](docs/tools.md#top) |
   [ethics](docs/ethics.md#top)
