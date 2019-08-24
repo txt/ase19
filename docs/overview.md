@@ -80,14 +80,12 @@ The point of all these algorithms is _choice_. Given some data (or model generat
 and some goals then there are many ways we use that data to achieve some, or all of those goals.
 To say that another way, we have many choices on how we put the world together:
 
-<center>
-<img src="../etc/img/dots1.png" width=500>
-</center>
+<img align=center src="../etc/img/dots1.png" width=500>
 
 Some of those ways are quite silly:
 
 <center>
-<img src="../etc/img/dots2.png" width=500>
+<img align=center src="../etc/img/dots2.png" width=500>
 </center>
 
 
