@@ -1,0 +1,659 @@
+digraph {
+ rankdir=LR
+{rank=same; trans1; count1; effect; rite; data; nomiuse;well}
+
+/*
+
+The following diagram shows one way to map the Microsoft principles (the black shaded nodes marked
+a,b,c,d,e,f)
+into the IEEE principles (the gray shaded nodes marked 1,2,3,4,5,6,7,8):
+
+
+The top levels of the diagram are mostly definitioanl things. For example, 
+
+
+    (Fairness, Explanation) -> Transparancey
+    (Transparency, Relability & Safety) -> Accountability
+
+We would also say that
+
+    (Fairness, Reliability & Safety, 
+    Incusiveness, Privacy & Security) -> Human Rights
+    
+    (Accountability. Privacy & Security,
+    Reliability & Safety) -> Effectivess.
+
+In our reading of these principles, _data agency_ is a matter of people understand
+what data is there, and knowing is it secure; i.e.
+
+    (Inclusivemess, Privacy & Security) -> Data Agency
+
+As to the other links, as near as we can tell,
+well-being and awareness of misure are very similar since:
+ 
+   (Fairness, Reliability&safety) -> Well-being
+   (Fairness, Reliability&safety) -> Awareness of Misuse
+
+There are two terms with similar meanings mentioned by
+IEEE and Microsoft: _accountability_ and _transparency_.  For simplicity sake, 
+we just link them too each other.
+
+Lastly,  _competence_ is all itself  since the IEEE definition of that principle seems to be more
+about the developer than the design patterns and algorithms which are being developed. 
+
+
+*/
+edge [color=green, penwidth = 2]
+{rank=same; cluster; goals; stream;}
+{trans;  safe;} -> count
+fair -> trans 
+{safe;priv; count;} -> comp 
+{inc; priv; } -> data 
+growth  [label="performance\ngrowth curves" shape=none]
+sharing  [shape=none]
+#transfer  [shape=none]
+context  [shape=none]
+explain  [shape=none]
+
+#fftree  -> opt 
+{safe; fair;} -> well 
+{safe; fair; priv; inc; } -> rite 
+{safe; fair;} -> nomiuse 
+
+
+trans [label="a.Transparency" shape=box style=filled fontcolor=white fillcolor=black]
+inc [label="c.Inclusiveness" shape=box style=filled fontcolor=white fillcolor=black]
+priv [label="e.Privacy\n&Security" shape=box style=filled fontcolor=white fillcolor=black]
+count [label="f.Accountability" shape=box style=filled fontcolor=white fillcolor=black]
+
+rite [label="1.Human\nRights" shape=box style=filled fillcolor=gray]
+well [label="2.Well\nBeing" shape=box style=filled fillcolor=gray]
+data [label="3.Data\nAgency" shape=box style=filled fillcolor=gray]
+trans1 [label="5.Transparency" shape=box style=filled fillcolor=gray]
+count1 [label="6.Accountability" shape=box style=filled fillcolor=gray]
+nomiuse [label="7.Aware of\nMisuse" shape=box style=filled fillcolor=gray]
+comp [label="8.Effectiveness" shape=box style=filled fillcolor=gray]
+
+
+trans-> trans1 
+count -> count1 
+
+/*
+This mapping  is hardly definitive since many of these concepts are being rapidly evolved.
+One way to assist in the evolution of these concepts is to define them use discrete maths; i.e. using data structures
+and algorithms-- which is the point of the rest of this chapter. 
+
+## Design Details
+
+The principles supported by this design are shown on one side the above diagram.
+The other side of that diagram shows the modules and algorithms needed to support that design. 
+Before exploring those modules and algorithms, we stress three points:
+
+- Most of the concepts in this diagram is not mentioned in a standard machine learning or AI text.
+  That is, ethical-aligned design raises many issues that extend our thinking far away from traditional approaches.
+- While this diagram looks complex, it really isn't. Much of  its complexity is in the mapping between
+  the IEEE and Microsoft principles. Apart from that, a few modules are enough to support most of this
+  ethically-aligned design. This chapters describes those modules, in broad strokes. Our sample source
+  code offers much more details on these modules.
+- The back of this book offers KNEAD[^knead],  a sample implementation of this ethically-aligned design for AI
+tools. 
+   while KNEAD following is **one** way to build an ethically-aligned AI tool, it is by not means  **the only** way
+to do it.
+We hope that the reader's 
+reaction to this code is  "Hey! There's a better way to
+do that!" or "This code does not handle ABC so it needs DEF and here is a sample implementation of that".
+
+[^knead]: KNEAD is short for "the Knowledge Needed for Ethically-Aligned Design".
+
+### Core Concepts
+
+Three core concepts in that design are clustering, goals, and streaming.
+
+*/
+edge [color=blue]
+goals  [label="Goals", shape=none]
+/*
+
+#### Clustering
+
+For many  reasons, clustering is at the core of  our
+ethically-aligned-design. What we believe and how we act
+often needs to get tuned to the current situation.
+When we go to see  a doctor, we expect that
+the treatments offered are contextualized to what is appropriate
+for people like us having problems like us.
+[Kai Petersen & Claes Wohlin](REFS#petersen-2009)
+ offer a rich set of dimensions
+ along which software projects can be contextualized (processes,
+ product, organization, market, etc). That said,
+what they do
+not  offer is a  way to learn
+ new contextualizations for new projects.
+Also,
+ while their arguments are convincing, they offer no experimental
+ confirmation that their contexts are the "right" contexts. 
+
+*/
+
+edge [color=red]
+
+/*
+
+Clustering is useful when (a) local contexts matter, but  (b) we are not sure if reusing
+someone's prior definitions for "context" are appropriate. Under those conditions,
+we must run a clustering algorithm to find informative groups within data.
+
+
+*/
+
+  cluster ->  context
+
+/*
+
+
+Clustering is also useful for pragmatic reasons.
+Some problems are too complex to run all together--
+in which case better conclusions can be reached
+faster if we [explore several small sub-problems](REFS#majumder-2018)
+(found by clustering) rather
+then one super-large problem.
+That is
+
+   context -> effectiveness
+
+*/
+
+    context -> comp 
+
+/*
+
+
+Also, models complex enough to cover all the data can become succinct and easily
+understood when learned just  from local clusters:
+
+
+    clustering -> explanation
+
+*/
+
+    cluster -> explain
+/*
+
+Further, by learning different models for each cluster, the performance of the per-cluster
+models can be better than those that seek to cover all the data. For example,
+recursive clustering is [an interesting way to implement multi-objective optimizers](REFS#chen-2018a).
+
+
+Not only that, but clustering is useful for 
+_anomaly detection_,
+_compression_, _sharing_, _privacy_, and _repair_.
+Once data is clustered, we can [build an anomaly detector](REFS#peters-2015)
+by recording the average distance between rows in each cluster. New rows are anomalous
+ if they  are unusually distant
+from the other rows in its nearest cluster. That isL
+
+   cluster -> anomaly detection -> (reliability,  effectiveness)
+*/
+   cluster -> anomaly -> {safe;comp}
+/*
+Another thing we can do with clusters is to _compress_  the data by 
+[retaining only some rows from each cluster](REFS#nair-2018).  That isL
+
+   cluster -> compression
+
+*/
+
+   cluster -> compress
+
+/*
+Once data is compressed, it is easier to share
+  (i.e. do not share all the data, just a few samples
+  from each cluster). 
+Clustering and compression
+ can be basis of a privacy algorithm. If we are only sharing compressed data,
+then all the rows _Not_ shared are 100% private. As to the data that we do share, a 
+[little obsfication   of those rows](ROWS#peters-2015) can decrease the odds that these rows will reveal sensitive information[^obsfuct]. That is:
+   
+   compression -> sharing -> privacy
+*/
+anomaly  [label="anomaly\ndetection"shape=none]
+compress  [label="compression" shape=none]
+env  [label="certification\nenvelope" shape=none]
+
+obs [label=obsfication shape=none]
+   compress -> obs ->sharing -> priv
+/*
+Further, hierarchical  clustering[^huer] can be the basis of a generic repair
+mechanism. Once data is clustered hierarchically , performance statistics can be kept on each node.
+When models fail, it may just be one small sub-tree that needs revising.
+In that case, we need only  relearn from the examples in that sub-tree 
+and 
+[this is much faster](REFS:spears-2001)
+than relearning from all the data. That is:
+
+
+    cluster -> repair
+
+*/
+    cluster -> repair
+/*
+
+(For other kinds of generic repair methods, see _incremental labelling_, below).
+
+[^huer]: Where clusters are recursively   divided into smaller and smaller
+sub-clusters.
+
+Finally, it should be noted also that clustering and compression enables
+_certification envelopes_; i.e. oracles that can advise if you
+are asking the right model the right questions.  Certification envelopes let us check if
+new data is something the model is already familiar with (and if not, we can alert
+the user that the model may give misleading results for this new data). That is:
+
+   compression -> certification  envelopes -> reliability
+   
+*/
+   compress -> env -> safe
+
+/*
+
+[^obsfuct:] Many algorithms try to make  data 
+more private by randomly mutating data values.  Such mutation tends to [decrease the performance of models learned from that data](REFS#brickell-2008).  [Fayola Peters](REFS#peters-2015) showed that better privacy (without damaging learner performance) can be achieved by understanding the boundaries between classes in the data. Her mutators changed value but up to but not over, the class boundary.
+
+
+
+Certification 
+envelope might have [saved the lives of the Columbia Space Shuttle crew](REFS#columbia-2003).
+At launch, Columbia was struck with a
+1200 cubic centimeter block of ice travelling at 470mph (relative to
+the craft). A model called CRATER reported that that this ice struck
+would have minimal  impact on the craft.  But CRATER was trained in 3
+cubic centimeter ice blocks travelling at less that 100 mph.  
+Since CRATER had no certification envelope, this
+mismatch between CRATER's area of expertise, and the question
+it was now being asked, was not detected. 
+When Columbia re-entered the atmosphere,
+it
+spun out of control and disintegrated (killing the crew of eight)
+since the ice had punched a large hole in its airframe.
+
+
+#### Goals 
+
+To show that a system is performing as is it should be,
+we need to know what people expect from that system,
+That is, the first thing we must say is that:
+
+    Goals -> Competence
+
+*/
+
+#{cluster; compress -> obs;} -> priv 
+#compress -> env -> anomaly -> {comp; safe;}
+
+edge [color=blue]
+
+    effect [label="Competence" shape=box style=filled fillcolor=gray]
+    goals -> comp  
+
+/*
+
+Anyone who has done any requirements engineering knows that systems
+are build for stakeholders and different stakeholders have different goals.
+For example, project managers can make a very large number of decisions about a
+project and  different kinds of projects have different definitions
+of what is "best":
+
+-  For safety critical applications, the goal
+is ultra-reliability. For such systems, it is reasonable
+to spend much effort to fund most errors in a system. 
+- For other kinds of applications (such as rushing out a new software game so
+this organization can secure the cash flow needed for next month's salaries) 
+it it is reasonable to skip over low-priority bugs, just to ship the product sooner.
+
+One way to reason about the _inclusiveness_ of a system is to ask how well
+does the system meet  the goals of different stakeholders.
+
+      Goals -> Inclusiveness  
+
+*/
+    goals -> inc  
+/*
+Of course, in practice, not every goal of every stakeholder can be satisfied.
+Sometimes, AI tools have to trade-off between competing goals. For example,
+in the 1990s,
+NASA had the goals of "better,faster,cheaper" space ships. But after some
+very high-profile (and every expensive) mission failures, that mantra
+was often modified to "better,faster,cheaper, pick any two" [^bfc]. 
+
+[^bfc]: For an interesting discussion on what worked, and what did not work,
+with "better, faster, cheaper", see [Can we build software faster and better and cheaper?](/REFS#menzies-2009a).
+
+To accommodate trading off between multiple goals, _optimization_ software
+allows their users to enter in some _objective function_ which can be
+used to assess different solutions. That is, with optimizes, the
+goals are part of the input space, supplied prior to execution. Using that
+optimizer, we can better meet the goals of our stakeholders. 
+This is an important part of ethically-aligned design so we say:
+
+    Goals -> Optimization
+
+*/
+   opt  [label=Optimization shape=none]
+   goals -> opt 
+
+/*  
+
+A certain kind of optimizer, called a _hyperparameter optimizer_
+is very useful for  improving learners. AI tools such as data miners
+come with numerous "magic"  hyperparameters which are set via
+"engineering judgment" (otherwise known as "guesses").
+For example:
+
+-  When learning a random forest, one such magic
+control hyperparameter is the number of trees in the forest. 
+- One common result is that the performance of Naive Bayes classifiers
+  can be improved via _discretization_  which means dividing  columns of numeric
+  data into a couple of bins. In this case, the number of bins is the hyperparameter.
+
+The performance gains from hyperparameter optimization can be [very large indeed [^hyper]. Hence we say:
+
+[^hyper]: See [Fu et al.](/REFS#fu-2017s) and the work of [Tantithamthavorn et al.](/REFS:tan-2016a).
+
+    Optimization -> Effectiveness
+
+But hyperparameter optimization can be very slow, unless large problems are divided into smaller ones.
+Hence, for pragmatic reasons, it is useful to cluser the space of options before doing optimization.
+
+
+    Clustering -> Optimization
+
+*/
+
+    opt -> comp
+    cluster  [label="cluster.py" shape=ellipse]
+    cluster -> opt
+
+/*
+
+While not widely appreciated,
+hyperparameter optimizers are also very useful for maintaining fairness. 
+To understand that sentence, a little data mining theory is needed. Data can be fitted
+to many models [^simp]. 
+
+![](https://imgs.xkcd.com/comics/curve_fitting.png)
+
+Each of these models can perform differently.
+One performance measure, that is relevant to fairness, is 
+that we should not use
+certain attribute if we we can help it
+(e.g. attributes relating to gender, age, race, etc)[^fair1]. 
+[In our experience](/REFS#chak-2019), 
+if we do/do not tell the learner about the fairness goal,
+then we will/will not generate fair models.
+That is:
+
+[^simp]: To avoid needlessly complex models, one common technique 
+is _simplest first_. 
+For example, when Mark Hall and Geoffrey Holmes implemented
+the [CFS feature selector](/REFS#hall-2003)
+as 
+a _forward select_ search over _N_ features starts with _N_ models (each containing one feature) then
+mixes and matches those models to build progressively large feature sets. This search stops
+when the larger models are performing no better than the smaller ones. 
+
+[*fair1]: Of course, sometimes those attributes are more important than anything else
+for predicting some goal. For example, many illnesses are age related. That said,
+when using attributes like age, race, or gender is optional (i.e. we can achieve our
+goals without using that kind of sensitive information) then it is at the least kind and polite
+to do so (and, at the very most, it can be illegal to do so; e.g. using gender information
+in decisions about not hiring a job candidate).
+
+    Goals and Optimization -> Fairness
+
+*/
+
+   fair [label="b.Fairness" shape=box style=filled fontcolor=white fillcolor=black]
+   {goals;opt;} -> fair 
+
+/*
+
+Goals are important for more that just competency and inclusion and fairness.
+Reliability and safety have to be assessed with respect to a system's goals.
+Without knowledge of the  goals, we may not be able to:
+
+- Define what "unsafe conditions" mean;  
+- Or declarer what services must always be reliable offered.
+
+Hence we say:
+
+    Goals -> Reliability & Safety
+
+*/
+
+    safe [label="d.Reliability\n&Safety" shape=box style=filled fontcolor=white fillcolor=black]
+    goals -> safe
+
+/*
+
+There are many other aspects to reliability and safety (in fact, there are whole
+conferences devoted to that very topic[^issre]). Covering all those aspects would
+require an entirely separate book](/REFS#evensong-1995).
+Here, we restrict ourselves to certain aspects of reliability that are usual skipped
+over in data mining textbooks.
+For example,
+one 
+important componet of reliability is monitoring for problems,
+then quickly repairing those problems as they arise. That is, it is not enough
+just to deliver a working AI tool; it is also important to stream any new
+data past the AI tool, quickly fixing anything that goes wrong.
+That is:
+
+    streaming -> monitoring -> repair -> reliability
+
+[^issre]: See the International Symposium on Software Reliability Engineering.
+
+*/
+
+   stable  [label="stability",shape=none]
+   monitor  [shape=none]
+   repair  [label="repair" shape=none]
+   stream  [label=streaming shape=none]
+   stream -> monitor -> repair -> safe 
+
+/*
+
+Another kind of stability is _solution stability_; that is to say,
+how effective is a recommendation within some _neighborhood_ of
+change?  For example,
+ small perturbations in the data
+should not lead to large changes in the model. But this is often
+not the case.  The following figure shows results from learning a
+linear repregresion model of the form $$y=\beta_0 + \beta_1x_1 +
+\beta_2x_2...$$, 20 times, each time using two-thirds of the available
+training data. Note how the observed $$beta_i$$ values vary widely
+(8 of them even cross the $$\beta_i=0$$ line which means that in
+different samples they are psitively or negativly correlated to
+$$y$$.
+
+
+![](/img/varybeta.png){:class="img-responsive img-rounded"}
+
+A very useful
+  test is to repeat all the learning ten times, each time using 90% of the data, then check for variations
+in the learned model. If such a test shows that the learned model varies widely across
+different training data samples, then that means that before any model is presented to the user,
+the data should be clustered and different models generated from different regions of the data.
+That is
+
+    clustering -> stability -> explanation
+
+
+*/
+   cluster -> stable -> explain 
+
+/*
+
+Recently it has been shown](REFS#agrawal-2018) that such conclusion
+stability
+can be enhaced, at least partially, by
+[optimizating for model stability](REFS#agrawal-2018)..
+That is, while
+building models, we can make
+decisions  that decrease variability in the conclusions of the learned model.
+That is:
+
+   optimization -> stability -> reliability
+
+*/
+   opt -> stable -> safe 
+
+/*
+
+Yet another kind of stability is _recommendation stability_.
+To make this idea
+more concrete,
+consider the following two recommendations generated by an AI tool.
+When configuring a project's staffing and development expectations,
+an AI tool might offer a _ponts_-based or a _rule_-based recommendation.
+A points-based recommendation might be:
+
+       language=Python, yearsOfExperience=5, userStoriesPerSprint=10
+
+while a _rule_-based recommendation might be:
+
+       yearsOfExperience in 3 to 5, userStoriesPerSprint in 5 to 15
+
+Note that the points-based recommendation is _brittle_; i.e. any small change to its exact
+recommendation might break its effectiveness.  On the other hand, the rule
+shows what we can safely cnage (e.g. _yearsOfExperience_ from 3 to 5) and even
+what we can ingore (_language_).
+
+That is:
+
+    rules -> stability -> reliability
+
+
+*/
+
+   fftree  [shape=ellipse label="rules.py"] 
+   fftree -> stable 
+/*
+Note that rule-based recommendations simplify explanation, and hence system transparanecy
+
+
+    rules -> explain -> transparency
+   
+*/
+
+   fftree   -> explain  -> {trans;}
+
+edge [color=black]
+/*
+
+#### Streaming
+
+After clustering and goals, the final key component is streaming. 
+Instead of just running data through an AI tool once, it is important to watch
+over the data and recognize when the old model is now out-of-date. This is the task
+of data streaming; i.e. whenever more data comes to hand, pass it to the AI tool.
+
+Streaming is like clustering but instead of grouping the data according to its
+propoerties, streaming groups data according to when it is generated.
+
+One thing we can do with streamng is check that models elarend in the past sare stills table and useful in the present. That is, streaming is one way to assess the continued effectiveness of an AI tool.
+
+   streaming -> (monitoring, stability) -> effectiveness
+
+*/
+
+    stream -> stable
+    stream -> monitor -> comp 
+/*
+
+*/
+alearn [label="incremental\nlabelling" shape=none]
+{stream; } -> alearn -> inc 
+alearn -> repair
+
+stream -> anomaly -> monitor 
+stream -> repair -> comp 
+stream -> growth -> comp 
+sharing -> comp 
+
+
+/*
+
+XXX how tog et goals" the timmmatrix
+
+XXX find the most bugs in fewest lines
+
+Note that a many learners need some form of adaption to be a good goal-based reasoner.  As shown
+in our sample code, that adapation is not difficult and the resulting goal-based reasoner
+uses many components that would be familiar to anyone with some machine learning experience:
+
+- First cluster the data 
+
+Many learning systems have goals hardwired into them (e.g. reduce mean-squared error or reduce entropy).
+This means that those learning systems built their models to satisfy goal1, even though the generated
+models may be assessed via some other goal2. For example, many learners were developed and debugged
+while building models that maximize the goal of accuracy, which we can define as follows:
+
+- Suppose a test data set contains mixture of things we want to find ($$X$$) and other things ($$\neg X$$).
+- Suppose some learner looks at that data to guess  that some things are $$X$$ and some are not.
+- This leads to the following matrix:
+
+|notX| X  | &lt-- classified as
+|---|-------|-------------------
+| A |  C    | notX
+| B |  D    | X
+
+_Accuracy_ is all the correct gueses; i.e. $$\mathit{accuracy}=\frac{A+B}(A+B+C+D}$$. 
+Other goals of interest might be _recall_ which is how of the target things did we find
+(so $$\mathit{recall}=\frac{D}{B+D}$$) or _false alarms_ which is how often
+the learner shows us something we do not care about
+(so $$\mathit{false alarm}=\frac{C}{A+C}$$.)
+
+A
+strange thing about accuracy is that a model can be highly accurate, while still missing most
+of the things we want to find. Consider, for example, a set 1000 software projects of which 100
+are significantly challenged (where "challeged"  might mean things like these projects
+always deliver late or that these projects have a hard time retaining staff). Suppose the results
+from testing that model were as follows:
+
+|notX| X   | &lt-- classified as
+|----|-----|-------------------
+| A=90 |  C=10 | notX
+| B=0  |  D=0  |X
+
+See the problem? This learner is 90\% accurate by only a 10% recall for the things we want to find.
+It turns out that accuracy is not very accurate when the target class is relatively rare (in this case,
+10\%). But if we change to other  XXX
+
+
+
+
+a regresion model might try to learn
+equations that reduce the difference between their predictions and the actual values seen in  training
+data set.
+
+*/
+
+edge [color=black,style=dashed,penwidth=1]
+"col.py" -> {"num.py";"sym.py"} [arrowhead="diamond"]
+"rows.py" -> {cluster}
+
+subgraph cluster3 {
+  shape=none
+  "num.py"
+  "sym.py"
+  "row.py"
+}
+subgraph cluster4 {
+  shape=none
+  "rows.py"
+  "col.py"
+}
+{"col.py";"row.py"} -> "rows.py" [arrowhead="none"]
+
+}
+

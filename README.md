@@ -37,7 +37,7 @@ This subject will explore methods to augment standard software engineering pract
   [tools](docs/tools.md#top) |
   [ethics](docs/ethics.md#top)
 - Algorithms:
-    - Data mining: discretization | basic | advanced
+    - Data mining: baselines | discretization | basic | advanced
     - Optimizers : landscapes | basic | advanced | opt+mine
     - Theorem provers: basic | advanced
 - Process: [requirements](docs/requirements.md#top) | 
