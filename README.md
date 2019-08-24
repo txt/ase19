@@ -8,7 +8,7 @@
 [chat](https://ase19.slack.com/) 
 
 
-
+# Welcome to Automated Software Engineering
 
 Fall 2019,   
 CSC NC State,  

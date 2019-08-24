@@ -8,7 +8,7 @@
 [chat](https://ase19.slack.com/) 
 
 
-# Introduction
+# Overview
 
 This book is about using better software engineering to build better AI software.
  AI is a very broad topic, discussed in
@@ -76,18 +76,33 @@ Thirdly,  we look
  algorithms; some about optimizers; and a little about theorem
  provers.
 
+The point of all these algorithms is _choice_. Given some data (or model generating data)
+and some goals then there are many ways we use that data to achieve some, or all of those goals.
+To say that another way, we have many choices on how we put the world together:
+
+<center>
+<img src="../etc/img/dots1.png" width=500>
+</center>
+
+Some of those ways are quite silly:
+
+<center>
+<img src="../etc/img/dots2.png" width=500>
+</center>
+
+
 - Optimizers can better control the data  miners.
-    Several research has  improved data mining performance via optimizers that tune the control parameters of the data miner (See [Agrawal 2018a](REFS:agrawal-2018a),
-   [Fu'18](REFS:fu-206), and [Tantithamthavorn et al.](REFS.md#Tan-2016a)).
+    Several research has  improved data mining performance via optimizers that tune the control parameters of the data miner (See [Agrawal 2018a](REFS.md#agrawal-2018a),
+   [Fu'18](REFS.md#fu-206), and [Tantithamthavorn et al.](REFS.md#Tan-2016a)).
 - Data miners can better control the optimizers.
      For example,
-[Majumder et al.](majumder-2018) used k-means clustering to divide up a complex text mining problem, then apply optimizers within each cluster. They report that this method speeds up their processing by up to three orders of magnitude.
+[Majumder et al.](REFS.md#majumder-2018) used k-means clustering to divide up a complex text mining problem, then apply optimizers within each cluster. They report that this method speeds up their processing by up to three orders of magnitude.
 - Data miners can act as optimizers.
      For example, [Chen et al.](REFS.md#chen-2018a)
 show that their recursive descent bi-clustering algorithm (which is a data mining technique) out-performs traditional evolutionary algorithms for the purposes of optimizing SE models.
 - Data miners and optimizers can be mashed up to (say) explore complex problems where one
   defines interesting regions where the other can reason faster, and better.
-    For example, [Abdessalem et al.](REFS:abdollahi-2016) generate test cases for autonomous cars via a cyclic approach where an optimizer reflects on the output of data miners that reflect on the output of an optimizer (and so on).
+    For example, [Abdessalem et al.](REFS.md#abdollahi-2016) generate test cases for autonomous cars via a cyclic approach where an optimizer reflects on the output of data miners that reflect on the output of an optimizer (and so on).
 - Theorem provers can be data generators for data miners or
   optimizers.
      When models come with many constraints, we can use theorem provers to [generate valid examples](REFS.md#chen-2018a);
