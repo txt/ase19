@@ -245,6 +245,12 @@ arXiv:http://science.sciencemag.org/content/208/4450/1335.full.pdf
 
 Nancy G. Leveson. 1995. Safeware: System Safety and Computers. ACM, New York, NY, USA.
 
+### Lin 2015
+
+M Linares-Vásquez, G Bavota, C   Bernal Cárdenas, R. Oliveto, M.  Di Penta, 
+and D.  Poshyvanyk. (2015)
+Optimizing energy consumption of GUIs in Android apps: a multi-objective approach. FSE'15
+
 ### Lipton 2016
 
 Zachary C Lipton. 2016. The mythos of model interpretability. arXiv

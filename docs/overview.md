@@ -90,6 +90,44 @@ Some of those ways are quite silly:
 <em>Randall Munroe     <br> https://xkcd.com/1725/ </em>
 <br clear=all>
 
+And some of those choices are very important. 
+For example [Linares-Vásquez et al.](REFS.md#lin-2015)
+use a genetic algorithm (which is a kind of optimizer)
+to propose better color schemes for cell phones. For example,
+of the screens shown below, the left-hand-side  is an original,
+energy expensive design while the right-hand-side is far less
+energy demanding.
+
+<img src="../etc/img/cellphone.png" width=500> 
+
+
+[Mendonca et al.](REFS.md#mendonca-2009) offer another
+example of exoloring choice in software engineering. 
+For example, software can be expressed as a set of choices.
+Here is a 
+tree of options about a search engine. In this diagram,
+a filled/hollow circle means “mandatory”/”optional” (respectively).
+Also, white/dark fans means “and”,”or” (respectively).
+
+<img src="../etc/img/translatefm.png" width=600> 
+
+
+Theorem provers can explore this model and find product design
+ that satisfy all these constraints. While this is trivial in this
+ case (cause the model is so small), theorems about real-world
+ software rapidly get very large:
+
+- A feature model of the LINUX kernel has 4000 variables and over
+100,000 constraints; 
+- When software branches are expressed as theorems,
+those theorems get very large indeed (more than thousands of variables
+and tens of thousands of constraints).  
+- Such large theories are too
+hard to use just via a manual inspection;
+- But automatic theorem provers can explore this system of constraints,
+  to produce new products.
+
+
 
 - Optimizers can better control the data  miners.
     Several research has  improved data mining performance via optimizers that tune the control parameters of the data miner (See [Agrawal 2018a](REFS.md#agrawal-2018a),
