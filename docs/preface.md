@@ -62,11 +62,11 @@ the authors of this book have spent decades applying many
 AI tools (mostly  for software engineering applications). We share
 some of that case study experience in this book. For example,
 recently we
-[reversed engineered from multiple AI applications](REFS#amershi-2019)
+[reversed engineered from multiple AI applications](REFS.md#amershi-2019)
 a nine-step
 industrial AI pipeline. This book devoted nine chapters to that pipeline:
 
-<img src="../etc/img/9steps.png" width=800>
+<img src="../etc/img/9steps.png" width=900>
 
 ## Data Miners + Optimizers + Theorem Provers
 
@@ -78,24 +78,24 @@ Thirdly,  we look
 
 - Optimizers can better control the data  miners.
     Several research has  improved data mining performance via optimizers that tune the control parameters of the data miner (See [Agrawal 2018a](REFS:agrawal-2018a),
-   [Fu'18](REFS:fu-206), and [Tantithamthavorn et al.](Tan-2016a)).
+   [Fu'18](REFS:fu-206), and [Tantithamthavorn et al.](REFS.md#Tan-2016a)).
 - Data miners can better control the optimizers.
      For example,
 [Majumder et al.](majumder-2018) used k-means clustering to divide up a complex text mining problem, then apply optimizers within each cluster. They report that this method speeds up their processing by up to three orders of magnitude.
 - Data miners can act as optimizers.
-     For example, [Chen et al.](REFS#chen-2018a)
+     For example, [Chen et al.](REFS.md#chen-2018a)
 show that their recursive descent bi-clustering algorithm (which is a data mining technique) out-performs traditional evolutionary algorithms for the purposes of optimizing SE models.
 - Data miners and optimizers can be mashed up to (say) explore complex problems where one
   defines interesting regions where the other can reason faster, and better.
     For example, [Abdessalem et al.](REFS:abdollahi-2016) generate test cases for autonomous cars via a cyclic approach where an optimizer reflects on the output of data miners that reflect on the output of an optimizer (and so on).
 - Theorem provers can be data generators for data miners or
   optimizers.
-     When models come with many constraints, we can use theorem provers to [generate valid examples](REFS#chen-2018a);
+     When models come with many constraints, we can use theorem provers to [generate valid examples](REFS.md#chen-2018a);
 - Optimizers can  improve theorem provers:
  Theorem provers deliver solutions in an order dictated  by their internal design. This means, when
      there are very many ways to solve constraints, theorem provers can take a while  to generate solutions that we prefer. In
   this case, a useful trick is to first , run theorem provers (a little) to get a sample of solutions; then  second
-      run mutators and optimizers to [combine that sample in interesting ways](REFS#chen-2019).
+      run mutators and optimizers to [combine that sample in interesting ways](REFS.md#chen-2019).
 
 When combined,
 these
