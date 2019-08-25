@@ -189,10 +189,11 @@ ethical goals.
 ### Effectiveness
 
 
+[ethic](ethics)
 
 It is unethical to deliver an AI tool that is performing poorly,
 particularly when there are so many ways to make an AI tool perform
-better.  As discussed in our chapter on [Baselines](about-basleines),
+better.  As discussed in our chapter on [Baselines](basleines),
 no AI tool works best for all problems. Hence, we exploring new
 problems, there must be a _commissioning_ process where different
 AI tools are explored and/or adjusted to the local problem:
