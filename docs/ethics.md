@@ -382,11 +382,11 @@ of _social cognition_. Here, each particle is mutating a solution and those muta
 proceed in some direction with some momentum. Each keeps a memory of what _best_ solution
 it ever found along its path. The particles' are pulled along by two "rubber bands";
 
-- &Phi;1: one "pull" towards the best solution ever seen by this particle;
-- &Phi;2: another "pull" towards the best solution ever seen by any  particle;
+- &Phi;<sub>1</sub>: one "pull" towards the best solution ever seen by this particle;
+- &Phi;<sub>2</sub>: another "pull" towards the best solution ever seen by any  particle;
 
 [Usually](REFS.md#carlisle-2004), particles believe themselves twice as much as everyone else;
-i.e.  &Phi;1 = 2&Phi;2. As a result, the particles circle around looking for better and better
+i.e.  &Phi;<sub>1</sub> = 2&Phi;<sub>2</sub>. As a result, the particles circle around looking for better and better
 solutions. A standard PSO rig is 30 particles, which run around till they stop seeing improvements
 more that &Epsilon;. 
 
