@@ -155,8 +155,9 @@ measured in terms of _commissioning effort_,
 to very slow algorithms (e.g. KNN,  that scale very poorly to large
 data sets).
 
+- Naive Bayes 
 <a href="../etc/img/nb101.png"><img align=right src="../etc/img/nb101.png" width=400></a>
-- Naive Bayes classifiers keep different statistics on rows of different
+classifiers keep different statistics on rows of different
 classes. When new data arrives, such a classier can be quickly updated, just by
 adding to the stats of the class of that new row.  
 New examples are classified according to what old data they are most similar too.
@@ -169,9 +170,13 @@ is more likely to be a red `default` dot.
 In practice, this is very slow (especially for large data sets) since finding the
 Kth-nearest neighbors requires a full pass over all the training data for each
 new test instance.
-- KNN can be made faster via clustering algorithms that group together similar examples.
+- KNN can be made
+<a href="../etc/img/cluster101.png"><img align=right src="../etc/img/cluster101.png" width=400></a>
+ faster via clustering algorithms that group together similar examples.
   Once grouped, KNN only needs to within a group. 
-- Just as an aside, clustering can be made very fast using tricks
+- Just as an aside, 
+<a href="../etc/img/rp101.png"><img align=right src="../etc/img/rp101.png" width=400></a>
+clustering can be made very fast using tricks
 like 
 recursive random projections (RRP).
 After a few random samples, it is possible to find two moderately distant points "_east_" and "_west_"
@@ -181,12 +186,24 @@ Repeating this recursively "_D"_ times generates a tree of clusters of depth "_D
 the leaves of which holds
 data that is 
 similar according  to "_D_" random projections  over "_east,west_" pairs.
+- Another way 
+<a href="../etc/img/dt101.png"><img align=right src="../etc/img/dt101.png" width=400></a>
+to "cluster" is to split the data according to what attribute best seperates
+  the class variables, then recurse on each split. For example, in the example
+  at right, the best split to divide blue and red dots is `x2 < 3`.
+  Note that this is a "supervised" approach (whereas standard clustering, that
+  does not use the class variables, is called "unsupervised").
+  This kind of _decision tree_ learning can be very fast,
+  but it won't work without some target class.
+
 
 It is important to stress that the  commissioning   effort cannot
 be the only way we assess an AI tool.  For high dimensional image
 data, deep learning] has proved to be very effective.
 
-- Deep learners are n-layered neural networks were layer "i" find
+- Deep learners 
+<a href="../etc/img/dl101.png"><img align=right src="../etc/img/dl101.png" width=400></a>
+are n-layered neural networks were layer "i" find
 new features that layer "i+1" uses to make new conclusions.
 
 Training such learners can be a very slow process, so tuning and
