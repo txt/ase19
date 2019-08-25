@@ -492,23 +492,23 @@ Four tools for pragmatically assessing AI tool reliability are
 - _Certification envelopes_: In this approach, AI tools are  shipped with some data structure
    that summarizes the data used to certify that system. If some new input arrives, and it is
    outside of this certification envelope, then we know not to trust the conclusions of the AI. 
-       - Note
+   - Note
    that for this to work, some anomaly detection algorithm must test if new inputs are outside
    of the envelope.
-       - One way to build an anomaly detector is to use RRP. As a side-effect of computing distance to each "_east,west_"
+   - One way to build an anomaly detector is to use RRP. As a side-effect of computing distance to each "_east,west_"
   pair in any cluster, we can collect the mean and standard deviation of all the distances seen in that cluster.
   With that information, we can declare something to be anomalous if its distance is   
   [more than "_N_" standard deviations away from the mean](REFS.md#peters-2019).
-       - Another way to build an anomaly detector is to continuing active learning (including SBMO) after the comissioning process.
+   - Another way to build an anomaly detector is to continuing active learning (including SBMO) after the comissioning process.
   Anomalies can be reported when the predictions from active learning/SMBO do not
   match the newly incoming data.
 - _Repair_ operators that can mitigate for poor behavior or the system leaving the certification envelope.
-       - Hierarchical clustering tools like RPP make repair somewhat easier since they divide the whole monitoring problem
+  - Hierarchical clustering tools like RPP make repair somewhat easier since they divide the whole monitoring problem
          into numerous smaller ones. In we colelct the anomalies seen in a subtree, and if the number
          of anomalies exceeds some threshold, then we can relearn our models/subtree using the data
          and anomalies in that sub-tree. Diana Gordon reports one application wherer this repair-in-subtrees
          method can tens of thousands times fsater than soem global reset and relearn over all data.
-       - Another way to run repair operators is to never stop learning. If we keep running (e.g.) sequential
+  - Another way to run repair operators is to never stop learning. If we keep running (e.g.) sequential
          model-based optimization whenever new data arrives, then our models will always be changing in
          response to new data. From a pragmatic perspective, this approach works best when the
          model within SMBO can update itself incrementally, very quickly.
