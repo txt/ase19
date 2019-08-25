@@ -534,13 +534,13 @@ To find  prototypes, run some clustering algorithm (e.g. RP) and the return only
 
 ### Privacy and Security
 
-
 #### Privacy
+
 To share data, while maintaining privacy, two important tricks are prototype section and mutation.
 Prototype section as discussed above. Piracy-based mutation must be done with care
 since, if otherwise, 
 [Grechanik et al.](REFS.md#grech-2010)
-and Brickell et al.](brickell-2008) warn that 
+and [Brickell et al.](REFS.md#brickell-2008) warn that 
  the more we obfuscate data (to maintain privacy), the worse
 the effectiveness of the models learned from that data.
 
@@ -553,6 +553,8 @@ but not more than the hyperspace boundary between classes.
 TBD
 
 ## Todo
+ 
+Need to add notes on the following
 
 - privacy and sharing, cmompression (prootoype detection), streaming, sharing (transfer learning)
 - discretization to convert columns into bins
