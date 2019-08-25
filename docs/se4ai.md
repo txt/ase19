@@ -98,8 +98,7 @@ these steps, as required):
 We also surveyed many industrial data scientists to understand how much time they spend on different parts of this pipeline:
 
 ```
-               what hours
-=================== =====
+               WHAT HOURS
        requirements   4.4 ------------------------------------------
          collection   4.7 ---------------------------------------------
            cleaning   4.5 -------------------------------------------
