@@ -353,7 +353,7 @@ try to maximize the accuracy of its predictions).  Better AI tools
 now how to trade off between the multiple competing goals of different
 stakeholders.
 
-<img src="../etc/img/pareto1.png" align=right width=400>
+<img src="../etc/img/pareto1.png" align=right width=300>
 
 One way to trade-off between competing goals are multi-goal reasoners.
 Pareto frontiers were introduced in [tools](tools.md#top) in the
