@@ -66,15 +66,15 @@ general principles for implementing autonomous and intelligent
 systems (A/IS).  They propose that the design of such A/IS systems
 satisfy certain criteria:
 
-1. _Human Rights:_ A/IS shall be created and operated to respect, promote, and protect internationally recognized human rights.
-2. _Well-being:_ A/IS creators shall adopt increased human well-being as a primary success criterion for development.
-3. _Data Agency:_ A/IS creators shall empower individuals with the ability to access
+- _Human Rights:_ A/IS shall be created and operated to respect, promote, and protect internationally recognized human rights.
+- _Well-being:_ A/IS creators shall adopt increased human well-being as a primary success criterion for development.
+- _Data Agency:_ A/IS creators shall empower individuals with the ability to access
    and securely share their data, to maintain people’s capacity to have control over their identity.
-4. _Effectiveness:_ A/IS creators and operators shall provide evidence of the effectiveness and fitness for purpose of A/IS.
-5. _Transparency:_ The basis of a particular A/IS decision should always be discoverable.
-6. _Accountability:_ A/IS shall be created and operated to provide
+- _Effectiveness:_ A/IS creators and operators shall provide evidence of the effectiveness and fitness for purpose of A/IS.
+- _Transparency:_ The basis of a particular A/IS decision should always be discoverable.
+- _Accountability:_ A/IS shall be created and operated to provide
    an unambiguous rationale for all decisions made.
-7. _Awareness of Misuse:_ A/IS creators shall guard against all potential misuses and risks of A/IS in operation.
+- _Awareness of Misuse:_ A/IS creators shall guard against all potential misuses and risks of A/IS in operation.
 
 Other  organizations, like [Microsoft](REFS.md#microai-2019)
 offer their own principles for AI:
@@ -155,9 +155,12 @@ measured in terms of _commissioning effort_,
 to very slow algorithms (e.g. KNN,  that scale very poorly to large
 data sets).
 
+<a href="../etc/img/nb101.png"><img align=right src="../etc/img/nb101.png" width=400></a>
 - Naive Bayes classifiers keep different statistics on rows of different
 classes. When new data arrives, such a classier can be quickly updated, just by
 adding to the stats of the class of that new row.  
+New examples are classified according to what old data they are most similar too.
+For example, at right, if sepal length is 2.5, the _Virginica_ is most likely.
 - On the other hand, KNN algorithms make conclusions by interpolating between
 the k nearest neighbors.  In practice, this is very slow since finding the
 Kth-nearest neighbors requires a full pass over all the training data for each
