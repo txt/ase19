@@ -120,6 +120,13 @@ Richard O. Duda, Peter E. Hart, and David G. Stork. 2000.
 von Neumann, Shannon, and Entropy:
 http://bit.ly/2Y1yBQh
 
+### Euroethics 2018
+
+"Ethics Guidelines for Trustworthy Artificial Intelligence" (2018)
+European Commission
+High-Level Expert Group on AI 
+https://ec.europa.eu/digital-single-market/en/news/ethics-guidelines-trustworthy-ai
+
 ## F
 
 ### Feather 2002
