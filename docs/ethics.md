@@ -162,7 +162,7 @@ classes. When new data arrives, such a classier can be quickly updated, just by
 adding to the stats of the class of that new row.  
 New examples are classified according to what old data they are most similar too.
 For example, at right, if sepal length is 2.5, the _Virginica_ is most likely.
-<br>
+<br clear=both>
 
 <a href="../etc/img/knn101.png"><img align=right src="../etc/img/knn101.png" width=400></a>
 On the other hand, 
@@ -172,13 +172,13 @@ is more likely to be a red `default` dot.
 In practice, this is very slow (especially for large data sets) since finding the
 Kth-nearest neighbors requires a full pass over all the training data for each
 new test instance.
-<br>
+<br clear=both>
 
 <a href="../etc/img/cluster101.gif"><img align=right src="../etc/img/cluster101.gif" width=400></a>
  KNN can be made
  faster via clustering algorithms that group together similar examples.
   Once grouped, KNN only needs to within a group. 
-<br>
+<br clear=both>
 
 <a href="../etc/img/rp101.jpg"><img align=right src="../etc/img/rp101.jpg" width=400></a>
  Just as an aside, 
@@ -192,7 +192,7 @@ Repeating this recursively "_D"_ times generates a tree of clusters of depth "_D
 the leaves of which holds
 data that is 
 similar according  to "_D_" random projections  over "_east,west_" pairs.
-<br>
+<br clear=both>
 
 <a href="../etc/img/dt101.png"><img align=right src="../etc/img/dt101.png" width=400></a>
 Another way 
@@ -203,7 +203,7 @@ to "cluster" is to split the data according to what attribute best seperates
   does not use the class variables, is called "unsupervised").
   This kind of _decision tree_ learning can be very fast,
   but it won't work without some target class.
-<br>
+<br clear=both>
 
 <a href="../etc/img/dl101.png"><img align=right src="../etc/img/dl101.png" width=400></a>
 It is important to stress that the  commissioning   effort cannot
@@ -212,7 +212,7 @@ data, deep learning] has proved to be very effective.
 Deep learners 
 are n-layered neural networks were layer "i" find
 new features that layer "i+1" uses to make new conclusions.
-<br>
+<br clear=both>
 
 Training such learners can be a very slow process, so tuning and
 comparing with other learners may be impractical.  In this book we
