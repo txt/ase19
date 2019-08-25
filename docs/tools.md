@@ -132,7 +132,7 @@ Applying such a criteria, the car data looks like:
 
 
 |      |cylinder&nbsp;| displacmnt&nbsp;| hpower&nbsp;| <weight&nbsp;| >acceltn&nbsp;| model&nbsp;| origin&nbsp;| >mpg|
-|---- -|--------:| ----------:| ------:| -------:| -------:|-----:|------:|-----:|
+|------|--------|----------|-------|-------|---------|------|------|-------|
 |best |4       | >85       | <46   | 1975  |  19.4   |  >81 |  3   |   40  | 
 |best |4       | >85       | <65   | 1985  |  21.5   |  >78 |  2   |   40  |
 |best |4       | >85       | <65   | 2085  |  21.7   |  >80 |  2   |   40  |
