@@ -188,9 +188,6 @@ ethical goals.
 
 ### Effectiveness
 
-
-[ethic](ethics)
-
 It is unethical to deliver an AI tool that is performing poorly,
 particularly when there are so many ways to make an AI tool perform
 better.  As discussed in our chapter on [Baselines](basleines),
@@ -198,20 +195,20 @@ no AI tool works best for all problems. Hence, we exploring new
 problems, there must be a _commissioning_ process where different
 AI tools are explored and/or adjusted to the local problem:
 
-- AI tools come with defaults from their control settings. Those defaults may
-be wildly  inappropriate for new problem.  For examples of this of this, see
-Section 2 of [Nair et al.](REFS.md#nair-2018).  Hyperparameter optimizers are
-tools for automatically finding tunings that can greatly improve effectiveness.
-For examples of this, see [Fu et al.](REFS.md#fu-2016) and [Agrawal et
-al.](REFS.md#agrawal-2018a). One way to implement such hyperparameter optimization
-is via active learning (see below). 
+- AI tools come with defaults from their control settings. Those
+defaults may be wildly  inappropriate for new problem.  For examples
+of this of this, see Section 2 of [Nair et al.](REFS.md#nair-2018).
+Hyperparameter optimizers are tools for automatically finding tunings
+that can greatly improve effectiveness.  For examples of this, see
+[Fu et al.](REFS.md#fu-2016) and [Agrawal et al.](REFS.md#agrawal-2018a).
+One way to implement such hyperparameter optimization is via active
+learning (see below).
 
 
-The faster the algorithm,
-the easier it is to fiddle with. So measured in terms of
-_commissioning effort_,
+The faster the algorithm, the easier it is to fiddle with. So
+measured in terms of _commissioning effort_,
  we prefer linear time methods (e.g.  Naive Bayes)
-to very slow algorithms (e.g. KNN,  that scale very poorly to large 
+to very slow algorithms (e.g. KNN,  that scale very poorly to large
 data sets).
 
 - Naive Bayes classifiers keep different statistics on rows of different
@@ -234,9 +231,9 @@ the leaves of which holds
 data that is 
 similar according  to "_D_" random projections  over "_east,west_" pairs.
 
-It is important to stress that the  commissioning   effort cannot be the only way we assess
-an AI tool.  For high dimensional image data, deep learning] has
-proved to be very effective.
+It is important to stress that the  commissioning   effort cannot
+be the only way we assess an AI tool.  For high dimensional image
+data, deep learning] has proved to be very effective.
 
 - Deep learners are n-layered neural networks were layer "i" find
 new features that layer "i+1" uses to make new conclusions.
@@ -250,31 +247,34 @@ problem.
 
 ### Fairness
 
-Machine learning software, by its nature, is always a  form  of  statistical  discrimination.   This  discrimination becomes objectionable when it places certain social groups  (e.g. those characterized by age, sex, gender, nationality) at  a  systematic  advantage or  Disadvantage
+Machine learning software, by its nature, is always a  form  of
+statistical  discrimination.   This  discrimination becomes
+objectionable when it places certain social groups  (e.g. those
+characterized by age, sex, gender, nationality) at  a  systematic
+advantage or  Disadvantage
 
 There are various measures that can be applied to measure unfariness.
-The
-first step is to identify “protected attributes” (e.g. race, age,
-gender, etc). Next, we use all attributes (privileged and otherwise)
-to build a classifier.  Thirdly, we measure unfariness
+The first step is to identify “protected attributes” (e.g. race,
+age, gender, etc). Next, we use all attributes (privileged and
+otherwise) to build a classifier.  Thirdly, we measure unfariness
 using measures like:
 
 - EOD: the delta of true positive rates in unprivileged and privileged groups;
 - AOD: the average delta in false positive rates and true positive rates between privileged and unprivileged groups.   
 
-After that, handling unfairness becomes a 
-hyperparameter optimization issue.
- Recent result shows that hyperparameter  tuning can find
+After that, handling unfairness becomes a hyperparameter optimization
+issue.  Recent result shows that hyperparameter  tuning can find
 fairer models (where “fair”  measured by EOD and AOD). The trick
 here is that such optimization must strive for fairness AND performance
-(precision, recall etc) since [experiments show](REFS.md#chak-2019) that optimizing
-for performance separately to fairness means that we can succeed
-on one and fail on the other.
+(precision, recall etc) since [experiments show](REFS.md#chak-2019)
+that optimizing for performance separately to fairness means that
+we can succeed on one and fail on the other.
 
 
 ### Inclusiveness
 
-AI tools that include humans in their reasoning process must do several  things:
+AI tools that include humans in their reasoning process must do
+several  things:
 
 1. They must not unfairly discriminate against particular social groups (see above).
 1. The humans must be be able to understand  why an AI tool has made a conclusion.  
@@ -287,10 +287,10 @@ AI tools that include humans in their reasoning process must do several  things:
  
 #### Explanation
 
-Inclusiveness is helped by AI tools that generate succinct human-readable
-models since  humans can read and understand  such models.  Rule-based learners
-like  contrast set learners and FFTrees are useful for generating such succinct
-models:
+Inclusiveness is helped by AI tools that generate succinct
+human-readable models since  humans can read and understand  such
+models.  Rule-based learners like  contrast set learners and FFTrees
+are useful for generating such succinct models:
 
 <img src="../etc/img/ffteg.png" width=600>
 
@@ -321,22 +321,25 @@ for
 
 <img src="../etc/img/lime.png" align=right width=400>
 
-Another interesting approach  to explanation is to use locality reasoning.
-The  [LIME explanation algorithm](REFS.md#riberio-2016) 
+Another interesting approach  to explanation is to use locality
+reasoning.  The  [LIME explanation algorithm](REFS.md#riberio-2016)
  builds some model `M1` using examples near the
-example of interest (LIME does not specify which model is used). 
-Next, LIMES builds a local regression mode `M2` using the predictions from `M1`. The coefficients of `M2`
-are then informative as to what factors are most influential.
-For example, in  the diagram at right, the example of interest is marked with a red cross and the `M2` coefficients
-would reveal why this example is labeled (say) ref, not blue).
+example of interest (LIME does not specify which model is used).
+Next, LIMES builds a local regression mode `M2` using the predictions
+from `M1`. The coefficients of `M2` are then informative as to what
+factors are most influential.  For example, in  the diagram at
+right, the example of interest is marked with a red cross and the
+`M2` coefficients would reveal why this example is labeled (say)
+ref, not blue).
 
-
-For a discussion of other explanation algorithms, see  [Gosiekska and Biecek](REFS.md#gos-2019).
+For a discussion of other explanation algorithms, see  [Gosiekska
+and Biecek](REFS.md#gos-2019).
 
 #### Active Learning
 
-Once a system can explain itself, then most probably humans will want to change some part of it.
-Active learning is a general framework within which humans and AI can learn from each other, in
+Once a system can explain itself, then most probably humans will
+want to change some part of it.  Active learning is a general
+framework within which humans and AI can learn from each other, in
 the context of specific examples.
 
 - Active learners  incrementally build models using the minimum number of queries
@@ -361,27 +364,32 @@ the context of specific examples.
 
 #### Multi-goal Reasoning
 
-One of the lessons of research into requirements engineering is that the stakeholders for software
-have many competing goals. 
-Simple AI tools know how to chase a single goals (e.g. a classifier might try to maximize the accuracy
-of its predictions).  Better AI tools now how to trade off between the multiple competing
-goals of different  stakeholders.
+One of the lessons of research into requirements engineering is
+that the stakeholders for software have many competing goals.  Simple
+AI tools know how to chase a single goals (e.g. a classifier might
+try to maximize the accuracy of its predictions).  Better AI tools
+now how to trade off between the multiple competing goals of different
+stakeholders.
 
 <img src="../etc/img/pareto1.png" align=right width=400>
 
-One way to trade-off between competing goals are multi-goal reasoners. 
-Pareto frontiers were introduced in [tools](tools.md#top) in the section discussing
-how data miners use optimizers. Recall that, given many solutions floating in a space of multiple goals,
-the "Pareto frontier" are those solutions that are not demonstrably worse that anything else. In the figure at right,
-if we wish to maximize both the quantities, then "heaven" is top right so "_K,N_" are not on the frontier
-(since there are other items between them and heaven). On the other hand, 
- "A,B,C,D,E,F,G,H" are on the frontier since they have a clear line of sight to heaven.
+One way to trade-off between competing goals are multi-goal reasoners.
+Pareto frontiers were introduced in [tools](tools.md#top) in the
+section discussing how data miners use optimizers. Recall that,
+given many solutions floating in a space of multiple goals, the
+"Pareto frontier" are those solutions that are not demonstrably
+worse that anything else. In the figure at right, if we wish to
+maximize both the quantities, then "heaven" is top right so "_K,N_"
+are not on the frontier (since there are other items between them
+and heaven). On the other hand, "A,B,C,D,E,F,G,H" are on the frontier
+since they have a clear line of sight to heaven.
 
 There are many methods for finding the Pareto frontier including
-genetic algorithms
-and sequential model-based optimization and the three data mining methods described below.
-Once the frontier is found, the reasoning can stop. Alternatively, in multi-generational reasoning,
-this frontier becomes the seed for a new round of reasoning.
+genetic algorithms and sequential model-based optimization and the
+three data mining methods described below.  Once the frontier is
+found, the reasoning can stop. Alternatively, in multi-generational
+reasoning, this frontier becomes the seed for a new round of
+reasoning.
 
 #### Multi-goal Reasoning via Data Mining
 
@@ -391,35 +399,36 @@ systems that can better achieve the desired goals. For example, in this section,
 three very simple data mining methods that implement multi-goal optimization.  
 
 One way to use data mining method to implement multi-goal reasoning
-is via recursive random projections. [Krall et al.](REFS.md#krall-2015) 
+is via recursive random projections. [Krall et al.](REFS.md#krall-2015)
 and [Chen et al.](REFS.md#chen-2019)
- applied RPP to randomly generated candidates. Instead of evaluating all `N`  candidates,
-Krall and Chen just evaluated the `O(log2(N))` "_east_,_west_" pairs. There approach achieved
-similar (and sometimes better) results than
-standard optimizers while running much faster (for one large model, RRP terminated in minutes, not the hours required
-for standard optimizers).
-Chen et al. improved on Krall's work by showing that if the initial candidate size was large (say 10,000)
-then (a) multi-generational reasoning was not required while at the same time leading to (b) results
-competitive with other methods.
+ applied RPP to randomly generated candidates. Instead of evaluating
+ all `N`  candidates,
+Krall and Chen just evaluated the `O(log2(N))` "_east_,_west_"
+pairs. There approach achieved similar (and sometimes better) results
+than standard optimizers while running much faster (for one large
+model, RRP terminated in minutes, not the hours required for standard
+optimizers).  Chen et al. improved on Krall's work by showing that
+if the initial candidate size was large (say 10,000) then (a)
+multi-generational reasoning was not required while at the same
+time leading to (b) results competitive with other methods.
 
-
-A second  way to use data mining to implement multi-goal reasoning is via frugal trees.
-Recall from the above that a
-frugal tree generator
-        ranks different divisions of data columns according the goal of the learning.
-[Chen et al.](REFS.md#chen-2018) out-performed the prior state of the art (in one are)
-by ranking their divisions using a pair of two-dimensional goals:
+A second  way to use data mining to implement multi-goal reasoning
+is via frugal trees.  Recall from the above that a frugal tree
+generator ranks different divisions of data columns according the
+goal of the learning.  [Chen et al.](REFS.md#chen-2018) out-performed
+the prior state of the art (in one are) by ranking their divisions
+using a pair of two-dimensional goals:
 
 - Goal1: minimize false alarms, maximize recall
 - Goal2: maximize for most program defects seen in the minimal  number of lines of code.
 
-A third way to use data mining to implement multi-goal reasoning is to use
-contrast set learning and the 
-[Zitler and Künnzli](REFS.md#zitler-2004) indicator measure `I`
-In the following equation,
-`x.i` and `y.i` are the i-th goal of row `x,y`  and
-`x.i` and `y.i'` are those goals normalized 0..1 for min..max. 
-Each of the "_N_" goals is weighted `w.i=-1,1` depending on whether or not we seek to minimize or maximize  it.
+A third way to use data mining to implement multi-goal reasoning
+is to use contrast set learning and the [Zitler and
+Künnzli](REFS.md#zitler-2004) indicator measure `I` In the following
+equation, `x.i` and `y.i` are the i-th goal of row `x,y`  and `x.i`
+and `y.i'` are those goals normalized 0..1 for min..max.  Each of
+the "_N_" goals is weighted `w.i=-1,1` depending on whether or not
+we seek to minimize or maximize  it.
 
 _I(x,y) = -1/N \* ( &Sigma;(i=1 to N,  10^(w.i \* (x.i' - y.i') / N ) ) )_
 
