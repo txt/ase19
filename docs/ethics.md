@@ -205,7 +205,7 @@ to "cluster" is to split the data according to what attribute best seperates
   but it won't work without some target class.
 <br clear=both>
 
-<a href="../etc/img/dl101.png"><img align=right src="../etc/img/dl101.png" width=400></a>
+<a href="../etc/img/dl101.jpg"><img align=right src="../etc/img/dl101.jpg" width=400></a>
 It is important to stress that the  commissioning   effort cannot
 be the only way we assess an AI tool.  For high dimensional image
 data, deep learning] has proved to be very effective.
