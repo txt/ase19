@@ -77,7 +77,7 @@ more details, see later in this book):
 - Data pre-processors like feature selection;
 - Classifiers like Naive Bayes and KNN (kth-nearest neighbor);
 - Neural net methods like deep learning;
-- Theorem provers like picoSAT; XXX
+- Theorem provers like picoSAT, Z3
 - Meta-learning schemes like active learning.
 - Optimizers like sequential model-based optimization (a kind of active learning);
 - Multi-goal optimizers that can explore the trade-off between multiple goals.
@@ -106,7 +106,7 @@ to implement and evaluate their alternative, then that would be a very good thin
 (since that would give us more material for version two of this book).
 
 For us, this list is like a specification for an ideal "ethics
-machine".  Later in this book we offer a version 0.1  implementation
+machine".  Later, we offer a version 0.1  implementation
 of that ethics machine.  As will be seen, that implementation
 requires much extension  and improvement.  Nevertheless, it does
 show that a surprisingly large portion of the above can be created
@@ -322,11 +322,11 @@ for
 
 Another interesting approach  to explanation is to use locality reasoning.
 The  [LIME explanation algorithm](REFS.md#riberio-2016) 
- builds some model $$M_1$$ using examples near the
+ builds some model `M1` using examples near the
 example of interest (LIME does not specify which model is used). 
-Next, LIMES builds a local regression mode $$M_2$$ using the predictions from $$M_1$$. The coefficients of $$M_2$$
+Next, LIMES builds a local regression mode `M2` using the predictions from `M1`. The coefficients of `M2`
 are then informative as to what factors are most influential.
-For example, in  the diagram at right, the example of interest is marked with a red cross and the $$M_2$$ coefficients
+For example, in  the diagram at right, the example of interest is marked with a red cross and the `M2` coefficients
 would reveal why this example is labeled (say) ref, not blue).
 
 
@@ -392,12 +392,12 @@ three very simple data mining methods that implement multi-goal optimization.
 One way to use data mining method to implement multi-goal reasoning
 is via recursive random projections. [Krall et al.](REFS.md#krall-2015) 
 and [Chen et al.](REFS.md#chen-2019)
- applied RPP to randomly generated candidates. Instead of evaluating all $$N$$  candidates,
-Krall and Chen just evaluated the $$O(log_2(N))$$ "_east_,_west_" pairs. There approach achieved
+ applied RPP to randomly generated candidates. Instead of evaluating all `N`  candidates,
+Krall and Chen just evaluated the `O(log2(N))` "_east_,_west_" pairs. There approach achieved
 similar (and sometimes better) results than
 standard optimizers while running much faster (for one large model, RRP terminated in minutes, not the hours required
 for standard optimizers).
-Chen et al. improved on Krall's work by showing that if the initial candidate size was large (say $$10^4$$)
+Chen et al. improved on Krall's work by showing that if the initial candidate size was large (say 10,000)
 then (a) multi-generational reasoning was not required while at the same time leading to (b) results
 competitive with other methods.
 
@@ -412,26 +412,23 @@ by ranking their divisions using a pair of two-dimensional goals:
 - Goal1: minimize false alarms, maximize recall
 - Goal2: maximize for most program defects seen in the minimal  number of lines of code.
 
-
 A third way to use data mining to implement multi-goal reasoning is to use
 contrast set learning and the 
-[Zitler and Künnzli](REFS.md#zitler-2004) indicator measure $$I$$
+[Zitler and Künnzli](REFS.md#zitler-2004) indicator measure `I`
 In the following equation,
-$$x_i$$ and $$y_i$$ are the i-th goal of row $$x,y$$  and
- $$x_i'$$ and $$y_i'$$ are those goals normalized 0..1 for min..max. 
-Each of the "_N_" goals is weighted $$w_i=-1,1$$ depending on whether or not we seek to minimize or maximze  it.
+`x.i` and `y.i` are the i-th goal of row `x,y`  and
+`x.i` and `y.i'` are those goals normalized 0..1 for min..max. 
+Each of the "_N_" goals is weighted `w.i=-1,1` depending on whether or not we seek to minimize or maximize  it.
 
-$$
-I(x,y)=\frac{-1}{N}\sum_i^N 10^{w_i(x_i'-y_i')/N}
-$$
+    I(x,y) = -1/N * ( sum(i=1 to N) 10^(w.i * (x.i' - y.i') / N ) )
 
-Row $$x$$ is better than row $$y$$ if we "lose more"
-  going $$x$$ to $$y$$ than going  $$y$$ to $$x$$; i.e.  $$I(x,y) < I(y,x)$$.
-Rows can be   sorted according to  how many times they are better than
-  (say) $$M=100$$ other rows (selected at random). 
-Contrast set learning can then be applied
+- Row `x` is better than row `y` if we "lose more"
+  going `x` to `y` than going  `y` to `x`; i.e.  `I(x,y) < I(y,x)`.
+- Rows can be   sorted according to  how many times they are better than
+  (say) `M=100` other rows (selected at random). 
+- Contrast set learning can then be applied
   to discover what selects for the (say) 20% top scoring rows (while avoiding the rest).
-Note that, in practice, we have seen
+- Note that, in practice, we have seen
   this indicator measure [work well for up to 5 goals](REFS.md#sayyad-2013).
 
 These three examples demonstrate the value of understanding AI tools. 
