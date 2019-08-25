@@ -497,7 +497,7 @@ Four tools for pragmatically assessing AI tool reliability are
    of the envelope.
    - One way to build an anomaly detector is to use RRP. As a side-effect of computing distance to each "_east,west_"
   pair in any cluster, we can collect the mean and standard deviation of all the distances seen in that cluster.
-  With that information, we can declare something to be anomalous if its distance is   
+  With that information, we can declare something to be anomalous if its distance is
   [more than "_N_" standard deviations away from the mean](REFS.md#peters-2019).
    - Another way to build an anomaly detector is to continuing active learning (including SBMO) after the comissioning process.
   Anomalies can be reported when the predictions from active learning/SMBO do not
@@ -531,9 +531,6 @@ To find  prototypes, run some clustering algorithm (e.g. RP) and the return only
   [add in their data](REFS.md#peters-2015)  that has not been seen before; i.e. that is anomalous.
 
 
-#### Safety
-
-TBD
 
 ### Privacy and Security
 
@@ -550,6 +547,10 @@ the effectiveness of the models learned from that data.
 [Peters et al.](REFS.md#peters-2015) addresses this problem via supervised mutation methods.
 In that approach, after prototype selection, data is mutated by a random amount up to,
 but not more than the hyperspace boundary between classes.
+
+#### Safety
+
+TBD
 
 ## Todo
 
