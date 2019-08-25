@@ -159,14 +159,14 @@ sets of ethical concerns. Note that:
   are synonyms since they both reply on "fairness and "reliability and safely".
 
 
-|                | Accountable|Transparent|Fairnessx |Rely+Safex|Inclusivex|Private+Secure|
+|                | Accountable|Transparent|Fairness |Rely+Safe|Inclusivex|Private+Secure|
+|----------------|------------|-----------|----------|----------|----------|--------------|
 |Accountability  |  &#10004;  |           |         |         |         |              |
 |Transparency    |            |  &#10004; |         |         |         |              |
 |Well-being<br>+ aware of misuse||        | &#10004;| &#10004;|         |              |
 |Human-rights    |            |           | &#10004;|&#10004; |&#10004; |              |
 |Data agency     |            |           |         |         |&#10004; |   &#10004;   |
 |Effectivenessx   |   &#10004; |           |         |&#10004; |         |   &#10004;   |
-{: border="1px" align=center }
 
 The reader might dispute 
 this  mapping, perhaps saying  that 
