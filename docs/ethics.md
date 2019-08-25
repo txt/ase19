@@ -187,7 +187,7 @@ the leaves of which holds
 data that is 
 similar according  to "_D_" random projections  over "_east,west_" pairs.
 - Another way 
-<a href="../etc/img/dt101.jpg"><img align=right src="../etc/img/dt101.jpg" width=400></a>
+<a href="../etc/img/dt101.png"><img align=right src="../etc/img/dt101.png" width=400></a>
 to "cluster" is to split the data according to what attribute best seperates
   the class variables, then recurse on each split. For example, in the example
   at right, the best split to divide blue and red dots is `x2 < 3`.
