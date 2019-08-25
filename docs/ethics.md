@@ -9,69 +9,66 @@
 
 # Ethics
 
+The premise of this book is that AI tools offer a rich tapestry of
+choices that software engineers can weave through to a variety of
+goals (and which can include ethical goals).  This chapter offers
+specific examples of that process.
 
-The premise of this book is that
-AI tools offer a rich tapestry
-of choices 
-that
-software engineers can weave
-through to a variety of goals (and which can include ethical goals). 
-This chapter offers specific examples of that process.
+We explore ethics since, More and more, AI tools  are making decisions
+that affect people’s lives in such high-stakes applications such
+as mortgage lending, hiring, and prison sentencing. Many high-stake
+applications such as finance, hiring, admissions, criminal justice
+use AI decision-making frequently:
 
-We explore ethics since, More and more, AI tools  are making decisions that affect people’s
-lives in such high-stakes applications such as mortgage lending,
-hiring, and prison sentencing. Many high-stake applications such
-as finance, hiring, admissions, criminal justice use AI
-decision-making
-frequently[^ladd-1998],[^burrell-2016],[^corbett-2018],[^galindo-2000],[^yan-2013],[^chalfin-2016],[^ajit-2016],[^berk-2015],[^berk-2016].
+- [Ladd'98](REFS.md#ladd-1998)
+- [Burrell'16](REFS.md#burrell-2016)
+- [Corbett'18](REFS.md#corbett-2018)
+- [Galindo'00](REFS.md#galindo-2000)
+- [Yan'13](REFS.md#yan-2013)
+- [Chalfin'16](REFS.md#chalfin-2016)
+- [Ajit'16](REFS.md#ajit-2016)
+- [Berk'15](REFS.md#berk-2015)
+- [Berk'16](REFS.md#berk-2016)
+
+
 Unfortunately, some of  AI tools are  known to exhibit “group
 discrimination”; i.e. their decisions are inappropriately affected
 attributes like race, gender, age, etc:
 
-[^ladd-1998]:    [Ladd'98](/REFS.md#ladd-1998)
-[^burrell-2016]: [Burrell'16](/REFS.md#burrell-2016)
-[^corbett-2018]: [Corbett'18](/REFS.md#corbett-2018)
-[^galindo-2000]: [Galindo'00](/REFS.md#galindo-2000)
-[^yan-2013]:     [Yan'13](/REFS.md#yan-2013)
-[^chalfin-2016]: [Chalfin'16](/REFS.md#chalfin-2016)
-[^ajit-2016]:    [Ajit'16](/REFS.md#ajit-2016)
-[^berk-2015]:    [Berk'15](/REFS.md#berk-2015)
-[^berk-2016]:    [Berk'16](/REFS.md#berk-2016)
-
-
-- One older version of a [sentiment analyzer from Google](/REFS.md#Google-2017) gave negative (and wildly
+- One older version of a [sentiment analyzer from Google](REFS.md#Google-2017) gave negative (and wildly
 inappropriate) scores to sentences like 
 "I am a Jew" and "I am homosexual".
-- A popular photo tagging app assigned [animal category labels](/REFS.md#Google_Photo) to dark skinned people.
+- A popular photo tagging app assigned [animal category labels](REFS.md#Google_Photo) to dark skinned people.
 - Recidivism assessment models predict who might commit crimes, in the future. Some such models used by the criminal justice system are more likely to
-[falsely label black defendants as future criminals](/REFS.md#Machine_Bias) (at twice the rate as white defendants).
+[falsely label black defendants as future criminals](REFS.md#Machine_Bias) (at twice the rate as white defendants).
 - Facial recognition software which predicts characteristics such as gender, age from images has been found to have a
-[much higher error rate](/REFS.md#skin-bias-2018) for dark-skinned women compared to light-skinned men
-- Amazon.com stopped using automated recruiting tools after finding [anti-women bias](/REFS.md#Amazon_Bias).
+[much higher error rate](REFS.md#skin-bias-2018) for dark-skinned women compared to light-skinned men
+- Amazon.com stopped using automated recruiting tools after finding [anti-women bias](REFS.md#Amazon_Bias).
 
+We say that, to some degree, the ethical impact of AI tools can be
+controlled by the developers building that software. We stress "to
+some degree" since the best ethical intentions of any developer can
+be defeated by  malevolent forces, or even by just dumb luck.  So
+it is wrong to say that if our guileless are followed that the
+result AI tool will always adhere to socially-accepted ethical
+standards.
 
-
-We say that, to some degree, the ethical impact of AI tools can be controlled by the developers
-building that software. We stress "to some degree" since the best ethical intentions
-of any developer can be defeated by  malevolent forces, or even by just dumb luck.
-So it is wrong to say that if our guileless are followed that the result AI tool will always adhere to 
-socially-accepted ethical standards.
-
-But it also wrong to say that just because some ethical goals are not always reached, that we should not strive towards
-those goals.
-Developers will always try to adhere to ethical standards.
-Or, at the very least, they should monitor their AI tools and report unethical usage or consequences.
+But it also wrong to say that just because some ethical goals are
+not always reached, that we should not strive towards those goals.
+Developers will always try to adhere to ethical standards.  Or, at
+the very least, they should monitor their AI tools and report
+unethical usage or consequences.
 
 ## Technical Choices
 
-Our point will be that,
-in the 21st century, the wise software engineering
-knows how  different AI tools offer different services, and how some of those services
-can achieve certain ethical goals.
-We offer fair warning to the reader versed in the standard texts on, say, data mining.
-The technologies discussed below roam far away from standard discussion of (say)
-classification vs regression vs whatever else. Once we introduce ethical goals like inclusiveness or fairness
-then the technology choices become very different.
+Our point will be that, in the 21st century, the wise software
+engineering knows how  different AI tools offer different services,
+and how some of those services can achieve certain ethical goals.
+We offer fair warning to the reader versed in the standard texts
+on, say, data mining.  The technologies discussed below roam far
+away from standard discussion of (say) classification vs regression
+vs whatever else. Once we introduce ethical goals like inclusiveness
+or fairness then the technology choices become very different.
 
 The following methods are discussed above, very briefly
 (and for
@@ -94,13 +91,14 @@ more details, see later in this book):
 - Incremental learning that updates its models after seeing each new example.
 
 
-For the industrial practitioner who wishes to distinguish themselves within the currently
-crowded AI market, the above list might be a marketing opportunity. 
-By augmenting their current toolkit with some of the above, industrial practitioners might be able
-to offer services that is absent amongst their  rivals.
+For the industrial practitioner who wishes to distinguish themselves
+within the currently crowded AI market, the above list might be a
+marketing opportunity.  By augmenting their current toolkit with
+some of the above, industrial practitioners might be able to offer
+services that is absent amongst their  rivals.
 
-For the researcher who is an advocated of a particular AI tool,
-the above list might inspire a research challenge:
+For the researcher who is an advocated of a particular AI tool, the
+above list might inspire a research challenge:
 
 - First, they might seek ways  to extend their preferred AI tool
 such that it covers the more of the above services.
@@ -108,19 +106,22 @@ such that it covers the more of the above services.
 to implement and evaluate their alternative, then that would be a very good thing
 (since that would give us more material for version two of this book).
 
-For us, this list is like a specification for an ideal "ethics machine". 
-Later in this book we offer a version 0.1  implementation of that ethics machine.
-As will be seen, that implementation requires much extension  and improvement.
-Nevertheless, it does show that a surprisingly large portion of the above
-can be created in a relatively simple manner. It is hoped that that implementation
-seeds a research community devoted to exploring algorithms with ethical effects.
+For us, this list is like a specification for an ideal "ethics
+machine".  Later in this book we offer a version 0.1  implementation
+of that ethics machine.  As will be seen, that implementation
+requires much extension  and improvement.  Nevertheless, it does
+show that a surprisingly large portion of the above can be created
+in a relatively simple manner. It is hoped that that implementation
+seeds a research community devoted to exploring algorithms with
+ethical effects.
 
 ## Current Ethical Concerns
 
 The  [Institute for Electronics and Electrical
-Engineers](/REFS.md#IEEEethics-2019) (IEEE) has   recently discussed general principles for
-implementing autonomous and intelligent systems (A/IS).  They propose that the
-design of such A/IS systems satisfy certain criteria:
+Engineers](REFS.md#IEEEethics-2019) (IEEE) has   recently discussed
+general principles for implementing autonomous and intelligent
+systems (A/IS).  They propose that the design of such A/IS systems
+satisfy certain criteria:
 
 1. _Human Rights:_ A/IS shall be created and operated to respect, promote, and protect internationally recognized human rights.
 2. _Well-being:_ A/IS creators shall adopt increased human well-being as a primary success criterion for development.
@@ -132,7 +133,7 @@ design of such A/IS systems satisfy certain criteria:
    an unambiguous rationale for all decisions made.
 7. _Awareness of Misuse:_ A/IS creators shall guard against all potential misuses and risks of A/IS in operation.
 
-Other  organizations, like [Microsoft](/REFS.md#microai-2019)
+Other  organizations, like [Microsoft](REFS.md#microai-2019)
 offer their own principles for AI:
 
 - _Transparency_ AI systems should be understandable
@@ -142,13 +143,11 @@ offer their own principles for AI:
 - _Privacy & Security_: AI systems should be secure and respect privacy
 - _Accountability_: AI systems should have algorithmic accountability
 
-Ethics is a
-rapidly evolving concept so it hardly surprising to say that mapping
-the stated ethical concerns of one organization (Microsoft) into
-another (IEEE) is not easy.  
-Nevertheless,
-the following table shows one way we might map together these two
-sets of ethical concerns. Note that:
+Ethics is a rapidly evolving concept so it hardly surprising to say
+that mapping the stated ethical concerns of one organization
+(Microsoft) into another (IEEE) is not easy.  Nevertheless, the
+following table shows one way we might map together these two sets
+of ethical concerns. Note that:
 
 - "accountability" and "transparency"  appear in both the IEEE and Microsoft lists. Clearly these
   are concerns shared by many people.
@@ -168,17 +167,13 @@ sets of ethical concerns. Note that:
 |Data agency     |            |           |         |         |&#10004; |   &#10004;   |
 |Effectivenessx   |   &#10004; |           |         |&#10004; |         |   &#10004;   |
 
-The reader might dispute 
-this  mapping, perhaps saying  that 
-we have missed,
-or missed out, or misrepresented, some vital ethical concern.  This  would be 
-a good thing since that would mean you are now engaging in discussions about
-software and ethics.
-In
-fact, the best thing that could happen below is that you say "that
-is wrong; a better way to do that would be..."
-As  George Box said,  all models
-are wrong; but some are useful.  
+The reader might dispute this  mapping, perhaps saying  that we
+have missed, or missed out, or misrepresented, some vital ethical
+concern.  This  would be a good thing since that would mean you are
+now engaging in discussions about software and ethics.  In fact,
+the best thing that could happen below is that you say "that is
+wrong; a better way to do that would be..." As  George Box said,
+all models are wrong; but some are useful.
 
 In any case, what the above table does demonstrate is that:
 
@@ -297,7 +292,7 @@ models since  humans can read and understand  such models.  Rule-based learners
 like  contrast set learners and FFTrees are useful for generating such succinct
 models:
 
-![](/img/fft.png){: .imgright}
+<img src="../etc/img/fft.png" width=700>
 
 - According  to [George Kelly](REFS.md#kelly-1955), humans reason about the world
 via lists of differences between things (as apposed to list of things abut each
@@ -324,7 +319,7 @@ for
 
 [^simon]: Gigerenzer's thinking was  influenced by the Nobel-Prize winning economist and AI pioneer Herbert Simon.  [Simon argued](REFS.md#simon-1956) that humans do make optimizer decisions, since such optimality assumes complete knowledge about a situation.  Rather, says Simon, humans reason via "satisficing" ( a portmanteau of satisfy and suffice) in which they seek solutions good enough for the current context.
 
-![](/img/lime.png){: .imgright}
+<img src="../etc//img/lime.png" width=600>
 
 Another interesting approach  to explanation is to use locality reasoning.
 The  [LIME explanation algorithm](REFS.md#riberio-2016) 
@@ -372,7 +367,7 @@ Simple AI tools know how to chase a single goals (e.g. a classifier might try to
 of its predictions).  Better AI tools now how to trade off between the multiple competing
 goals of different  stakeholders.
 
-![](/img/pareto1.png){: .imgright}
+<img src="../etc/img/pareto1.png" width=500>
 
 One way to trade-off between competing goals are multi-goal reasoners. 
 Pareto frontiers were introduced in [Chapter 3](/about-tools#optimizers) in the section discussing

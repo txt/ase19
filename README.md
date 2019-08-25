@@ -39,7 +39,7 @@ This subject will explore methods to augment standard software engineering pract
 - Algorithms:
     - Data mining: baselines | discretization | basic | advanced
     - Optimizers : landscapes | basic | advanced | opt+mine
-    - Theorem provers: basic | advanced
+    - Theorem provers: [basic](docs/provers.md#top) | advanced
 - Process: [requirements](docs/requirements.md#top) | 
   [collect](docs/collect.md#top) | 
   [cleanse](docs/cleanse.md#top) | 
