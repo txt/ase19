@@ -156,7 +156,7 @@ to very slow algorithms (e.g. KNN,  that scale very poorly to large
 data sets).
 
 Naive Bayes 
-<a href="../etc/img/nb101.png"><img align=right src="../etc/img/nb101.png" width=400></a>
+<a href="../etc/img/nb101.png"><img align=right src="../etc/img/nb101.png" width=500></a>
 classifiers keep different statistics on rows of different
 classes. When new data arrives, such a classier can be quickly updated, just by
 adding to the stats of the class of that new row.  
@@ -164,7 +164,7 @@ New examples are classified according to what old data they are most similar too
 For example, at right, if sepal length is 2.5, the _Virginica_ is most likely.
 <br clear=both>
 
-<a href="../etc/img/knn101.png"><img align=right src="../etc/img/knn101.png" width=400></a>
+<a href="../etc/img/knn101.png"><img align=right src="../etc/img/knn101.png" width=500></a>
 On the other hand, 
 KNN algorithms make conclusions by interpolating between
 the k nearest neighbors.  For example, at right, at `k=2`, the green test instance
@@ -174,13 +174,13 @@ Kth-nearest neighbors requires a full pass over all the training data for each
 new test instance.
 <br clear=both>
 
-<a href="../etc/img/cluster101.gif"><img align=right src="../etc/img/cluster101.gif" width=400></a>
+<a href="../etc/img/cluster101.gif"><img align=right src="../etc/img/cluster101.gif" width=500></a>
  KNN can be made
  faster via clustering algorithms that group together similar examples.
   Once grouped, KNN only needs to within a group. 
 <br clear=both>
 
-<a href="../etc/img/rp101.jpg"><img align=right src="../etc/img/rp101.jpg" width=400></a>
+<a href="../etc/img/rp101.jpg"><img align=right src="../etc/img/rp101.jpg" width=500></a>
  Just as an aside, 
 clustering can be made very fast using tricks
 like 
@@ -194,9 +194,9 @@ data that is
 similar according  to "_D_" random projections  over "_east,west_" pairs.
 <br clear=both>
 
-<a href="../etc/img/dt101.png"><img align=right src="../etc/img/dt101.png" width=400></a>
+<a href="../etc/img/dt101.png"><img align=right src="../etc/img/dt101.png" width=500></a>
 Another way 
-to "cluster" is to split the data according to what attribute best seperates
+to "cluster" is to split the data according to what attribute best separates
   the class variables, then recurse on each split. For example, in the example
   at right, the best split to divide blue and red dots is `x2 < 3`.
   Note that this is a "supervised" approach (whereas standard clustering, that
@@ -205,7 +205,7 @@ to "cluster" is to split the data according to what attribute best seperates
   but it won't work without some target class.
 <br clear=both>
 
-<a href="../etc/img/dl101.jpg"><img align=right src="../etc/img/dl101.jpg" width=400></a>
+<a href="../etc/img/dl101.jpg"><img align=right src="../etc/img/dl101.jpg" width=500></a>
 It is important to stress that the  commissioning   effort cannot
 be the only way we assess an AI tool.  For high dimensional image
 data, deep learning] has proved to be very effective.
