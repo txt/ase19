@@ -314,8 +314,7 @@ and Biecek](REFS.md#gos-2019).
 #### Active Learning
 
 
-<a href="https://research.fb.com/wp-content/uploads/2018/09/bo_1d_opt.gif"><img align=right 
-src="https://research.fb.com/wp-content/uploads/2018/09/bo_1d_opt.gif" width=500></a>
+<a href="../etc/img/al101.png"><img align=right src="../etc/img/al101.png" width=500></a>
 Once a system can explain itself, then most probably humans will
 want to change some part of it.  Active learning is a general
 framework within which humans and AI can learn from each other, in
@@ -331,7 +330,10 @@ the context of specific examples.
        need to build a ground truth or comission a model.
 - Active learning is simpler when models can quickly update themselves.
     - Examples of such fast incremental update algorithms include Naive Bayes and RRP and many others besides.
-- Sequential model-based optimization (SMBO) is an active learner that assumes it is fast to guess
+- Sequential 
+<a href="https://research.fb.com/wp-content/uploads/2018/09/bo_1d_opt.gif"><img align=right 
+src="https://research.fb.com/wp-content/uploads/2018/09/bo_1d_opt.gif" width=500></a>
+model-based optimization (SMBO) is an active learner that assumes it is fast to guess
   a value for a new example (if we have a model) but slow to confirm that guess (by running some oracle).
      - For example, when optimizing a data miner,
   SMBO might explore random settings to the control parameters of that learner. 
@@ -340,6 +342,7 @@ the context of specific examples.
      -  The next setting it tries
   might be the one that is guessed to [achieve the highest predicted  score](REFS.md#nair-2018).
 
+<br clear=both>
 
 #### Multi-goal Reasoning
 
