@@ -181,28 +181,12 @@ To see that, consider three rules R1,R2,R3:
    at home; or what was the longitude  of your birth place). Sure, R3 does not find all the Germans,
    but it does not have all the performance drawbacks of R1 or R1.
 
-```
-                               pareto
-                              frontier
-                                 |
-                                 | 
-                                 |
-       heaven----->  *           v
-                     |           .------- R1        
-                  80 +   R3   .--
-                     |     ..-     
-    millions         |    .          R4
-          of      40 +   .        
-     Germans         |  .        R5
-                     | R2
-                   0 .-----|-----|-----|----| --> 
-          
-                           2     4     6    8
-                        Billions of non-Germans
-```
-The above diagram shows our rules in a trade-off diagram called a  
-   "ROC curve" (receiver operator characteristics). ROC curves show
-   how much a rule covers all the positive and negative examples. On that curve, the "heaven"
+<img src="../etc/img/r12345.png"  width="600">
+
+The above diagram shows our rules in a trade-off diagram called
+a
+"ROC curve" (receiver operator characteristics). ROC curves show
+how much a rule covers all the positive and negative examples. On that curve, the "heaven"
 point is top-left where we cover all the positive examples and none of the negative ones. Note
 that if we generated a million rules at random then some of them like R4,R5 would be "buried" 
 behind other, better rules. On that diagram, the Pareto frontier are all the rules with nothing
@@ -216,7 +200,6 @@ ROC curve, trying to "flow" their knowledge towards the Pareto frontier
 than anything else). Some learners use this ROC curve explicitly, others use various
 very fast heuristics which, experience has shown, drive the knowledge towards the frontier.
 
-
 ## Theorem Provers
 
 **Theorem provers** are very specialized tools for finding settings to variables that satisfy the logical constraints of a model. Such a theorem provers might report that  A=true and B=false satisfies the constraint (A and not B).   
@@ -228,12 +211,11 @@ Sample theorem provers include:
 For example, [Mendonca et al.](REFS.md#mendonca-2009) offer the following feature model  describing  a tree of options about a search engine. In this diagram,   a filled/hollow circle means 
 "mandatory"/"optional" (respectively). Also, white/dark fans means "and","or" (respectively). 
 
-
-![](/img/translatefm.png){: width="600px"}
+<img src="../etc/img/translatefm.png"  width="600">
 
 This tree can be expressed as:
 
-![](/img/translatefmclauses.png){: width="400px"}
+<img src="../etc/img/translatefmclauses.png" width="400">
 
 Note the last two theorems (lines 13,14). Without these two lines then any choice in any sub-tree is valid (so it is easy to design a search engine).
 However, with these _cross-tree constraints_ we have to be more careful.  Technically, the presence of these cross-tree constraints makes this problem
