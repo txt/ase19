@@ -176,7 +176,7 @@ all models are wrong; but some are useful.
 
 In any case, what the above table does demonstrate is that:
 
-- Large organizations are now v:e REery concerned with ethics. 
+- Large organizations are now very concerned with ethics. 
 - When they talk about ethics, there is much overlap in what they say.
 - This is a pressing need to extend our current design thinking for AI tools. Hence, this book.
  
@@ -238,7 +238,7 @@ an AI tool.  For high dimensional image data, deep learning] has
 proved to be very effective.
 
 - Deep learners are n-layered neural networks were layer "i" find
-new features hat layer "i+1" uses to make new conclusions.
+new features that layer "i+1" uses to make new conclusions.
 
 Training such learners can be a very slow process, so tuning and
 comparing with other learners may be impractical.  In this book we
