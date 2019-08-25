@@ -80,10 +80,10 @@ are unimportant for predicting miles per hour-- just that combinations
 of other values were more important. 
 Experienced analysts know that such negative results 
 (that some attributes can be ignored) 
-are important[^holmes]
+are important (\*)
 since they let us simplify how we report models,  thus simplifying  all the subsequent activity inspired by that model. 
 
-[^holmes]: From the _Adventure of Silver Blaze_ by Arthur Conan Doyle.<br>Gregory (Scotland Yard detective): "Is there any other point to which you would wish to draw my attention?"<br> Holmes: "To the curious incident of the dog in the night-time."<br> Gregory: "The dog did nothing in the night-time."<br> Holmes: "That was the curious incident." 
+(\*) From the _Adventure of Silver Blaze_ by Arthur Conan Doyle.<br>Gregory (Scotland Yard detective): "Is there any other point to which you would wish to draw my attention?"<br> Holmes: "To the curious incident of the dog in the night-time."<br> Gregory: "The dog did nothing in the night-time."<br> Holmes: "That was the curious incident." 
 
 ## Optimizers
 
