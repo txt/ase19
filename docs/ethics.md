@@ -171,7 +171,7 @@ In practice, this is very slow (especially for large data sets) since finding th
 Kth-nearest neighbors requires a full pass over all the training data for each
 new test instance.
 - KNN can be made
-<a href="../etc/img/cluster101.png"><img align=right src="../etc/img/cluster101.png" width=400></a>
+<a href="../etc/img/cluster101.gif"><img align=right src="../etc/img/cluster101.gif" width=400></a>
  faster via clustering algorithms that group together similar examples.
   Once grouped, KNN only needs to within a group. 
 - Just as an aside, 
@@ -187,7 +187,7 @@ the leaves of which holds
 data that is 
 similar according  to "_D_" random projections  over "_east,west_" pairs.
 - Another way 
-<a href="../etc/img/dt101.png"><img align=right src="../etc/img/dt101.png" width=400></a>
+<a href="../etc/img/dt101.jpg"><img align=right src="../etc/img/dt101.jpg" width=400></a>
 to "cluster" is to split the data according to what attribute best seperates
   the class variables, then recurse on each split. For example, in the example
   at right, the best split to divide blue and red dots is `x2 < 3`.
