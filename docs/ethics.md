@@ -161,8 +161,12 @@ classes. When new data arrives, such a classier can be quickly updated, just by
 adding to the stats of the class of that new row.  
 New examples are classified according to what old data they are most similar too.
 For example, at right, if sepal length is 2.5, the _Virginica_ is most likely.
-- On the other hand, KNN algorithms make conclusions by interpolating between
-the k nearest neighbors.  In practice, this is very slow since finding the
+- On the other hand, 
+<a href="../etc/img/knn101.png"><img align=right src="../etc/img/knn100.png" width=400></a>
+KNN algorithms make conclusions by interpolating between
+the k nearest neighbors.  For example, at right, at `k=2`, the green test instance
+is more likely to be a red `default` dot.
+In practice, this is very slow (especially for large data sets) since finding the
 Kth-nearest neighbors requires a full pass over all the training data for each
 new test instance.
 - KNN can be made faster via clustering algorithms that group together similar examples.
