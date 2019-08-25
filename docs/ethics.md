@@ -434,8 +434,8 @@ Row `x` is better than row `y` if we "lose more"
 | `x.i, y.i` | i-th goal of row `x,y`|
 | `w.i`      | if we want to minimize, maximize goal `i` then `w.i=-1,1`|
 | `m(z)`       | function to  normalize `z` into 0..1 for min..max |
-| &Delta;`(i,w,x,y)` | =  `10^(w.i  ( m(x.i) - m(y.i) ) / N )`  |
-| `I(x,y)`             | = `-1/N   &Sigma;<sub>i</sub> &Delta;(i,w,x,y)` |
+| &Delta;`(i,w,x,y)` | =  `10^( w.i( m(x.i) - m(y.i) ) / N )`  |
+| `I(x,y)`             | = `-1/N` &Sigma;`<sub>i</sub> &Delta;(i,w,x,y)` |
 
 For source code for this, see [RowDom](http://menzies.us/fun/row.html#scoring-rows.
     
