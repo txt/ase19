@@ -227,7 +227,7 @@ Machine learning software, by its nature, is always a  form  of
 statistical  discrimination.   This  discrimination becomes
 objectionable when it places certain social groups  (e.g. those
 characterized by age, sex, gender, nationality) at  a  systematic
-advantage or  Disadvantage
+advantage or  disadvantage
 
 There are various measures that can be applied to measure unfariness.
 The first step is to identify “protected attributes” (e.g. race,
@@ -313,6 +313,9 @@ and Biecek](REFS.md#gos-2019).
 
 #### Active Learning
 
+
+<a href="https://research.fb.com/wp-content/uploads/2018/09/bo_1d_opt.gif"><img align=right 
+src="https://research.fb.com/wp-content/uploads/2018/09/bo_1d_opt.gif" width=500></a>
 Once a system can explain itself, then most probably humans will
 want to change some part of it.  Active learning is a general
 framework within which humans and AI can learn from each other, in
