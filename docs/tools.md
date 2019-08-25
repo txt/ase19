@@ -142,7 +142,7 @@ Applying such a criteria, the car data looks like:
 |worst|8       | >383      | >165  | 4952  |  11.5   |  <73 |  1   |   10  |
 |worst|8       | >383      | >165  | 4955  |  11.5   |  <71 |  1   |   10  |
 |     |        |           |       | minimize| maximize|    |       | maximize      |
-{: style="padding:3px; border: 1px;" }
+
 
 Optimizers use this data to find a set of changes (also know as "mutations")  which, if applied to the cars, will make them weigh less, speed up faster, and use less gas.
 
@@ -224,7 +224,7 @@ Sample theorem provers include:
 -  maxWalkSat, pycoSAT, MathSAT, vZ, Z3
 -  and many more besides.
 
-For example, [Mendonca et al.](REFS#mendonca-2009) offer the following feature model  describing  a tree of options about a search engine. In this diagram,   a filled/hollow circle means 
+For example, [Mendonca et al.](REFS.md#mendonca-2009) offer the following feature model  describing  a tree of options about a search engine. In this diagram,   a filled/hollow circle means 
 "mandatory"/"optional" (respectively). Also, white/dark fans means "and","or" (respectively). 
 
 
@@ -256,25 +256,24 @@ Note also that optimizers and data miners are tightly inter-connected:
 In our literature review, we have seen several different kinds of combinations of data miners and optimizers:
 
 - Theorem provers as data generators:  
-    - when models come with many constraints, we can use theorem provers to [generate valid examples](REFS#chen-2018a);
+    - when models come with many constraints, we can use theorem provers to [generate valid examples](REFS.md#chen-2018a);
 - Optimizers to improve theorem provers: 
     - Theorem provers deliver solutions in whatever order is dictated  by their internal design. This means, when
      there are very many ways to solve constraints, theorem provers can take a long time to generate solutions that we prefer. In
   this case, a common strategy is to first , run theorem provers (a little) to get a sample of solutions; then  second
-      run mutators and optimizers to [combine that sample in interesting ways](REFS#chen-2019).
+      run mutators and optimizers to [combine that sample in interesting ways](REFS.md#chen-2019).
 - Mash-ups of data miners and optimizers: 
     - In this approach, data miners and optimizers can be seen as separate executables. For example, Abdessalem et al. [1] generate test cases for autonomous cars via a cyclic approach where an optimizer reflects on the output of data miners that reflect on the output of an optimizer (and so on).
 - Data miners acting as optimizers: 
-    - In this approach, there is no separation between the data miner and optimizer. For example, [Chen et al.](REFS#chen-2018a)
+    - In this approach, there is no separation between the data miner and optimizer. For example, [Chen et al.](REFS.md#chen-2018a)
 show that their recursive descent bi-clustering algorithm (which is a data mining technique) out-performs traditional evolutionary algorithms for the purposes of optimizing SE models.
 - Optimizers control the data  miners: 
-    - In this approach,the data miner is a sub-routine called by the optimizer. For example, several recent papers improve predictive performance via optimizers that tune the control parameters of the data miner (See [Agrawal 2018a](REFS:agrawal-2018a), 
-   [Fu'18](REFS:fu-206), and [Tantithamthavorn et al/](Tan-2016a)).
+    - In this approach,the data miner is a sub-routine called by the optimizer. For example, several recent papers improve predictive performance via optimizers that tune the control parameters of the data miner (See [Agrawal 2018a](REFS.md#agrawal-2018a), 
+   [Fu'18](REFS.md#fu-206), and [Tantithamthavorn et al/](REFS.md#Tan-2016a)).
 - Data miners control the optimizers:
     -  In this approach, the optimizer is a sub-routine called by the data miner. For example, 
-[Majumder et al.](majumder-2018) use k-means clustering to divide up a complex text mining problem, then apply optimizers within each cluster. They report that this method speeds up their processing by up to three orders of magnitude.
+[Majumder et al.](REFS.md#majumder-2018) use k-means clustering to divide up a complex text mining problem, then apply optimizers within each cluster. They report that this method speeds up their processing by up to three orders of magnitude.
 
 
 
 
-=================== =====
