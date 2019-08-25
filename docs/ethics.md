@@ -291,7 +291,7 @@ models since  humans can read and understand  such models.  Rule-based learners
 like  contrast set learners and FFTrees are useful for generating such succinct
 models:
 
-<img src="../etc/img/ffteg.png" width=700>
+<img src="../etc/img/ffteg.png" width=600>
 
 - According  to [George Kelly](REFS.md#kelly-1955), humans reason about the world
 via lists of differences between things (as apposed to list of things abut each
@@ -318,7 +318,7 @@ for
 
 [^simon]: Gigerenzer's thinking was  influenced by the Nobel-Prize winning economist and AI pioneer Herbert Simon.  [Simon argued](REFS.md#simon-1956) that humans do make optimizer decisions, since such optimality assumes complete knowledge about a situation.  Rather, says Simon, humans reason via "satisficing" ( a portmanteau of satisfy and suffice) in which they seek solutions good enough for the current context.
 
-<img src="../etc//img/lime.png" width=600>
+<img src="../etc//img/lime.png" width=500>
 
 Another interesting approach  to explanation is to use locality reasoning.
 The  [LIME explanation algorithm](REFS.md#riberio-2016) 
@@ -420,7 +420,7 @@ In the following equation,
 `x.i` and `y.i'` are those goals normalized 0..1 for min..max. 
 Each of the "_N_" goals is weighted `w.i=-1,1` depending on whether or not we seek to minimize or maximize  it.
 
-    I(x,y) = -1/N * ( sum(i=1 to N) 10^(w.i * (x.i' - y.i') / N ) )
+    I(x,y) = -1/N * ( &Sigma;(i=1 to N,  10^(w.i * (x.i' - y.i') / N ) ) )
 
 - Row `x` is better than row `y` if we "lose more"
   going `x` to `y` than going  `y` to `x`; i.e.  `I(x,y) < I(y,x)`.
