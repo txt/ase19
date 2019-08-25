@@ -181,7 +181,7 @@ To see that, consider three rules R1,R2,R3:
    at home; or what was the longitude  of your birth place). Sure, R3 does not find all the Germans,
    but it does not have all the performance drawbacks of R1 or R1.
 
-<img src="../etc/img/r12345.png"  width="600">
+<img src="../etc/img/r12345.png"  width="500">
 
 The above diagram shows our rules in a trade-off diagram called
 a
