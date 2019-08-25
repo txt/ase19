@@ -28,6 +28,21 @@ We will discuss many AI tools, including:
 - Repair algorithms, which can include contrast set learners and tabu-planners;
 - Clustering algorithms, and hierarchical clustering using recurisve random projections;
 - Incremental learning that updates its models after seeing each new example.
+- And more
+
+One of the ideas of this book is that the above are not really
+separate technologies.  Rather, if we look _down_ and _up_ we can
+find seminaries between them all the above. This means that
+we can simplify AI software by refactoring
+methods built for some of these (in order to better support the rest).
+
+- _Looking down:_ if we look inside all the above, there are common data structures and
+  sub-routines are can be reapplied across them all;
+- _Looking up:_ they above list  _what_ functions are offered by AI
+  tools, but not _why_ we are applying them. Reflecting on the those higher-level
+  _why_'s can find important refactorings and recombinations that support
+  numerous higher level goals (and in our case, those goals will be ethical, see below).
+
 
 But AI is a very broad topic, discussed in
  [so](REFS.md#norvig-2009)
