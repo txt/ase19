@@ -19,16 +19,15 @@ that affect people’s lives in such high-stakes applications such
 as mortgage lending, hiring, and prison sentencing. Many high-stake
 applications such as finance, hiring, admissions, criminal justice
 use AI decision-making frequently:
-
-- [Ladd'98](REFS.md#ladd-1998)
-- [Burrell'16](REFS.md#burrell-2016)
-- [Corbett'18](REFS.md#corbett-2018)
-- [Galindo'00](REFS.md#galindo-2000)
-- [Yan'13](REFS.md#yan-2013)
-- [Chalfin'16](REFS.md#chalfin-2016)
-- [Ajit'16](REFS.md#ajit-2016)
-- [Berk'15](REFS.md#berk-2015)
-- [Berk'16](REFS.md#berk-2016)
+ [Ladd'98](REFS.md#ladd-1998);
+ [Burrell'16](REFS.md#burrell-2016);
+ [Corbett'18](REFS.md#corbett-2018);
+ [Galindo'00](REFS.md#galindo-2000);
+ [Yan'13](REFS.md#yan-2013);
+ [Chalfin'16](REFS.md#chalfin-2016);
+ [Ajit'16](REFS.md#ajit-2016);
+ [Berk'15](REFS.md#berk-2015);
+ [Berk'16](REFS.md#berk-2016).
 
 
 Unfortunately, some of  AI tools are  known to exhibit “group
