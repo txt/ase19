@@ -291,7 +291,7 @@ models since  humans can read and understand  such models.  Rule-based learners
 like  contrast set learners and FFTrees are useful for generating such succinct
 models:
 
-<img src="../etc/img/ffteg.png" width=800>
+<img src="../etc/img/ffteg.png" width=700>
 
 - According  to [George Kelly](REFS.md#kelly-1955), humans reason about the world
 via lists of differences between things (as apposed to list of things abut each
