@@ -158,7 +158,7 @@ of ethical concerns. Note that:
 
 
 |                | Accountable|Transparent|Fairness |Rely+Safe|Inclusive|Private+Secure|
-|----------------|:-----------:|-----------|----------|----------|----------|--------------|
+|---------------:|:----------:|:---------:|:-------:|:-------:|:-------:|:------------:|
 |Accountability  |  &#10004;  |           |         |         |         |              |
 |Transparency    |            |  &#10004; |         |         |         |              |
 |Well-being<br>+ aware of misuse||        | &#10004;| &#10004;|         |              |
