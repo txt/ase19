@@ -376,6 +376,22 @@ reasoning, this frontier becomes the seed for a new round of
 reasoning.
 <br clear=both>
 
+<a href="../etc/img/pso101.png"><img align=right src="../etc/img/pso101.png" width=500></a>
+Another optimization method is particle swarm optimization which is an example
+of _social cognition_. Here, each particle is mutating a solution and those mutations
+proceed in some direction with some momentum. Each keeps a memory of what _best_ solution
+it ever found along its path. The particles' are pulled along by two "rubber bands";
+
+- &Phi;1: one "pull" towards the best solution ever seen by this particle;
+- &Phi;2: another "pull" towards the best solution ever seen by any  particle;
+
+[Usually](REFS.md#carlisle-2004), particles believe themselves twice as much as everyone else;
+i.e.  &Phi;1 = 2&Phi;2. As a result, the particles circle around looking for better and better
+solutions. A standard PSO rig is 30 particles, which run around till they stop seeing improvements
+more that &Epsilon;. 
+
+<br clear=both>
+
 #### Multi-goal Reasoning via Data Mining
 
 One of the lessons of this book is that building ethical systems is not hard. If developers really

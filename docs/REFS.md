@@ -64,6 +64,13 @@ Y. Brun and A. Meliou, “Software fairness,” ser. ESEC/FSE 18. NY, USA: ACM, 
 
 ## C
 
+### Carlisle 2004
+
+Anthony Carlisle and Gerry Dozier. (2004)
+[An off-the-shelf PSO](http://citeseerx.ist.psu.edu/viewdoc/download;jsessionid=9F059FE9543D2BC4C166B43C0C667E35?doi=10.1.1.589.485&rep=rep1&type=pdf)
+in Proceeding of Workshop on Particle Swarm Optimization},
+
+
 ### Chak 2019
 
 Joymallya Chakraborty, Tianpei Xia, Fahmid M. Fahid, Tim Menzies, 2019,
