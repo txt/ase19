@@ -134,11 +134,31 @@ can now be applied to other problems (e.g.  as discussed later in this book, how
 
 Thirdly,  we look
  at AI tools which,  recently, have had a major   impact on software
- engineering. Specifically, we will talk much about data mining
- algorithms; some about optimizers; and a little about theorem
- provers.
+ engineering practice or research.  There are many such tools including:
 
-The point of all these algorithms is _choice_. Given some data (or model generating data)
+- Cognitive pyschology; specifically, "frugral trees";
+- Data pre-processors like feature selection;
+- Classifiers like Naive Bayes and KNN (kth-nearest neighbor);
+- Neural net methods like deep learning;
+- Theorem provers like picoSAT, Z3
+- Meta-learning schemes like active learning.
+- Optimizers like sequential model-based optimization (a kind of active learning);
+- Multi-goal optimizers that can explore the trade-off between multiple goals.
+- Hyperparameter optimizers (again, like sequential model-based optimization);
+- Explanation algorithms like LIME or frugal trees;
+- Genetic algorithms;
+- Certification envelope technology such as prototype discovery and anomaly detection
+- Repair algorithms, which can include contrast set learners and tabu-planners;
+- Clustering algorithms, and hierarchical clustering using recurisve random projections;
+- Incremental learning that updates its models after seeing each new example.
+
+These tools fall three categories so:
+
+1. we will talk much about data mining algorithms; 
+2. some about optimizers; 
+3. and a little about theorem provers.
+
+The point of all the above algorithms is _choice_. Given some data (or model generating data)
 and some goals then there are many ways we use that data to achieve some, or all of those goals.
 To say that another way, we have many choices on how we put the world together:
 
@@ -157,7 +177,6 @@ energy expensive design while the right-hand-side is far less
 energy demanding.
 
 <img src="../etc/img/cellphone.png" width=500> 
-
 
 [Mendonca et al.](REFS.md#mendonca-2009) offer another
 example of exoloring choice in software engineering. 
