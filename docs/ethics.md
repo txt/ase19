@@ -162,7 +162,7 @@ adding to the stats of the class of that new row.
 New examples are classified according to what old data they are most similar too.
 For example, at right, if sepal length is 2.5, the _Virginica_ is most likely.
 - On the other hand, 
-<a href="../etc/img/knn101.png"><img align=right src="../etc/img/knn100.png" width=400></a>
+<a href="../etc/img/knn101.png"><img align=right src="../etc/img/knn101.png" width=400></a>
 KNN algorithms make conclusions by interpolating between
 the k nearest neighbors.  For example, at right, at `k=2`, the green test instance
 is more likely to be a red `default` dot.
