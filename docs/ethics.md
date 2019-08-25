@@ -366,10 +366,10 @@ Simple AI tools know how to chase a single goals (e.g. a classifier might try to
 of its predictions).  Better AI tools now how to trade off between the multiple competing
 goals of different  stakeholders.
 
-<img src="../etc/img/pareto1.png" width=500>
+<img src="../etc/img/pareto1.png" align=right width=400>
 
 One way to trade-off between competing goals are multi-goal reasoners. 
-Pareto frontiers were introduced in [Chapter 3](/about-tools#optimizers) in the section discussing
+Pareto frontiers were introduced in [tools](tools.md#top) in the section discussing
 how data miners use optimizers. Recall that, given many solutions floating in a space of multiple goals,
 the "Pareto frontier" are those solutions that are not demonstrably worse that anything else. In the figure at right,
 if we wish to maximize both the quantities, then "heaven" is top right so "_K,N_" are not on the frontier
