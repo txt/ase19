@@ -318,7 +318,7 @@ for
 
 [^simon]: Gigerenzer's thinking was  influenced by the Nobel-Prize winning economist and AI pioneer Herbert Simon.  [Simon argued](REFS.md#simon-1956) that humans do make optimizer decisions, since such optimality assumes complete knowledge about a situation.  Rather, says Simon, humans reason via "satisficing" ( a portmanteau of satisfy and suffice) in which they seek solutions good enough for the current context.
 
-<img src="../etc//img/lime.png" width=400>
+<img src="../etc/img/lime.png" align=right width=400>
 
 Another interesting approach  to explanation is to use locality reasoning.
 The  [LIME explanation algorithm](REFS.md#riberio-2016) 
