@@ -376,7 +376,7 @@ reasoning, this frontier becomes the seed for a new round of
 reasoning.
 <br clear=both>
 
-<a href="../etc/img/pso101.png"><img align=right src="../etc/img/pso101.png" width=500></a>
+<a href="../etc/img/pso101.gif"><img align=right src="../etc/img/pso101.gif" width=500></a>
 Another optimization method is particle swarm optimization which is an example
 of _social cognition_. Here, each particle is mutating a solution and those mutations
 proceed in some direction with some momentum. Each keeps a memory of what _best_ solution
