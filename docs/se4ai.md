@@ -93,7 +93,7 @@ For simplicity's sake, we draw it as steps that run left to right
 (but in reality, **AI is an agile process** where we jump around
 these steps, as required):
 
-<img src="../etc/img/9steps.png" width=600>
+<img src="../etc/img/9steps.png" width=900>
 
 We also surveyed many industrial data scientists to understand how much time they spend on different parts of this pipeline:
 
