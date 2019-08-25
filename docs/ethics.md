@@ -58,63 +58,7 @@ Developers will always try to adhere to ethical standards.  Or, at
 the very least, they should monitor their AI tools and report
 unethical usage or consequences.
 
-## Technical Choices
-
-Our point will be that, in the 21st century, the wise software
-engineering knows how  different AI tools offer different services,
-and how some of those services can achieve certain ethical goals.
-We offer fair warning to the reader versed in the standard texts
-on, say, data mining.  The technologies discussed below roam far
-away from standard discussion of (say) classification vs regression
-vs whatever else. Once we introduce ethical goals like inclusiveness
-or fairness then the technology choices become very different.
-
-The following methods are discussed above, very briefly
-(and for
-more details, see later in this book):
-
-- Cognitive pyschology; specifically, "frugral trees";
-- Data pre-processors like feature selection;
-- Classifiers like Naive Bayes and KNN (kth-nearest neighbor);
-- Neural net methods like deep learning;
-- Theorem provers like picoSAT, Z3
-- Meta-learning schemes like active learning.
-- Optimizers like sequential model-based optimization (a kind of active learning);
-- Multi-goal optimizers that can explore the trade-off between multiple goals.
-- Hyperparameter optimizers (again, like sequential model-based optimization);
-- Explanation algorithms like LIME or frugal trees;
-- Genetic algorithms;
-- Certification envelope technology such as prototype discovery and anomaly detection
-- Repair algorithms, which can include contrast set learners and tabu-planners;
-- Clustering algorithms, and hierarchical clustering using recurisve random projections;
-- Incremental learning that updates its models after seeing each new example.
-
-
-For the industrial practitioner who wishes to distinguish themselves
-within the currently crowded AI market, the above list might be a
-marketing opportunity.  By augmenting their current toolkit with
-some of the above, industrial practitioners might be able to offer
-services that is absent amongst their  rivals.
-
-For the researcher who is an advocated of a particular AI tool, the
-above list might inspire a research challenge:
-
-- First, they might seek ways  to extend their preferred AI tool
-such that it covers the more of the above services.
-- Secondly, they might scoff at this list, saying "I can do better than that". If they then went on
-to implement and evaluate their alternative, then that would be a very good thing
-(since that would give us more material for version two of this book).
-
-For us, this list is like a specification for an ideal "ethics
-machine".  Later, we offer a version 0.1  implementation
-of that ethics machine.  As will be seen, that implementation
-requires much extension  and improvement.  Nevertheless, it does
-show that a surprisingly large portion of the above can be created
-in a relatively simple manner. It is hoped that that implementation
-seeds a research community devoted to exploring algorithms with
-ethical effects.
-
-## Current Ethical Concerns
+## A Sample of Ethical Concerns
 
 The  [Institute for Electronics and Electrical
 Engineers](REFS.md#IEEEethics-2019) (IEEE) has   recently discussed
