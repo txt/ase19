@@ -9,6 +9,8 @@
 
 # Ethics
 
+<i class="fa fa-coffee"></i>
+
 The premise of this book is that AI tools offer a rich tapestry of
 choices that software engineers can weave through to a variety of
 goals (and which can include ethical goals).  This chapter offers
