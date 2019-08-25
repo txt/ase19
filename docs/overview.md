@@ -49,7 +49,11 @@ But AI is a very broad topic, discussed in
  [very](REFS.md#grus--2019)
  [many](REFS.md#duda-2000)
  [other](REFS.md#witten-2016)
- books. So what makes this book so different?
+ books. So what makes this book so different? As discussed below, our answer is
+
+- process;
+- ethically-aligned design;
+- algorithms.
 
 ## Process
 
