@@ -106,6 +106,8 @@ So we suggest to you that when you start a new AI project:
 - Your  first question should **not** be (e.g.) "what data miners should I apply to this data?".
 - Rather, it should be  "what are the ethical requirements of this development? And how can we best support those requirements?".
 
+### Ethics is a Real Problem
+
 Like it or not, ethics is now a primary design problem for AI systems,
 perhaps because of so many examples of ethical issues with AI:
 
@@ -120,6 +122,7 @@ inappropriate) scores to sentences like
 - Amazon.com stopped using automated recruiting tools after finding [anti-women bias](REFS.md#Amazon_Bias).
 
 
+### Some Ethical Principles 
 
 In response,  many high-profile organizations 
 have  discussed general principles for implementing autonomous and intelligent systems (A/IS).
