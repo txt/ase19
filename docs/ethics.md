@@ -440,6 +440,7 @@ _I(x,y) = -1/N \* ( &Sigma;(i=1 to N,  10^(w.i \* (x.i' - y.i') / N ) ) )_
   to discover what selects for the (say) 20% top scoring rows (while avoiding the rest).
 - Note that, in practice, we have seen
   this indicator measure [work well for up to 5 goals](REFS.md#sayyad-2013).
+- For source code for this, see [RowDom](http://menzies.us/fun/row.html#scoring-rows).
 
 These three examples demonstrate the value of understanding AI tools. 
 All the above refactor existing AI tools (RRP, frugal trees, contrast set learning) to achieve
@@ -451,9 +452,10 @@ better systems:
 - In the case of contrast set learner and the Zilter indicator, the resulting system is
   very easy to build.
 
-This three points are an excellent demonstrator of the main point of this book: AI tools give
-software developers more choices in how  to implement a system. 
-Developers can use those choices they can use to great benefit, including ethical benefits).
+This three points are an excellent demonstrator of the main point
+of this book: AI tools give software developers more choices in how
+to implement a system.  Developers can use those choices they can
+use to great benefit, including ethical benefits).
 
 
 ### Reliability  and Safety
