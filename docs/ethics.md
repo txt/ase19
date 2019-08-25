@@ -365,6 +365,7 @@ maximize both the quantities, then "heaven" is top right so "_K,N_"
 are not on the frontier (since there are other items between them
 and heaven). On the other hand, "A,B,C,D,E,F,G,H" are on the frontier
 since they have a clear line of sight to heaven.
+<br clear=both>
 
 <a href="../etc/img/ga101.png"><img align=right src="../etc/img/ga101.png" width=500></a>
 There are many methods for finding the Pareto frontier including
@@ -373,6 +374,7 @@ three data mining methods described below.  Once the frontier is
 found, the reasoning can stop. Alternatively, in multi-generational
 reasoning, this frontier becomes the seed for a new round of
 reasoning.
+<br clear=both>
 
 #### Multi-goal Reasoning via Data Mining
 
