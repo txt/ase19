@@ -576,8 +576,8 @@ prorotype generation.
 
 Transparencey: 
 
-    -transparent makes users of a  system aware ot the use and misue of that ssytem
-    - see explanation work [Feather'02]  [Menzies'07] [Gay'12] [Matheer'16]
+- transparent makes users of a  system aware ot the use and misue of that ssytem
+- see explanation work [Feather'02]  [Menzies'07] [Gay'12] [Matheer'16]
 
 
 ### Accountability
