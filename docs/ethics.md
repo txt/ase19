@@ -48,7 +48,7 @@ We say that, to some degree, the ethical impact of AI tools can be
 controlled by the developers building that software. We stress "to
 some degree" since the best ethical intentions of any developer can
 be defeated by  malevolent forces, or even by just dumb luck.  So
-it is wrong to say that if our guileless are followed that the
+it is wrong to say that if our guidelines are followed that the
 result AI tool will always adhere to socially-accepted ethical
 standards.
 
@@ -157,14 +157,14 @@ of ethical concerns. Note that:
   are synonyms since they both reply on "fairness and "reliability and safely".
 
 
-|                | Accountable|Transparent|Fairness |Rely+Safe|Inclusivex|Private+Secure|
-|----------------|------------|-----------|----------|----------|----------|--------------|
+|                | Accountable|Transparent|Fairness |Rely+Safe|Inclusive|Private+Secure|
+|----------------|:-----------:|-----------|----------|----------|----------|--------------|
 |Accountability  |  &#10004;  |           |         |         |         |              |
 |Transparency    |            |  &#10004; |         |         |         |              |
 |Well-being<br>+ aware of misuse||        | &#10004;| &#10004;|         |              |
 |Human-rights    |            |           | &#10004;|&#10004; |&#10004; |              |
 |Data agency     |            |           |         |         |&#10004; |   &#10004;   |
-|Effectivenessx   |   &#10004; |           |         |&#10004; |         |   &#10004;   |
+|Effectiveness   |   &#10004; |           |         |&#10004; |         |   &#10004;   |
 
 The reader might dispute this  mapping, perhaps saying  that we
 have missed, or missed out, or misrepresented, some vital ethical
