@@ -437,7 +437,7 @@ Row `x` is better than row `y` if we "lose more"
 | &Delta;`(i,w,x,y)` | =  `10^( w.i( m(x.i) - m(y.i) ) / N )`  |
 | `I(x,y)`             | = `-` &Sigma;<sub>i</sub> &Delta;`(i,w,x,y) / N` |
 
-For source code for this, see [RowDom](http://menzies.us/fun/row.html#scoring-rows.
+For source code for this, see http://menzies.us/fun/row.html#scoring-rows .
     
 Rows can be   sorted according to  how many times they are better than
   (say) `M=100` other rows (selected at random). 
