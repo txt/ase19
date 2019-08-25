@@ -420,7 +420,7 @@ In the following equation,
 `x.i` and `y.i'` are those goals normalized 0..1 for min..max. 
 Each of the "_N_" goals is weighted `w.i=-1,1` depending on whether or not we seek to minimize or maximize  it.
 
-    I(x,y) = -1/N * ( &Sigma;(i=1 to N,  10^(w.i * (x.i' - y.i') / N ) ) )
+_ I(x,y) = -1/N \* ( &Sigma;(i=1 to N,  10^(w.i \* (x.i' - y.i') / N ) ) ) _
 
 - Row `x` is better than row `y` if we "lose more"
   going `x` to `y` than going  `y` to `x`; i.e.  `I(x,y) < I(y,x)`.
