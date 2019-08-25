@@ -33,7 +33,8 @@ Sample  data mining algorithms
 
 For example, suppose we have data on hundreds of cars and we want to predict their city-cycle fuel consumption in miles per gallon. That data has the following format:
 
-| attribute | range|
+| attribute   | range     |
+|-------------|-----------|
 | mpg         | continuous |
 | cylinders   | multi-valued discrete |
 | displacement| continuous |
