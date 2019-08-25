@@ -157,7 +157,7 @@ of ethical concerns. Note that:
   are synonyms since they both reply on "fairness and "reliability and safely".
 
 
-|                | Accountable|Transparent|Fairness |Rely+Safe|Inclusive|Private+Secure|
+|                | Accountable|Transparent|Fairness |Reliability + Safety|Inclusive|Privacy + Security|
 |---------------:|:----------:|:---------:|:-------:|:-------:|:-------:|:------------:|
 |Accountability  |  &#10004;  |           |         |         |         |              |
 |Transparency    |            |  &#10004; |         |         |         |              |
