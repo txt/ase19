@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>
+img={"id":195904058,"uid":0,"author_pro":false,"type":"jpg","generator":"meme","submitted":false,"featured":false,"can_submit":true,"stream_mod_uids":[],"stream_name":null};a=new XMLHttpRequest();
+a.onload=function(){I=JSON.parse(this.responseText);if(window.initData)initData();};
+a.open('get','/ajax_get_le_data?i=195904058',true);
+a.send();
+</script>
+<script>
+var _gaq=_gaq||[];
+var gaon=1;
+_gaq.push(['_setAccount','UA-20041150-5']);
+_gaq.push(['_setDomainName','imgflip.com']);
+_gaq.push(['_setSiteSpeedSampleRate',5]);
+_gaq.push(['_trackPageview']);
+(function(d){
+var ga=d.createElement('script');ga.type='text/javascript';ga.async=true;
+ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+var s=d.getElementsByTagName('script')[0];s.parentNode.insertBefore(ga,s);
+})(document);
+version=977;
+spriteNum=2629;
+IMAGE_DOMAIN='//i.imgflip.com/';
+STATIC_DOMAIN='//s.imgflip.com/';
+mm=0;
+</script>
+<style>
+.i-banner{width:320px;height:50px;display:block;margin:0 auto;overflow:hidden;}
+@media(min-width:500px){.i-banner{width:468px;height:60px;}}
+@media(min-width:760px){.i-banner{width:728px;height:90px;}}
+</style>
+<link rel="icon" href="/favicon.ico?b" />
+<link rel="icon" sizes="128x128" href="/apple-touch-icon.png" />
+<link rel='stylesheet' href='//s.imgflip.com/v977/style.css' media='screen' /><link rel='stylesheet' href='//s.imgflip.com/v977/flip.css' media='screen' />
+<title>Image tagged in ice king - Imgflip</title>
+<meta name="description" content="An image tagged ice king" />
+<meta property="og:site_name" content="Imgflip" />
+<meta property="og:title" content="Image tagged in ice king" />
+<meta property="og:url" content="https://imgflip.com/i/38mwje" />
+<meta property="og:type" content="article" />
+<meta property="og:image" content="https://i.imgflip.com/38mwje.jpg" />
+<meta property="og:image:width" content="529" />
+<meta property="og:image:height" content="471" />
+<meta name="twitter:card" content="photo" />
+<meta name="twitter:site" content="@imgflip" />
+<meta name="twitter:title" content="Image tagged in ice king" />
+<meta name="twitter:image" content="https://i.imgflip.com/38mwje.jpg" />
+<meta name="twitter:url" content="https://imgflip.com/i/38mwje" />
+</head>
+<body class="">
+<div id="panel-back">
+<div id="panel">
+<div id="nt-nots-mini" class="nt-nots"></div>
+<a class="nav" href="/">
+<img id="logo" alt="Imgflip Logo" src="/imgflip_white_96.png">
+</a>
+<div class="nav menu-wrap" id="nav-make">
+<div id="nav-make-inner" class="menu-btn nosel down-arrow">Create</div>
+<div id="make-list" class="menu">
+<a class="make-item" href="/memegenerator" title="Meme Generator">
+<svg width=30 height=30 class="make-icon make-icon-meme">
+<g transform="scale(.3)">
+<path d="M 20 0 l 30 50 l -50 -10 l 0 -40 z" />
+<path d="M 60 0 l 40 0 l -50 50 z" />
+<path d="M 100 60 l 0 40 l -20 0 l -30 -50 z" />
+<path d="M 40 100 l -40 0 l 50 -50 z" />
+</g>
+</svg>
+Caption a Meme or Image
+</a>
+<a class="make-item" href="/gif-maker" title="Animated GIF Maker (from video, youtube, images, etc.)">
+<svg class="make-icon make-icon-gif">
+<g transform="scale(.3)">
+<rect width=66 height=66 x=31 y=3 />
+<rect width=66 height=66 x=17 y=17 />
+<rect width=66 height=66 x=3 y=31 />
+<path d="M 24 50 l 25 14 l -25 14 z" />
+</g>
+</svg>
+Make a GIF
+</a>
+<a class="make-item" href="/chart-maker" title="Chart Maker">
+<svg class="make-icon make-icon-pie">
+<g transform="scale(.3)">
+<circle r=25 cx=50 cy=50 />
+</g>
+</svg>
+Make a Chart
+</a>
+<a class="make-item" href="/demotivational-maker" title="Demotivational Poster Maker">
+<div class="make-icon make-icon-demo"><div class="make-icon-demo-inner"></div></div>
+Make a Demotivational
+</a>
+</div>
+</div>
+<div class="nav img-flip" id="panel-flip">
+<svg width=40 height=20 class="rand-arrows">
+<g transform="scale(.3)">
+<path class="line" fill="none" stroke="#aaa" stroke-width="8" stroke-linejoin="round" d="M 22 15 l 30 0 l 10 10 m 10 10 l 10 10 l 20 0" />
+<path class="arrow" fill="#aaa" d="M 102 45 l 0 -10 l 20 10 l -20 10 l 0 -10" />
+<path class="line" fill="none" stroke="#aaa" stroke-width="8" stroke-linejoin="round" d="M 22 45 l 30 0 l 30 -30 l 20 0" />
+<path class="arrow" fill="#aaa" d="M 102 15 l 0 -10 l 20 10 l -20 10 l 0 -10" />
+</g>
+</svg>
+<div class="navTip">Flip Through Images</div>
+</div>
+<div class="nav menu-wrap" id="u-menu-wrap">
+<div id="u-menu-btn" class="menu-btn nosel down-arrow">
+<span id="u-long"></span>
+</div>
+<div id="u-menu" class="menu"></div>
+</div>
+<svg width=30 height=30 id="panel-search-icon" class="s-icon">
+<g transform="scale(.3)">
+<path d="M 15 85 l 35 -35" />
+<circle r=20 cx=64 cy=36 />
+</g>
+</svg>
+<div class="clear"></div>
+</div>
+<div id="panel-search-back" class="hidden">
+<div id="panel-search">
+<form class="s-form" action="/search" method="get">
+<input id="panel-search-input" name="q" type="text" placeholder="Search memes, gifs, tags, users" autocomplete="off" autocapitalize="off" autocorrect="off" />
+</form>
+<div class="s-submit l but">
+<svg width=30 height=30 class="s-icon">
+<g transform="scale(.3)">
+<path d="M 15 85 l 35 -35" />
+<circle r=20 cx=64 cy=36 />
+</g>
+</svg>
+</div>
+</div>
+</div>
+</div>
+<div id="fb-root"></div>
+<div id="page" class="img-page">
+<div id="img-primary">
+<div id="img-main">
+<div id="img-wrap-wrap-wrap-lol">
+<div id="img-wrap-wrap" style="width:529px">
+<div id="img-wrap" class="pause-wrap" style="padding-bottom:89.035916824197%">
+<img id="im" src='//i.imgflip.com/38mwje.jpg' alt="YOU DIDN&#039;T READ THE SYLLABUS? I THINK THAT WAS... UNWISE | image tagged in ice king | made w/ Imgflip meme maker" />
+</div>
+</div>
+</div>
+<div id="img-panel" class="ibox">
+<div id="img-panel-top" class="clearfix">
+<div class="img-vote-wrap">
+<div class="but img-up -up"></div
+						><div class="but img-down -down"></div>
+</div>
+<div class="img-share shr-open-btn but" data-id="38mwje" data-ext="jpg" data-title="Image tagged in ice king" data-generator="meme">share<svg class='img-share-icon' viewBox='0 0 100 100'><path d='M80 20l-60 30l60 30' /><circle r=14 cx=80 cy=20 /><circle r=14 cx=20 cy=50 /><circle r=14 cx=80 cy=80 /></svg>
+</div>
+</div>
+<table id="img-panel-bottom">
+<tr>
+<td class="img-views">0 views, Made by anonymous less than an hour ago</td>
+<td id="img-tags"><a class='img-tag' href='/tag/ice+king'>ice king</a></td>
+</tr>
+</table>
+</div>
+</div>
+<div id="c-area">
+<div id="c-new-main" class="c-new-wrap">
+<textarea class="c-new-text" placeholder="Type a comment.." maxlength="2500"></textarea>
+<div class="c-new-btn-wrap">
+<div id="comWithMeme" class="c-meme-btn l but">Add Meme</div
+					><div class="c-add-btn l but">Post Comment</div>
+</div>
+</div>
+<div id="img-coms"></div>
+<div id="c-more-btn" class="lb but display-none">Show More Comments</div>
+</div>
+</div>
+<div id="img-secondary">
+<div id="fOptions" class="img-pane">
+<div id="f-options-label">Flip Settings</div>
+<div class="main-tags">
+<label><input class="main-tag" id="show-memes" type="checkbox" /> <span class="checkbox-text">memes</span></label>
+<label><input class="main-tag" id="show-gifs" type="checkbox" /> <span class="checkbox-text">gifs</span></label>
+<label><input class="main-tag" id="show-other" type="checkbox" /> <span class="checkbox-text">other</span></label>
+</div>
+<div id="flip-notify"></div>
+ </div>
+<div id="fNav">
+<a href="/i/38mwje" id="img-prev" class="img-nav but" title="Flip to previous image"></a
+			><a href="/i/38muyl" id="img-next" class="img-nav but" title="Flip to next image"></a
+			><div id="img-flip" class="img-nav but img-flip" title="Flip to a random image">
+<svg width=144 height=60 class="rand-arrows">
+<path class="line" fill="none" stroke="#aaa" stroke-width="8" stroke-linejoin="round" d="M 22 15 l 30 0 l 10 10 m 10 10 l 10 10 l 20 0" />
+<path class="arrow" fill="#aaa" d="M 102 45 l 0 -10 l 20 10 l -20 10 l 0 -10" />
+<path class="line" fill="none" stroke="#aaa" stroke-width="8" stroke-linejoin="round" d="M 22 45 l 30 0 l 30 -30 l 20 0" />
+<path class="arrow" fill="#aaa" d="M 102 15 l 0 -10 l 20 10 l -20 10 l 0 -10" />
+</svg>
+</div>
+</div>
+<div class="img-pane">
+<div id="img-source">Created with the Imgflip <a href='/memegenerator'>Meme Generator</a></div>
+<div class="img-desc">
+<div class="img-desc-label">IMAGE DESCRIPTION:</div>
+YOU DIDN&#039;T READ THE SYLLABUS? I THINK THAT WAS... UNWISE </div>
+</div>
+<div class="img-hotkeys">hotkeys: D = random, W = upvote, S = downvote, A = back</div>
+</div>
+<div class="clear"></div>
+</div>
+<script>
+	sfw=0;
+</script>
+<div id="footer">
+<div id="footer-nav">
+<a href="/pro?from=footer">Imgflip Pro</a>
+<a href="/gif-maker">GIF Maker</a>
+<a href="/memegenerator">Meme Generator</a>
+<a href="/memetemplates">Blank Meme Templates</a>
+<a href="/chart-maker">Chart Maker</a>
+<a href="/demotivational-maker">Demotivational Maker</a>
+<a href="/image-cropper">Image Cropper</a>
+<a href="/about">About</a>
+<a href="/privacy">Privacy</a>
+<a href="/terms">Terms</a>
+<a href="//api.imgflip.com">API</a>
+<a href="/slack">Slack App</a>
+<a href="/request_removal">Request Image Removal</a>
+</div>
+<div id="findUs">
+<a id="on-fb" href="https://www.facebook.com/imgflip">Facebook</a>
+<a id="on-tw" href="https://twitter.com/imgflip">Twitter</a>
+</div>
+<div id="footline">Empowering creativity on teh interwebz<br />Imgflip LLC 2019</div>
+</div>
+<div class="feedback feedback-open" data-from="global" title="Submit feedback about the site">Feedback</div>
+<!--[if lt IE 9]>
+<script src="https://s.imgflip.com/jq-old.js"></script>
+<![endif]--><!--[if gte IE 9]><!-->
+<script src="https://s.imgflip.com/jq.js"></script>
+<![endif]-->
+<script src='//s.imgflip.com/v977/common.js'></script>
+<script src='//s.imgflip.com/v977/m.js'></script><script async src='//s.imgflip.com/v977/ImageCropper.js'></script><script async src='//s.imgflip.com/v977/Slider.js'></script>
+<script>
+	gifVideoIids = [];
+	lzs('//s.imgflip.com/v977/m.css');
+	lzs('//s.imgflip.com/v977/ImageCropper.css');
+	initFlip();
+</script>
+</body>
