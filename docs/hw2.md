@@ -15,6 +15,9 @@ Create a class `Tbl` `Col` `Row` (and reuse `Num` from last time).
 Do not use any built-in CSV class (and definitely do not use Pandas).
 
 - `Tbl`s has many rows, which is a list of `Row`
+- Whenever a line from  some comma-separated data is added to a `Tbl`, then:
+    - It becomes a `Row` in `Tbl`
+    - And all the `Num`s in the `cols` are updated (using the code you wrote last week).
 - `Tbl`s reads _named csv_ files (\*). 
     - The first line is a list of column names
     - The other lines are data that we will read and store as `Row`s in the `Tbl`s
@@ -42,9 +45,6 @@ Details:
 - All my objects have a unique id `oid` (that's optional for you).
 - `Tbl`s hold a list of `cols` (one for each column in the `rows')
     - Every `Col` knows its column name and what `pos` it has
-- Whenever a line from the csv is added to a `Tbl`, then:
-    - It becomes a `Row` in `Tbl`
-    - And all the `Num`s in the `cols` are updated (using the code you wrote last week).
 - `Rows` keep a list of `cells` and another list called `cooked` that we won't talk about now.
 
 My code reads the above and generates a 
