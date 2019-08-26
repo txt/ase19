@@ -9,31 +9,46 @@
 
 ## Homework 2
 
-<img src="http://yuml.me/diagram/plain;dir:lr/class/[Tbl|oid|read(file); dump();]++rows-1..*[Row|oid; cells:list; cooked:list; dom = 0],[Tbl]++cols-1..*[Col],[Col|col;txt]^-[Num|oid;  hi; lo; m2; mu; n; sd; |Num1()],[Col]-[note: one Num for each column in the rows{bg:beige}s])">
+<img src="http://yuml.me/diagram/plain;dir:lr/class/[Tbl|oid|read(file); dump();]++rows-1..*[Row|oid; cells:list; cooked:list; dom = 0],[Tbl]++cols-1..*[Col],[Col|oid; col;txt]^-[Num| hi; lo; m2; mu; n; sd; |Num1()],[Num]-[note: one Num for each column in the rows{bg:orange}])">
 
-XXX no built ins
-
-Create a class `Tbl` `Col` `Row` (and reuse
-`Num` from last time). Do not use any built-in CSV class (and definitely
-do not use Pandas).
+Create a class `Tbl` `Col` `Row` (and reuse `Num` from last time).
+Do not use any built-in CSV class (and definitely do not use Pandas).
 
 - `Tbl`s has many rows, which is a list of `Row`
-- `Tbl`s read _named csv_ files (\*). 
+- `Tbl`s reads _named csv_ files (\*). 
     - The first line is a list of column names
     - The other lines are data that we will read and store as `Row`s in the `Tbl`s
+
+```
+  $cloudCover, $temp, $humid, $wind,  $playHours
+  100,         68,    80,     0,      3   
+  0,           85,    85,     0,      0
+  0,           80,    90,     10,     0
+  60,          83,    86,     0,      4
+  100,         70,    96,     0,      3
+  100,         65,    70,     20,     0
+  70,          64,    65,     15,     5
+  0,           72,    95,     0,      0
+  0,           69,    70,     0,      4
+  80,          75,    80,     0,      3
+  0,           75,    70,     18,     4
+  60,          72,    83,     15,     5
+  40,          81,    75,     0,      2
+  100,         71,    91,     15,     0
+```
+
+Details:
+
+- All my objects have a unique id `oid` (that's optional for you).
 - `Tbl`s hold a list of `cols` (one for each column in the `rows')
     - Every `Col` knows
 - Whenever a line from the csv is added to a `Tbl`, then:
     - It becomes a `Row` in `Tbl`
-    - And all the `Num`s in the `cols` are updates
+    - And all the `Num`s in the `cols` are updated (using the code you wrote last week).
 - `Rows` keep a list of `cells` and another list called `cooked` that we won't talk about now.
-- All objects have a unique id `oid`.
 
-The input to this is a named csv file, e.g.
-[weathernum](https://raw.githubusercontent.com/timm/fun/master/data/weathernum.csv).
-
-The output is a `Tbl` with a structure like this:
-
+My code reads the above and generates a 
+`Tbl` object with the following structure:
 
 ```
 t.cols
@@ -236,16 +251,11 @@ t.rows
 |  |  oid: 20
 ```
 
-As rows are added to `Tbl`
-Due 4pm Thursday.
-
-Last time, you incrementally kept stats on a column
-of numbersThis one's not hard. What we are really doing here is 
-to
-
 ## What to do:
 
-Version1: get the above example working (no error checking)
+Divide this problem into three parts:
+
+- Part1: read a file from disk (or from a string
 
 Version2: 
 - skip blank likes
