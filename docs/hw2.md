@@ -9,7 +9,7 @@
 
 ## Homework 2
 
-<img src="http://yuml.me/diagram/plain;dir:lr/class/[Tbl|oid|read(file); dump();]++rows-1..*[Row|oid; cells:list; cooked:list; dom = 0],[Tbl]++cols-1..*[Col],[Col|col,txt]^-[Num|oid;  hi; lo; m2; mu; n; sd; |Num1()],[Num]-[note: one Num for each column in the rows{bg:beige}s])">
+<img src="http://yuml.me/diagram/plain;dir:lr/class/[Tbl|oid|read(file); dump();]++rows-1..*[Row|oid; cells:list; cooked:list; dom = 0],[Tbl]++cols-1..*[Col],[Col|col;txt]^-[Num|oid;  hi; lo; m2; mu; n; sd; |Num1()],[Col]-[note: one Num for each column in the rows{bg:beige}s])">
 
 XXX no built ins
 
