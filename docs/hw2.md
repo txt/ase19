@@ -251,7 +251,6 @@ offer some code fragments you could use. For example:
 - to kill comments and whitespace, see the call below to `re.sub` (in `rows`)
 - To find our how to convert strings to etierh floats or ints, use `compiler`.
 
-
 ```python
 import re
 
@@ -297,12 +296,12 @@ def cells(src):
        oks = oks or [compiler(cell) for cell in cells]
        yield [f(cell) for f,cell in zip(oks,cells)]
 
-def main(s):
+def fromString(s)
   "putting it all together"
   for lst in cells(rows(string(s))):
-    print(lst)
-
+    yield lst
 ```
+
 ### What to Hand in
 
 - Place your code  in the `hw/2` directory.
