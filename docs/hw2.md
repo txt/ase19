@@ -9,10 +9,13 @@
 
 ## Homework 2
 
-<img src="http://yuml.me/diagram/plain;dir:lr/class/[Tbl|oid|read(file); dump();]++rows-1..*[Row|oid; cells:list; cooked:list; dom = 0],[Tbl]++cols-1..*[Num|oid; col; hi; lo; m2; mu; n; sd; txt|Num1()],[Num]-[note: one Num for each column in the rows{bg:beige}s])">
+<img src="http://yuml.me/diagram/plain;dir:lr/class/[Tbl|oid|read(file); dump();]++rows-1..*[Row|oid; cells:list; cooked:list; dom = 0],[Tbl]++cols-1..*[Col],[Col|col,txt]^-[Num|oid;  hi; lo; m2; mu; n; sd; |Num1()],[Num]-[note: one Num for each column in the rows{bg:beige}s])">
+
+XXX no built ins
 
 Create a class `Tbl` `Col` `Row` (and reuse
-`Num` from last time):
+`Num` from last time). Do not use any built-in CSV class (and definitely
+do not use Pandas).
 
 - `Tbl`s has many rows, which is a list of `Row`
 - `Tbl`s read _named csv_ files (\*). 
@@ -240,67 +243,66 @@ Last time, you incrementally kept stats on a column
 of numbersThis one's not hard. What we are really doing here is 
 to
 
+## What to do:
 
-## Tips for Python Programmers
+Version1: get the above example working (no error checking)
 
-If you are a Python programmer, the following code might
-offer some code fragments you could use. For example:
+Version2: 
+- skip blank likes
+- complain if any line is not the same size as line1 (number of cells)
+- if any cell in the data contains "?", just skip over it
+- ifa column name contains a "?", then skip over that whole columns
 
-- To read from strings, or files, or zipped files, use `strings,file,zippers`.
-- To kill leading and trailing whitespace, use `string.zipped()`
-- to kill comments and whitespace, see the call below to `re.sub` (in `rows`)
-- To find our how to convert strings to etierh floats or ints, use `compiler`.
+Example input:i
 
 ```python
-import re
+if __name__=="__main__":
+  s="""
+  $cloudCover, $temp, ?$humid, <wind,  $playHours
+  100,        68,    80,    0,    3   # comments
+  0,          85,    85,    0,    0
 
-def compiler(x):
-  "return something that can compile strings of type x"
-  try: int(x); return  int 
-  except:
-    try: float(x); return  float
-    except ValueError: return str
-
-def string(s):
-  "read lines from a string"
-  for line in s.splitlines(): yield line
-
-def file(fname):
-  "read lines from a fie"
-  with open(fname) as fs:
-      for line in fs: yield line
-
-def zipped(archive,fname):
-  "read lines from a zipped file"
-  with zipfile.ZipFile(archive) as z:
-     with z.open(fname) as f:
-        for line in f: yield line
-
-def rows(src, 
-         sep=     ",",
-         doomed = r'([\n\t\r ]|#.*)'):
-  "convert lines into lists, killing whitespace and comments"
-  for line in src:
-    line = line.strip()
-    line = re.sub(doomed, '', line)
-    if line:
-      yield line.split(sep)
-
-def cells(src):
-  "convert strings into their right types"
-  oks = None
-  for n,cells in enumerate(src):
-    if n==0:
-       yield cells
-    else:
-       oks = oks or [compiler(cell) for cell in cells]
-       yield [f(cell) for f,cell in zip(oks,cells)]
-
-def fromString(s)
-  "putting it all together"
-  for lst in cells(rows(string(s))):
-    yield lst
+  0,          80,    90,    10,   0
+  60,         83,    86,    0,    4
+  100,        70,    96,    0,    3
+  100,        65,    70,    20,   0
+  70,         64,    65,    15,   5
+  0,          72,    95,    0,    0
+  0,          69,    70,    0,    4
+  ?,          75,    80,    0,    ?
+  0,          75,    70,    18,   4
+  60,         72,
+  40,         81,    75,    0,    2
+  100,        71,    91,    15,   0
+  """
+  for lst in cells(cols(rows(string(s)))):
+    print(lst)
 ```
+
+Output (something like the following, near enough is good enough)
+
+     ['$cloudCover', '$temp', '<wind', '$playHours']
+     [100, 68, 0, 3]
+     [0, 85, 0, 0]
+     [0, 80, 10, 0]
+     [60, 83, 0, 4]
+     [100, 70, 0, 3]
+     [100, 65, 20, 0]
+     [70, 64, 15, 5]
+     [0, 72, 0, 0]
+     [0, 69, 0, 4]
+     ['?', 75, 0, '?']
+     [0, 75, 18, 4]
+     E> skipping line 14
+     [40, 81, 0, 2]
+     [100, 71, 15, 0]
+     
+## Tips for Python Programmers
+
+The following code handles the tedium of reading from disk, dividing into cells,
+converting the strings into the right type. Not handled here are `Row` and `Table` and `cols` creation:
+
+- https://gist.github.com/timm/04d138cfa8a7cb372d605a3e392d60e2
 
 ### What to Hand in
 
@@ -308,12 +310,6 @@ def fromString(s)
 - Place a text file `hw/2/out.txt` in that same directory, showing a transcript of it work.
 - Place a link to that code in http://tinv.cc/ase19give
 
-### Extras
-
-Next week, we will add some more tricks which, if you want, you could
-get a head start on how.
-
-If a coluLooking ahead
 
 
 
