@@ -257,11 +257,11 @@ Divide this problem into three parts:
 
 - Part1: read a file from disk (or from a string) into a list of lists (where all the strings are turned into numbers, where appropriate).
 - Part2: redo the above, handling some tedious special cases:
-  - skip blank likes
-  - complain if any line is not the same size as line1 (number of cells)
-  - if any cell in the data contains "?", just skip over it
-  - ifa column name contains a "?", then skip over that whole columns
-- Part3: assuming no errors, generate the structire showing above;
+  - skip blank likes;
+  - complain if any line is not the same size as line1 (number of cells);
+  - if any cell in the data contains "?", just skip over it;
+  - ifa column name contains a "?", then skip over that whole columns;
+- Part3: using the Part2 code,  generate something like the structure showing above (near enough is good enough).
 
 To test Part2, run a test case like the  following. To test Part3, write a `dump`
 method  for `Tbl` (to spit out something like the big print out
@@ -319,7 +319,9 @@ converting the strings into the right type. Not handled here are `Row` and `Tabl
 ## What to Hand in
 
 - Place your code  in the `hw/2` directory.
-- Place a text file `hw/2/out.txt` in that same directory, showing a transcript of it work.
+- Place a text file `hw/2/outpart1.txt` in that same directory, showing a transcript of Part1 (above) working.
+- Place a text file `hw/2/outpart2.txt` in that same directory, showing a transcript of Part2 (above) working.
+- Place a text file `hw/2/outpart3.txt` in that same directory, showing a transcript of Part3 (above) working.
 - Place a link to that code in http://tinv.cc/ase19give
 
 
