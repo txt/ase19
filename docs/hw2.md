@@ -322,7 +322,7 @@ converting the strings into the right type. Not handled here are `Row` and `Tabl
 - Place a text file `hw/2/outpart1.txt` in that same directory, showing a transcript of Part1 (above) working.
 - Place a text file `hw/2/outpart2.txt` in that same directory, showing a transcript of Part2 (above) working.
 - Place a text file `hw/2/outpart3.txt` in that same directory, showing a transcript of Part3 (above) working.
-- Place a link to that code in http://tinv.cc/ase19give
+- Place a link to that code in http://tiny.cc/ase19give
 
 
 
