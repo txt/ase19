@@ -9,7 +9,7 @@
 
 ## Homework 2
 
-<img src="http://yuml.me/diagram/plain;dir:lr/class/[Tbl]++rows-1..*[Row|cells;cooked;dom = 0],[Tbl]++cols-1..*[Num||Num1()]">
+<img src="http://yuml.me/diagram/plain;dir:lr/class/[Tbl]++rows-1..*[Row|cells;cooked;dom = 0],[Tbl]++cols-1..*[Num||Num1()],[Num]-(note: one Num for column in the rows{bg:beige})" >">
 
 Create a class `Tbl` and `Row`:
 
