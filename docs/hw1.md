@@ -35,7 +35,7 @@ coding help from lecturer/tutor. Otherwise, you are on your own.
 
 - Place your code  in the `hw/1` directory.
 - Place a text file `hw/1/out.txt` in that same directory, showing a transcript of it work.
-- Place a link to that code in http://tinv.cc/ase19give
+- Place a link to that code in http://tiny.cc/ase19give
 
 ### What to do
 
