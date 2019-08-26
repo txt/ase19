@@ -41,7 +41,7 @@ Details:
 
 - All my objects have a unique id `oid` (that's optional for you).
 - `Tbl`s hold a list of `cols` (one for each column in the `rows')
-    - Every `Col` knows
+    - Every `Col` knows its column name and what `pos` it has
 - Whenever a line from the csv is added to a `Tbl`, then:
     - It becomes a `Row` in `Tbl`
     - And all the `Num`s in the `cols` are updated (using the code you wrote last week).
@@ -316,7 +316,7 @@ converting the strings into the right type. Not handled here are `Row` and `Tabl
 
 - https://gist.github.com/timm/04d138cfa8a7cb372d605a3e392d60e2
 
-### What to Hand in
+## What to Hand in
 
 - Place your code  in the `hw/2` directory.
 - Place a text file `hw/2/out.txt` in that same directory, showing a transcript of it work.
