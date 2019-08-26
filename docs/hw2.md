@@ -9,9 +9,17 @@
 
 ## Homework 2
 
-<img src="http://yuml.me/diagram/plain;dir:lr/class/[Tbl]++-1..*[Row|cells;cooked;dom = 0],[Row]-uses-[Col||Col1()]">
+<img src="http://yuml.me/diagram/plain;dir:lr/class/[Tbl]++rows-1..*[Row|cells;cooked;dom = 0],[Tbl]++-cols-1..*[Num||Num1()]">
 
+Create a class `Tbl` and `Row`:
 
+- `Tbl`s has many rows, which is a list of `Row`
+- `Tbl`s read _named csv_ files (\*). 
+    - The first line is a list of column names
+    - The other lines are data that we will read and store as `Row`s in the `Tbl`s
+- `Tbl`s hold a list of `cols`
+
+As rows are added to `Tbl`
 Due 4pm Thursday.
 
 Last time, you incrementally kept stats on a column
