@@ -28,7 +28,7 @@ The input to this is a named csv file, e.g.
 The output is a `Tbl` with a structure like this:
 
 
-#--- tblok -----------------------
+```
 t.cols
 |  1
 |  |  add: Num1
@@ -85,20 +85,6 @@ t.cols
 |  |  oid: 6
 |  |  sd: 2.02864
 |  |  txt: $playHours
-t.my
-|  class: 5
-|  nums
-|  |  1
-|  |  2
-|  |  3
-|  |  4
-|  |  5
-|  xs
-|  |  1
-|  |  2
-|  |  3
-|  |  4
-|  |  5
 t.oid: 1
 t.rows
 |  1
@@ -241,7 +227,7 @@ t.rows
 |  |  cooked
 |  |  dom: 0
 |  |  oid: 20
-
+```
 
 As rows are added to `Tbl`
 Due 4pm Thursday.
