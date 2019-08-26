@@ -11,16 +11,20 @@
 
 <img src="http://yuml.me/diagram/plain;dir:lr/class/[Tbl|oid|read(file); dump();]++rows-1..*[Row|oid; cells:list; cooked:list; dom = 0],[Tbl]++cols-1..*[Num|oid; col; hi; lo; m2; mu; n; sd; txt|Num1()],[Num]-[note: one Num for each column in the rows{bg:beige}s])">
 
-Create a class `Tbl` and `Row`:
+Create a class `Tbl` `Col` `Row` (and reuse
+`Num` from last time):
 
 - `Tbl`s has many rows, which is a list of `Row`
 - `Tbl`s read _named csv_ files (\*). 
     - The first line is a list of column names
     - The other lines are data that we will read and store as `Row`s in the `Tbl`s
 - `Tbl`s hold a list of `cols` (one for each column in the `rows')
+    - Every `Col` knows
 - Whenever a line from the csv is added to a `Tbl`, then:
     - It becomes a `Row` in `Tbl`
     - And all the `Num`s in the `cols` are updates
+- `Rows` keep a list of `cells` and another list called `cooked` that we won't talk about now.
+- All objects have a unique id `oid`.
 
 The input to this is a named csv file, e.g.
 [weathernum](https://raw.githubusercontent.com/timm/fun/master/data/weathernum.csv).
@@ -237,12 +241,96 @@ of numbersThis one's not hard. What we are really doing here is
 to
 
 
+## Tips for Python Programmers
+
+If you are a Python programmer, the following code might
+offer some code fragments you could use. For example:
+
+- To read from strings, or files, or zipped files, use `strings,file,zippers`.
+- To kill leading and trailing whitespace, use `string.zipped()`
+- to kill comments and whitespace, see the call below to `re.sub` (in `rows`)
+- To find our how to convert strings to etierh floats or ints, use `compiler`.
+
+
+```python
+import re
+
+def compiler(x):
+  "return something that can compile strings of type x"
+  try: int(x); return  int 
+  except:
+    try: float(x); return  float
+    except ValueError: return str
+
+def string(s):
+  "read lines from a string"
+  for line in s.splitlines(): yield line
+
+def file(fname):
+  "read lines from a fie"
+  with open(fname) as fs:
+      for line in fs: yield line
+
+def zipped(archive,fname):
+  "read lines from a zipped file"
+  with zipfile.ZipFile(archive) as z:
+     with z.open(fname) as f:
+        for line in f: yield line
+
+def rows(src, 
+         sep=     ",",
+         doomed = r'([\n\t\r ]|#.*)'):
+  "convert lines into lists, killing whitespace and comments"
+  for line in src:
+    line = line.strip()
+    line = re.sub(doomed, '', line)
+    if line:
+      yield line.split(sep)
+
+def cells(src):
+  "convert strings into their right types"
+  oks = None
+  for n,cells in enumerate(src):
+    if n==0:
+       yield cells
+    else:
+       oks = oks or [compiler(cell) for cell in cells]
+       yield [f(cell) for f,cell in zip(oks,cells)]
+
+if __name__=="__main__":
+  s="""
+  $cloudCover, $temp, $humid, $wind,  $playHours
+  100,        68,    80,    0,    3          # comments
+  0,          85,    85,    0,    0
+  0,          80,    90,    10,   0
+  60,         83,    86,    0,    4
+  100,        70,    96,    0,    3
+  100,        65,    70,    20,   0
+  70,         64,    65,    15,   5
+  0,          72,    95,    0,    0
+  0,          69,    70,    0,    4
+  100,        75,    80,    0,    3
+  0,          75,    70,    18,   4
+  60,         72,    90,    10,   4
+  40,         81,    75,    0,    5
+  100,        71,    91,    15,   0
+  """
+  for lst in cells(rows(string(s))):
+    print(lst)
+
+```
 ### What to Hand in
 
 - Place your code  in the `hw/2` directory.
 - Place a text file `hw/2/out.txt` in that same directory, showing a transcript of it work.
 - Place a link to that code in http://tinv.cc/ase19give
 
-### What to do
+### Extras
+
+Next week, we will add some more tricks which, if you want, you could
+get a head start on how.
+
+If a coluLooking ahead
+
 
 
