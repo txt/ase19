@@ -118,6 +118,30 @@ _only_ talk about training. Hence, if we are going to talk SE for
 AI, there is a pressing need to discuss all the work that fills up
 the other four days of the week.
 
+## SE Needs Special Kinds of AI
+
+Another reason to study SE for AI is that standard AI methods may not work as expected for SE.
+We've been applying SE tools to AI for decades now are there are some strange results suggesting that SE needs its own
+special kinds of AI:
+
+- One repeated results is the keys effect; i.e. controlling a very small number of variables is enough
+to control all the rest.
+- This means that AI for SE can be done via _carving_; i.e. throw away the stuff that does not matter and just reason about the rest
+
+There a re some good reasons for this.:
+
+- One thing to note that is software does not correspond to the mathematical definition of a function; i.e. outputs determined by some input.
+In pratice, one piece of software has many if-statemebts which means that the whole state space of the system divides into thousands to millions of tiny pieces,
+each with their own properites. So  to Better AI
+- Another thing is [naturalness](REFS.md@hindle-2012). Software is written ina language. Languages have use a few repeated structures that with high frequency,
+ and many more structures with much lower frequency. This changes the nature of the analysis since just a few things cover the most of the mass of possibilities.
+- Because of the other two points, or perhaps because of them, software's internal behavior clumps. Software does not spent all its time roaming over
+  all its internal state space. Rather, there are a few things that happen nearly all the time and many things that happen rarely. One result
+of this is (e.g.) bugs cluster such that most of the bugs are found in a  very small part of the code.
+
+All the above changes the nature of how we analyse software, of how we apply AI to SE and how SE can inform the process of building and use AI software. 
+
+Want more details? Then read on!
 
 
 

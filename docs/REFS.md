@@ -214,6 +214,12 @@ applications." ACM Comput. Surv. 45, 1, Article 11 (December 2012),
 
 Hall, Mark & Holmes, Geoffrey. (2003). Benchmarking Attribute Selection Techniques for Discrete Class Data Mining. Knowledge and Data Engineering, IEEE Transactions on. 15. 1437- 1447. 10.1109/TKDE.2003.1245283. 
 
+### Hindle 2012
+
+
+Abram Hindle, Earl T. Barr, Zhendong Su, Mark Gabel, and Premkumar Devanbu. 2012. On the naturalness of software. In Proceedings of the 34th International Conference on Software Engineering (ICSE '12). IEEE Press, Piscataway, NJ, USA, 837-847.
+
+
 ## I
 
 ### IEEEethics 2019
