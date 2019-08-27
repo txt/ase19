@@ -87,20 +87,31 @@ offer their own principles for AI:
 - _Privacy & Security_: AI systems should be secure and respect privacy
 - _Accountability_: AI systems should have algorithmic accountability
 
+Another statement of required ethics from AI systems comes from the [European Union](REFS.md#euroethics-2018):
+
+
+- _Human agency and oversight:_ AI systems should empower human beings, allowing them to make informed decisions and fostering their fundamental rights. At the same time, proper oversight mechanisms need to be ensured, which can be achieved through human-in-the-loop, human-on-the-loop, and human-in-command approaches
+- _Technical Robustness and safety:_ AI systems need to be resilient and secure. They need to be safe, ensuring a fall back plan in case something goes wrong, as well as being accurate, reliable and reproducible. That is the only way to ensure that also unintentional harm can be minimized and prevented.
+- _Privacy and data governance:_ besides ensuring full respect for privacy and data protection, adequate data governance mechanisms must also be ensured, taking into account the quality and integrity of the data, and ensuring legitimised access to data.
+- _Transparency:_ the data, system and AI business models should be transparent. AI systems and their decisions should be explained in a manner adapted to the stakeholder concerned. Humans need to be aware that they are interacting with an AI system, and must be informed of the system’s capabilities and limitations.
+- _Diversity, non-discrimination and fairness:_ Unfair bias must be avoided, as it could could have multiple negative implications, from the marginalization of vulnerable groups, to the exacerbation of prejudice and discrimination. Fostering diversity, AI systems should be accessible to all, regardless of any disability, and involve relevant stakeholders throughout their entire life circle.
+- _Societal and environmental well-being:_ AI systems should benefit all human beings, including future generations. It must hence be ensured that they are sustainable and environmentally friendly. Moreover, they should take into account the environment, including other living beings, and their social and societal impact should be carefully considered. 
+- _Accountability:_Mechanisms should be put in place to ensure responsibility and accountability for AI systems and their outcomes. Auditability, which enables the assessment of algorithms, data and design processes plays a key role therein, especially in critical applications. Moreover, adequate an accessible redress should be ensured.
+
 Ethics is a rapidly evolving concept so it hardly surprising to say
 that mapping the stated ethical concerns of one organization
-(Microsoft) into another (IEEE) is not easy.  Nevertheless, the
-following table shows one way we might map together these two sets
+into another is not easy.  Nevertheless, the
+following tables shows one way we might map together these three sets
 of ethical concerns. Note that:
 
-- "accountability" and "transparency"  appear in both the IEEE and Microsoft lists. Clearly these
+- "accountability" and "transparency"  appear in all three statements.  Clearly these
   are concerns shared by many people.
-- Missing from the Microsoft list is "effectiveness" but
-  we would argue that what IEEE calls "effectiveness" can be expressed
-  in terms of other Microsoft terms (see below).
+- Missing from the Microsoft list is "effectiveness". Maybe Microsoft always assumes that their software is always effective?
 - Assessed in terms of the Microsoft terminology, the IEEE goals or "well-being" and "awareness of misuse"
   are synonyms since they both reply on "fairness and "reliability and safely".
 
+
+Here's _IEEE_ in the rows and  _Microsoft_ (in the columns):
 
 |                | Accountable|Transparent|Fairness |Reliability + Safety|Inclusive|Privacy + Security|
 |---------------:|:----------:|:---------:|:-------:|:-------:|:-------:|:------------:|
@@ -110,6 +121,19 @@ of ethical concerns. Note that:
 |Human-rights    |            |           | &#10004;|&#10004; |&#10004; |              |
 |Data agency     |            |           |         |         |&#10004; |   &#10004;   |
 |Effectiveness   |   &#10004; |           |         |&#10004; |         |   &#10004;   |
+
+
+Here's _IEEE_ in the rows and  the _EU_ (in the columns):
+
+|                | Accountability|Transparency|Human agency + oversight|Technical robustness + safety|Privacy + data governance |Diversity, no-discrimination + fairness|Societal + environmental wellbeing|
+|---------------:|:-------------:|:----------:|:----------------------:|:---------------------------:|:------------------------:|:-------------------------------------:|:--------------------------------:|
+|Accountability  |  &#10004;     |            |                        |                             |                          |      &#10004;                         |                                  |
+|Transparency    |               |  &#10004;  |                        |                             |                          |                                       |                                  |
+|Well-being<br>+ aware of misuse||            |                        |                             |                          |                                       |      &#10004;                    |
+|Human-rights    |               |            |      &#10004;          |                             |                          |                                       |                                  |
+|Data agency     |               |            |                        |                             |       &#10004;           |                                       |                                  |
+|Effectiveness   |  &#10004;     |            |                        |    &#10004;                 |                          |                                       |                                  |
+
 
 The reader might dispute this  mapping, perhaps saying  that we
 have missed, or missed out, or misrepresented, some vital ethical
