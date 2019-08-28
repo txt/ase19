@@ -132,9 +132,14 @@ each with their own properites.
      - Which means that when (e.g.) optimizing, then rule-based methods (that divide their knowledge
        into multiple regions) [can do better](https://www.umsec.umn.edu/sites/www.umsec.umn.edu/files/10tar3.pdf) than numeric optimizers (that tend to reason about the
        program as one global space).
-- Another thing is [naturalness](REFS.md@hindle-2012). Software is written in a language. Languages have use a few repeated structures that with high frequency,
- and many more structures with much lower frequency. This changes the nature of the analysis since just a few things cover the most of the mass of possibilities.
-- Because of the other two points, or perhaps because of them, software's internal behavior clumps. Software does not spent all its time roaming over
+- Another 
+<a href="https://scx2.b-cdn.net/gfx/news/hires/2008/zipfslaw.gif"><img 
+src="https://scx2.b-cdn.net/gfx/news/hires/2008/zipfslaw.gif" align=right width=500></a>
+thing is [naturalness](REFS.md@hindle-2012). Software is written in a language. Languages have use a few repeated structures that [occur with high frequency, and many more structures with much lower frequency](https://phys.org/news/2008-12-linux-evolution-reveals-curious-mathematical.html). This changes the nature of the analysis since just a few things cover the most of the mass of possibilities.
+<br clear=both>
+- Because 
+<a href="../etc/img/bugs.png"><img src="../etc/img/bugs.png" align=right width=400></a>
+of the other two points, or perhaps because of them, software's internal behavior clumps. Software does not spent all its time roaming over
   all its internal state space. Rather, there are a few things that happen nearly all the time and many things that happen rarely. One result
 of this is (e.g.) bugs cluster such that most of the bugs are found in a  very small part of the code.
 
