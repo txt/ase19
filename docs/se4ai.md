@@ -129,6 +129,9 @@ There are some good reasons for this.:
 - Strange to say, software does not correspond to the mathematical definition of a function; i.e. outputs determined by some input.
      - In pratice, one piece of software has many if-statemebts which means that the whole state space of the system divides into thousands to millions of tiny pieces,
 each with their own properites. 
+     - Which means that when (e.g.) optimizing, then rule-based methods (that divide their knowledge
+       into multiple regions) [can do better](https://www.umsec.umn.edu/sites/www.umsec.umn.edu/files/10tar3.pdf) than numeric optimizers (that tend to reason about the
+       program as one global space).
 - Another thing is [naturalness](REFS.md@hindle-2012). Software is written in a language. Languages have use a few repeated structures that with high frequency,
  and many more structures with much lower frequency. This changes the nature of the analysis since just a few things cover the most of the mass of possibilities.
 - Because of the other two points, or perhaps because of them, software's internal behavior clumps. Software does not spent all its time roaming over
