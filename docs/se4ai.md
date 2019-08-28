@@ -134,7 +134,7 @@ each with their own properites.
        program as one global space).
 - Another 
 <a href="https://scx2.b-cdn.net/gfx/news/hires/2008/zipfslaw.gif"><img 
-src="https://scx2.b-cdn.net/gfx/news/hires/2008/zipfslaw.gif" align=right width=500></a>
+src="https://scx2.b-cdn.net/gfx/news/hires/2008/zipfslaw.gif" align=right width=400></a>
 thing is [naturalness](REFS.md@hindle-2012). Software is written in a language. Languages have use a few repeated structures that [occur with high frequency, and many more structures with much lower frequency](https://phys.org/news/2008-12-linux-evolution-reveals-curious-mathematical.html). This changes the nature of the analysis since just a few things cover the most of the mass of possibilities.
 <br clear=both>
 - Because 
