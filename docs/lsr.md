@@ -152,8 +152,11 @@ variance(num_friends)	 81
 standard_deviation(num_friends)	9.0
 covariance(num_friends, daily_minutes)	22.425435139573054
 correlation(num_friends, daily_minutes)	0.24819811705923378
-correlation(num_friends_good, daily_minutes_good)	0.5681114021304511
 alpha beta	(23.84486298346584, 0.8864062515241665)
 ```
 
+That is, for the above data
+
+- y =  0.88x + 23.8
+- and the correlation is 0.25 (which is barely correlated at all).
 
