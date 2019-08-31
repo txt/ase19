@@ -9,7 +9,8 @@
 
 #  LSR = Least Squares Regression
 
-<em>(This page uses materials from Joel Gruz's excellent book [Data Mining from Scratch](https://www.amazon.com/Data-Science-Scratch-Principles-Python/dp/1492041130/ref=pd_lpo_sbs_14_img_0?_encoding=UTF8&psc=1&refRID=W67Z8NPY8A1TSNYWG03N).</em>
+<em>(Please note that this page uses materials from Joel Gruz's excellent book [Data Mining from Scratch](https://www.amazon.com/Data-Science-Scratch-Principles-Python/dp/1492041130/ref=pd_lpo_sbs_14_img_0?_encoding=UTF8&psc=1&refRID=W67Z8NPY8A1TSNYWG03N). Also, if there is anything missing from the following code,
+please see the [raw source code](../src/lsr.py). )</em>
 
 One of the most basic data mining algorithms is least squares
 regression.  This algorithm tries to fit a straight line to a set
@@ -17,6 +18,12 @@ of points. The best line is the one that reduces the square of the
 distance between the predicted and actual values.
 
 <img src="../etc/img/lsr101.png" width=500>
+
+LSR is described below, first in its simplest 2-dimensional form and then we handle the general N-dimensional case.
+When we get to the general case, a stochastic gradient descent (SDG) method will be used to optimize the &beta; parameters of equations like
+_y=&alpha;+&beta;<sub>1</sub>x<sub>1</sub>+&beta;<sub>2</sub>x<sub>2</sub>+&beta;<sub>3</sub>x<sub>3</sub>+ ..._ (and in this case "optimize"
+means "guess &beta; values in order to reduce the prediction errro".
+SDG is a perfect illustration of one of the main points of this book; i.e. that optimize and data mining and really very tightly connected.
 
 ## Simple Regression (y= &alpha; + &beta;x)
 
@@ -185,15 +192,10 @@ Then we do some gradient descent. This is like sking, when you are drunk.
 In this approach, to get to the bottom of a hill:
 
 - Stand anywhere
-- Jump out and back, in a random direction, several times
-- Afterwards, At every point, you jump around in radlook at the slope and head down the direction That is, we offer a function that is the derivative  of a multi-regression function:
+- Lean over to every other point and write down the slope between you and them
+- Move yourself along the average slope.
 
-def squared_error_gradients(x_i, y_i, beta):
-    """the gradient corresponding to the ith squared error term. 
-       Derived via calculus applied to squared_errors."""
-    return [-2 * x_ij * errors(x_i, y_i, beta)
-            for x_ij in x_i]
-
+```python
 def estimate_beta(x, y):
     beta_initial = [random.random() for x_i in x[0]]
     return minimize_stochastic(squared_errors,
@@ -201,9 +203,20 @@ def estimate_beta(x, y):
                                x, y,
                                beta_initial,
                                0.001)
+
+def squared_error_gradients(x_i, y_i, beta):
+    """the gradient corresponding to the ith squared error term. 
+       Derived via calculus applied to squared_errors."""
+    return [-2 * x_ij * errors(x_i, y_i, beta)
+            for x_ij in x_i]
+
 ```
 
 \[30.619881701311712, 0.9702056472470465, -1.8671913880379478, 0.9163711597955347\]
 
 ie y= 30.62 + 0.97*x<sub>1</sub> - 1.87x<sub>2</sub> + 0.92x<sub>3</sub>
 
+## Real-world Stochastic Descent
+
+Moving on from the toy code shown above, if we look at the LSR packages seen in real-world data mining software, we seen much more sophisticated
+gradient descent tools. For example, XXX
