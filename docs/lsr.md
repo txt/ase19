@@ -293,6 +293,10 @@ algorithm take a  step proportional to the negative of the gradient (or approxim
   - The benefit of making those assumptions is that, using those assumptions, certain calculations are fast to compute;
   - But if the data does not correspond to those assumptions, then the resulting core fit will be very poor.
 
+Also, gradient descent (gradient ascent) methods can get trapped by _local optiima_ .  In most real-world situations, we have many peaks and many valleys, which causes such methods to fail, as they suffer from an inherent tendency of getting stuck at the local optima:
+
+<img src="https://www.tutorialspoint.com/genetic_algorithms/images/ga_motivation.jpg" width=600>
+
 Later in this book we will discuss optimizer that make far fewer assumptions about the function they are exploring.
 
 ```python
