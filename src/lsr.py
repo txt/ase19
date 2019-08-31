@@ -79,6 +79,54 @@ daily_minutes_good = [x
                       for i, x in enumerate(daily_minutes)
                       if i != outlier]
 
+def squared_error(x_i, y_i, theta):
+    alpha, beta = theta
+    return error(alpha, beta, x_i, y_i) ** 2
+
+def squared_error_gradient(x_i, y_i, theta):
+    alpha, beta = theta
+    return [-2 * error(alpha, beta, x_i, y_i),       # alpha partial derivative
+            -2 * error(alpha, beta, x_i, y_i) * x_i] # beta partial derivative
+
+def in_random_order(data):
+    indexes = [i for i, _ in enumerate(data)]  # create a list of indexes
+    random.shuffle(indexes)                    # shuffle them
+    for i in indexes:                          # return the data in that order
+        yield data[i]
+
+def vector_subtract(v, w):
+    return [v_i - w_i for v_i, w_i in zip(v,w)]
+
+def scalar_multiply(c, v):
+    return [c * v_i for v_i in v]
+
+def minimize_stochastic(target_fn, gradient_fn, x, y, theta_0, alpha_0=0.01):
+    data = list(zip(x, y))
+    theta = theta_0                             # initial guess
+    alpha = alpha_0                             # initial step size
+    min_theta, min_value = None, float("inf")   # the minimum so far
+    iterations_with_no_improvement = 0
+    # if we ever go 100 iterations with no improvement, stop
+    while iterations_with_no_improvement < 100:
+        value = sum( target_fn(x_i, y_i, theta) for x_i, y_i in data )
+        if value < min_value:
+            # if we've found a new minimum, remember it
+            # and go back to the original step size
+            min_theta, min_value = theta, value
+            iterations_with_no_improvement = 0
+            alpha = alpha_0
+        else:
+            # otherwise we're not improving, so try shrinking the step size
+            iterations_with_no_improvement += 1
+            alpha *= 0.9
+
+        # and take a gradient step for each of the data points
+        for x_i, y_i in in_random_order(data):
+            gradient_i = gradient_fn(x_i, y_i, theta)
+            theta = vector_subtract(theta, scalar_multiply(alpha, gradient_i))
+    return min_theta
+
+
 if __name__ == "__main__":
   random.seed(1)
   print(len(num_friends))
@@ -93,5 +141,14 @@ if __name__ == "__main__":
     r = random.random
     num_fir = [ (r() if r() < f else i)  for i in num_friends]
     print(dict(f=f, r=correlation(num_friends, num_fir), ab=least_squares_fit(num_friends, num_fir)))
+  random.seed(0)
+  theta = [random.random(), random.random()]
+  alpha, beta = minimize_stochastic(squared_error,
+                                    squared_error_gradient,
+                                    num_friends,
+                                    daily_minutes,
+                                    theta,
+                                    0.0001)
+  print("ab1",alpha,beta)
 
 

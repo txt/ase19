@@ -9,12 +9,16 @@
 
 #  LSR = Least Squares Regression
 
+<em>(This page uses materials from Joel Gruz's excellent book [Data Mining from Scratch](https://www.amazon.com/Data-Science-Scratch-Principles-Python/dp/1492041130/ref=pd_lpo_sbs_14_img_0?_encoding=UTF8&psc=1&refRID=W67Z8NPY8A1TSNYWG03N).</em>
+
 One of the most basic data mining algorithms is least squares
 regression.  This algorithm tries to fit a straight line to a set
 of points. The best line is the one that reduces the square of the
 distance between the predicted and actual values.
 
 <img src="../etc/img/lsr101.png" width=500>
+
+## Simple Regression (y= &alpha; + &beta;x)
 
 First, we'll do the simple case
 
@@ -64,9 +68,9 @@ def dot(v, w)        : return sum(v_i * w_i for v_i, w_i in zip(v, w))
 Correlation is a  number that varies 
 
 - -1 to 0 to 1 ;
-- where -1 means perfectly negatively associated;
-- and 0 means random connection;
-- and 1 means perfectly associated.
+- where -1 means perfectly linearly negatively associated;
+- and 0 means no linear connection;
+- and 1 means    perfectly linearly positively associated.
 
 <img src="../etc/img/corr101.png" width=700 allign=center> 
 
@@ -161,3 +165,10 @@ That is, for the above data
 - and the correlation is 0.25 (which is barely correlated at all).
 
 
+## Multiple Regression (y= &alpha;  &beta;<sub>1</sub>x<sub>1</sub> + &beta;<sub>2</sub>x<sub>2</sub> + &beta;<sub>3</sub>x<sub>3</sub> +  ...)
+
+To handle this, we need a vector for 
+the `x`s values and the
+&beta;s : 
+
+- \[ &alpha;, &beta;<sub>1</sub>x<sub>1</sub>, &beta;<sub>2</sub>x<sub>2</sub>,  &beta;<sub>3</sub>x<sub>3</sub>,  \]
