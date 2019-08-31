@@ -142,6 +142,7 @@ if __name__ == '__main__':
         covariance(num_friends, daily_minutes))
   print("correlation(num_friends, daily_minutes)",
         correlation(num_friends, daily_minutes))
+  print("alpha beta", least_squares_fit(num_friends, daily_minutes)) 
 ```
 
 The output is:
@@ -152,6 +153,7 @@ standard_deviation(num_friends)	9.0
 covariance(num_friends, daily_minutes)	22.425435139573054
 correlation(num_friends, daily_minutes)	0.24819811705923378
 correlation(num_friends_good, daily_minutes_good)	0.5681114021304511
+alpha beta	(23.84486298346584, 0.8864062515241665)
 ```
 
 

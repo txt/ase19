@@ -91,4 +91,5 @@ if __name__ == "__main__":
         correlation(num_friends, daily_minutes))
   print("correlation(num_friends_good, daily_minutes_good)",
         correlation(num_friends_good, daily_minutes_good))
-
+  alpha, beta = least_squares_fit(num_friends_good, daily_minutes_good)
+  print("ab",alpha,beta)
