@@ -172,3 +172,38 @@ the `x`s values and the
 &beta;s : 
 
 - \[ &alpha;, &beta;<sub>1</sub>x<sub>1</sub>, &beta;<sub>2</sub>x<sub>2</sub>,  &beta;<sub>3</sub>x<sub>3</sub>,  \]
+
+which we can use in the following functions to find predictions, errors, and squared errors (in a manner similar to the above). 
+
+```python
+def predicts(x_i, beta)           : return dot(x_i, beta)
+def errors(x_i, y_i, beta)        : return y_i - predicts(x_i, beta)
+def squared_errors(x_i, y_i, beta): return errors(x_i, y_i, beta) ** 2
+```
+
+Then we do some gradient descent. This is like sking, when you are drunk. 
+In this approach, to get to the bottom of a hill:
+
+- Stand anywhere
+- Jump out and back, in a random direction, several times
+- Afterwards, At every point, you jump around in radlook at the slope and head down the direction That is, we offer a function that is the derivative  of a multi-regression function:
+
+def squared_error_gradients(x_i, y_i, beta):
+    """the gradient corresponding to the ith squared error term. 
+       Derived via calculus applied to squared_errors."""
+    return [-2 * x_ij * errors(x_i, y_i, beta)
+            for x_ij in x_i]
+
+def estimate_beta(x, y):
+    beta_initial = [random.random() for x_i in x[0]]
+    return minimize_stochastic(squared_errors,
+                               squared_error_gradients,
+                               x, y,
+                               beta_initial,
+                               0.001)
+```
+
+\[30.619881701311712, 0.9702056472470465, -1.8671913880379478, 0.9163711597955347\]
+
+ie y= 30.62 + 0.97*x<sub>1</sub> - 1.87x<sub>2</sub> + 0.92x<sub>3</sub>
+
