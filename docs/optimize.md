@@ -65,6 +65,16 @@ As to the jiggling:
 - If any of the bugs get lucky, and learn how to handle more antibiotics, those bugs move into a new band (where there is less competition for food).  Hence, the new band gets full of bugs
   that can better handle that higher level of antibiotic.
 
+One important aspect of the above video, that might not be
+immediately apparent, is that bacteria from both sides the video
+<em>arrive in the middle at about the same time</em>. That is:
+
+-  Even though
+every little part of the above seen random and unreliable...
+-  The whole
+process is  not. Randomly jiggling and selecting things has some
+emergent stable properties (better bugs are found) and that this
+whole process is a repeatable, trustable, reliable effect.
 
 <img src="../etc/img/eukprok.png" width=400 align=right>
 (Just so you know, everything that is alive and big enough to be
@@ -161,7 +171,20 @@ def optimize(f       = model1,
 Note the `select` step in the above (we keep the `best` smallest values). This
 is used to train a new distribution, which sets us up for more `jiggling`, and so on.
 
+Note also the `budget` variable. While the above `model1` and `model2` are very fast t run,
+in the general case, running the model to evaluate a candidate solution is usaully very expensive.
+Hence, clever optimizers strive the minimize the  budget required to find solutions.
 
+- _Sequenetial model optimizers_ run a  data miner in parallel with the optimizer.
+  - First, we geenrate a large numher of _xs_ candidates.
+  - Using some evalaution function _f_, we  evaluated some small subset _xs[:n]_) to generate _n_ sets of _ys_ results 
+    (so _ys[i] = f(xs[i]_ for _i &lt n_).
+  - Next, using  a data miner (e.g. least squares regression, decision trees, whatver), we build a model M from _xs[:n],ys[:n]_. 
+  - Using that model we quickly make approximate guesses _ys[n:]_ about the remaining candidates _xs[n:]_
+    (so _ys[i] = M(xs[i](_ for _i &ge n_).
+
+
+AfA data miner learnes a model from `<xs,ys>`.  Dat seen so far 
 
 - 
 
