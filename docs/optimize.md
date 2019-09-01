@@ -9,8 +9,8 @@
 
 
 
-The two standard algorithms everyone beginning data mining and optimizer persons uses
-are LSR and NSGA-II.
+The two standard algorithms used by every beginning data mining and optimizer person is
+LSR and NSGA-II.
 
 LSR was discussed [before](lsr.md). Here, we introduce optimizing and NSGA-II.
 
