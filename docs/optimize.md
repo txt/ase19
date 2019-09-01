@@ -22,13 +22,16 @@ Optimization is a process that happens all the time;
 -  Here's a little video show how life optimizes to make more life. 
    [![Agar plate](https://img.youtube.com/vi/plVk4NVIUh8/0.jpg)](https://www.youtube.com/watch?v=plVk4NVIUh8)
 - In the video, bands of antibiotics of increasing concentration and smeared across a large plate of bug food (4 feet long, 2 feet wide).
-- E.coli are added to the two end zones (that have no antibiotics),
+- E.coli (which are little bugs) are added to the two end zones (that have no antibiotics),
 - In a matter of days, these bugs learn how to grow even in the presence of massive amounts of antibiotics.
-  E.coli are what's know as prokaryotic cells 
-  - Prokaryotes have no nucleus or any internal membrane-bounded organelle.  In essence, they are just simple bags of water containing floating strands of DNA 
-  - When two prokaryotes rub against each other, they can exchange material just by mixing the floating bits.  
-  - That means that as E.coli grow across the agar plate in the above video, they keep exchanging genetic material with the other bugs that they meet along the way.
-  - So its like the bacteria live and grow in a kind of  a blender that keeps mixing and matching all their different bits.
+
+How do they do this? Well:
+
+-  E.coli are what's know as prokaryotic cells 
+- Prokaryotes have no nucleus or any internal membrane-bounded organelle.  In essence, they are just simple bags of water containing floating strands of DNA 
+- When two prokaryotes rub against each other, they can exchange material just by mixing the floating bits.  
+- That means that as E.coli grow across the agar plate in the above video, they keep exchanging genetic material with the other bugs that they meet along the way.
+- So its like the bacteria live and grow in a kind of  a blender that keeps mixing and matching all their different bits.
 
 
 (Just so you know, you are a eukaryote which means your cells are far more structured and include nucleus and varying organelles including, 
