@@ -125,10 +125,12 @@ class Num:
     # all the usual initializations
     i.mu, i.sd = mu.sd
     [i + x for x in inits]
+  # all the other methods
+  # ...
+  # finally:
   def jiggle(i,n):
     "pull a random number from this distribution"
     return [ i.mu + i.sd * z() for _ in range(n) ]
-  # all the other methods
 
 def optimize(f       = model1,
              epsilon = 0.0000001,
@@ -139,8 +141,8 @@ def optimize(f       = model1,
              sd      = 100):
   dist = Num(mu=mu, sd=sd)
   while True:
-    if dist.sd < epsilon: break    # close enough. exit
     if budget  < 0      : break    # taking too long. exit
+    if dist.sd < epsilon: break    # close enough. exit
     xs = dist.jiggle(samples)      # jiggle
     ys = [ f(x) for x in xs ]      # score
     budget -= samples              # track how many times we called the model
