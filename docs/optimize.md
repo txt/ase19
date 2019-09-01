@@ -9,8 +9,21 @@
 
 
 
-#  Evolutionary Optimization
+#   Optimization
 
+Having read [lst](lsr.md), we have some idea how data miners reoort the structure within data.
+How is that different to optimizers? Well:
+
+- Data miners report "what is"
+- Optimizers report "what to do",  in order to reach some goal.
+
+Optimization happens all the time. Here's a little video show how life optimizes to make more life. All you need
+for an optimizer is a _jiggle_ step and a _select_ step. For the E.coli in this video, bugs are selected to make more bugs if they are
+not killed by some antibiotic. As to jiggling, E.coli are what's know as prokaryotic cells which means that they are simple bags of water contain floating strands of DNA. When to 
+prokaryotes rub, they can exchange material just by mixing this floating bigs. 
+At the start of this video, all the bacteria are just a little bit different (due to random mutations)
+So in the following video, all the bacteria and floating in a blender that keeps mixing and matching
+everything.
 
 [![Agar plate](https://img.youtube.com/vi/plVk4NVIUh8/0.jpg)](https://www.youtube.com/watch?v=plVk4NVIUh8)
 
@@ -24,9 +37,21 @@ import math,random
 r = random.random
 sq= math.sqrt; e= math.e; log= math.log; cos= math.cos; pi= math.pi
 
-def model(x):
+def model1(x, b=2):
   "just some function that we need to minimize"
-  return e**(-(x-2)**2) + 0.8 * e**(-(x+2)**2)
+  return e**(-(x-b)**2) + 0.8 * e**(-(x+b)**2)
+
+def model2(b):
+   "trying to guess b to best fit model to data"
+   data=[ (-4.5, 0.01) ,(  -4, 0.04) ,(-3.5, 0.14) ,(  -3, 0.37) ,(-2.5, 0.66) 
+         ,(  -2, 0.80) ,(-1.5, 0.66) ,( -1,  0.37) ,(-0.5, 0.15) ,(   0, 0.08) 
+         ,( 0.5, 0.18) ,(  1, 0.46)  ,( 1.5, 0.82) ,(   2, 1.00) ,( 2.5, 0.82) 
+         ,(   3, 0.46) ,( 3.5, 0.17) ,(   4, 0.05) ,(4.5, 0.01) ]
+   err=0
+   for x,actual in data:
+     predict = model1(x,b)
+     err    += abs(predict - actual)
+   return err
 
 class Num:
   def __init__(i,inits=[],mu=0, sd=0):
@@ -38,7 +63,7 @@ class Num:
     "pull a random number from this distribution"
     return i.mu + i.sd * sq(-2*log(r()))*cos(2*pi*r())
 
-def optimize(f       = model,
+def optimize(f       = model1,
              epsilon = 0.0000001,
              n       = 100,
              best    = 10,
