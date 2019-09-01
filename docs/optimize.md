@@ -73,24 +73,25 @@ add up to [six times the mass of the larger eukaryotic
 organisms](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC33863/).)
 
 
+## Software Optimizers
 
-## Preamble
+Here's a very simple optimizer that explores:
 
-Here's a very simple optimizer that tries to find what `x` values
-lead to better `y` values.
+- _model1_ : which  we use to find what `x` values lead to better `y` values. In this example "better" means "smaller".
+- _model2_ : which we use to guess better values for the `b` setting within the model. It turns out that _b=2_ is
+  the right value, but the optimizer does not know that until it plays around a little.
 
 ```python
-import math,random
-r = random.random
-sq= math.sqrt; e= math.e; log= math.log; cos= math.cos; pi= math.pi
+e=2.718281828459045
 
 def model1(x, b=2):
-  "just some function that we need to minimize"
+  "just some function that weweeed to minimize"
   return e**(-(x-b)**2) + 0.8 * e**(-(x+b)**2)
 
 def model2(b):
    "trying to guess b to best fit model to data"
-   data=[ (-4.5, 0.01) ,(  -4, 0.04) ,(-3.5, 0.14) ,(  -3, 0.37) ,(-2.5, 0.66) 
+   data=[ # data generated using b=2
+          (-4.5, 0.01) ,(  -4, 0.04) ,(-3.5, 0.14) ,(  -3, 0.37) ,(-2.5, 0.66) 
          ,(  -2, 0.80) ,(-1.5, 0.66) ,( -1,  0.37) ,(-0.5, 0.15) ,(   0, 0.08) 
          ,( 0.5, 0.18) ,(  1, 0.46)  ,( 1.5, 0.82) ,(   2, 1.00) ,( 2.5, 0.82) 
          ,(   3, 0.46) ,( 3.5, 0.17) ,(   4, 0.05) ,(4.5, 0.01) ]
@@ -99,6 +100,23 @@ def model2(b):
      predict = model1(x,b)
      err    += abs(predict - actual)
    return err
+```
+
+<img src="../etc/img/zcurve.png" width=300 align=right> To `jiggle`,
+we sample from a standard normal bell-shaped distribution (also
+called the unit normal or the Z-curve).  Such a distribution has a
+ mean of `mu=0` and a standard deviation of `sd=1`.
+<br clear=both>
+
+```python
+import math random
+r = random.random
+
+function z():
+  return math.sqrt(-2*math.log(r()))*math.cos(2*math.pi*r())
+```
+
+iNext, we use a `Num` class that knows how to accept initial values for `mu,sd`. 
 
 class Num:
   def __init__(i,inits=[],mu=0, sd=0):
