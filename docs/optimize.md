@@ -177,13 +177,13 @@ in the general case, running the model to evaluate a candidate solution is usual
 Hence, clever optimizers strive the minimize the  budget required to find solutions.
   - See below: sequential model optimization.
 - The `epsilon` variable. 
-  <img src="../etc/img/epsilon.png" width=300 align=right> To `jiggle`,
+  <img src="../etc/img/epsilon.png" width=400 align=right> 
   In domains where near-enough is good-enough, or when there is an inherently
-  large variance in any conclusion, `epsilon` is large and optimization can stop early.
-  - Note that  [epsilon domination algorithms](https://www.mitpressjournals.org/doi/abs/10.1162/106365605774666895) 
+  large variance in any conclusion, `epsilon` is large so  optimization can stop early.
+  - Note that  [epsilon domination algorithms](https://www.iitk.ac.in/kangal/papers/k2003002.pdf)
     can be used to reduce the internal search space of an optimizer.
-  - If a new solution falls within `epsilon` of an old solution, just skip it and [deprecate the choices that lead to that solution](https://arxiv.org/pdf/1902.01838.pdf).
-  - So don't reason about _all_. Rather, just reason sample around a little.
+    - If a new solution falls within `epsilon` of an old solution, just skip one (selected and random). Also, if you can,  [deprecate the choices that lead to that solution](https://arxiv.org/pdf/1902.01838.pdf).
+    - So don't reason about _all_. Rather, just reason sample around a little.
 
 ## Issues with Software Optimizers
 
