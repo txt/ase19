@@ -175,13 +175,13 @@ Note also the `budget` variable. While the above `model1` and `model2` are very 
 in the general case, running the model to evaluate a candidate solution is usaully very expensive.
 Hence, clever optimizers strive the minimize the  budget required to find solutions.
 
-- _Sequenetial model optimizers_ run a  data miner in parallel with the optimizer.
+- _Sequential  model optimizers_ run a  data miner in parallel with the optimizer.
   - First, we geenrate a large numher of _xs_ candidates.
   - Using some evalaution function _f_, we  evaluated some small subset _xs[:n]_) to generate _n_ sets of _ys_ results 
-    -  so _ys[i] = f( xs[i] )_ for _i &lt; n_
+    -   _ys[i] = f( xs[i] )_ for _i &lt; n_
   - Next, using  a data miner (e.g. least squares regression, decision trees, whatver), we build a model M from _xs[:n],ys[:n]_. 
   - Using that model we quickly make approximate guesses _ys[n:]_ about the remaining candidates _xs[n:]_
-    - so _ys[i] = M( xs[i] )_ for _i &ge; n_.
+    -  _ys[i] = M( xs[i] )_ for _i &ge; n_.
   - We then pick the stranges, lasrgest, msot outlier guess _g &in; i &ge; n_
 
 
