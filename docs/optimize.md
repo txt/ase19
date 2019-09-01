@@ -175,15 +175,22 @@ Note also the `budget` variable. While the above `model1` and `model2` are very 
 in the general case, running the model to evaluate a candidate solution is usaully very expensive.
 Hence, clever optimizers strive the minimize the  budget required to find solutions.
 
-- _Sequential  model optimizers_ run a  data miner in parallel with the optimizer.
-  - First, we geenrate a large numher of _xs_ candidates.
-  - Using some evalaution function _f_, we  evaluated some small subset _xs[:n]_) to generate _n_ sets of _ys_ results 
+- _Sequential  model optimizers_ run a  data miner in parallel with the optimizer. Such optimizer assume that (a) jiggling (i.e. candidate generation) is very fast and that (b) evalauting a candidate using the _f_ function is very slow. 
+  Under those assumptions, then the best way to build a model is to reflect on what has been seen so far in order to select what to do next.
+  1. First, we quickly generate a large numher of _xs_ candidates.
+     - This is usually **very fast**.
+  2. Using some evalaution function _f_, we  evaluated some small subset _xs[:n]_) to generate _n_ sets of _ys_ results 
     -   _ys[i] = f( xs[i] )_ for _i &lt; n_
-  - Next, using  a data miner (e.g. least squares regression, decision trees, whatver), we build a model M from _xs[:n],ys[:n]_. 
-  - Using that model we quickly make approximate guesses _ys[n:]_ about the remaining candidates _xs[n:]_
+    - This step can be **very slow** if _f_ is very slow to execute. So here, we keep _n_ small (e.g. _n &le; 30_).
+  3. Next, using  a data miner (e.g. least squares regression, decision trees, whatver), we build a model M from _xs[:n],ys[:n]_. 
+    - This step can be **very fast** since we are learnigna  small model from just a few examples.
+  4. Using that model we quickly make approximate guesses _ys[n:]_ about the remaining candidates _xs[n:]_
     -  _ys[i] = M( xs[i] )_ for _i &ge; n_.
-  - We then pick the stranges, lasrgest, msot outlier guess _g &in; i &ge; n_
-
+    - This step can be **very fast** since we are just calling a very small model `M`.
+  5. We then pick evaluate the  strangest, largest, most outlier guess _g &in; i &ge; n_
+    -  _ys[n+1] = f( xs[g] )_.
+    - This is a **slow** step, but since we are only evaluating one example, its usually not particularly slow.
+  6. Then _n=n+1_ and we loop back to step 3.
 
 AfA data miner learnes a model from `<xs,ys>`.  Dat seen so far 
 
