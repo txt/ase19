@@ -158,22 +158,41 @@ def optimize(f       = model1,
              sd      = 100):
   dist = Num(mu=mu, sd=sd)
   while True:
-    if budget  < 0      : break    # taking too long. exit
-    if dist.sd < epsilon: break    # close enough. exit
     xs = dist.jiggle(samples)      # jiggle
     ys = [ f(x) for x in xs ]      # score
     budget -= samples              # track how many times we called the model
     ys  = sorted(ys)[:best]        # select "best" smallest values
     dist = Num( ys )               # get set for more jiggling
+    if budget  < 0      : break    # taking too long. exit
+    if dist.sd < epsilon: break    # close enough. exit
   return dist.mu
 ```
 
-Note the `select` step in the above (we keep the `best` smallest values). This
-is used to train a new distribution, which sets us up for more `jiggling`, and so on.
+Note:
 
-Note also the `budget` variable. While the above `model1` and `model2` are very fast t run,
-in the general case, running the model to evaluate a candidate solution is usaully very expensive.
+- The `select` step in the above (we keep the `best` smallest values). This
+is used to train a new distribution, which sets us up for more `jiggling`, and so on.
+- The `epsilon` variable. In domains where near-enough is good-enough, or when there is an inherently
+  large variance in any conclusion, `epsilon` is large and optimization can stop early.
+  - Note that  [epsilon domination algorithms](https://www.mitpressjournals.org/doi/abs/10.1162/106365605774666895) 
+    can be used to reduce the internal search space of an optimizer.
+  - If a new solution falls within `epsilon` of an old solution, just skip it and [deprecate
+    the choices that lead to that solution](https://arxiv.org/pdf/1902.01838.pdf).
+- The `budget` variable. While the above `model1` and `model2` are very fast to run,
+in the general case, running the model to evaluate a candidate solution is usually very expensive.
 Hence, clever optimizers strive the minimize the  budget required to find solutions.
+
+
+## Issues with Software Optimizers
+
+
+### Minimizing Evaluations
+
+It is  good practice to avoid too many calls to the model evaluation function _f_ .
+
+
+Hence, clever optimizers strive the minimize the  budget required to find solutions.
+
 
 _Sequential  model optimizers_ run a  data miner in parallel with the optimizer. Such optimizer assumes that:
 
@@ -201,7 +220,7 @@ in order to select what to do next.
    -  _ys[i] = M( xs[i] )_ for _i &ge; n_.
    - This step can be <u>**VERY FAST**</u> since we are just calling a very small model `M`.
 5. Pick 
-   <img src="../etc/img/gp_opt.png" width=400 align=right>
+   <img src="../etc/img/gp_opt.png" width=500 align=right>
    the  strangest guess (e.g. the largest  outlier, has most variance) for guess _g &in; i &ge; n_. 
    - For example, in the picture at right, we have build a curve from _n=5_ observations.
    - The red line shows where the curve plus variance is greatest.
@@ -212,9 +231,8 @@ in order to select what to do next.
       
 6. Then _n=n+1_ and we loop back to step 3.
 
-AfA data miner learnes a model from `<xs,ys>`.  Dat seen so far 
+Note that the above uses a data miner inside an optimizer. As mentioned before, data mining and optimization are linked.
 
-- 
 
 ## GA
 - An EO procedure does not usually use gradient information in its
