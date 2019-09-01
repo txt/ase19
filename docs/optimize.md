@@ -22,6 +22,8 @@ How is that different to optimizers? Well:
 - Data miners report "what is"
 - Optimizers report "what to do",  in order to reach some goal.
 
+(Aside: and to find "what is", sometimes we use optimizers since they tell us "what to do" to find a good model. More on that, later.)
+
 Optimization is a process that happens all the time;
 
 -  Here's a little video show how life optimizes to make more life. 
