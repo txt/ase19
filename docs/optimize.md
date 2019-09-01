@@ -170,14 +170,15 @@ def optimize(f       = model1,
 
 Note:
 
-- The `select` step in the above (we keep the `best` smallest values). This
-is used to train a new distribution, which sets us up for more `jiggling`, and so on.
-- The `budget` variable. While the above `model1` and `model2` are very fast to run,
+- The `select` step in the above (we keep the `best` smallest values). 
+  - This is used to train a new distribution, which sets us up for more `jiggling`, and so on.
+- The `budget` variable. 
+  - While the above `model1` and `model2` are very fast to run,
 in the general case, running the model to evaluate a candidate solution is usually very expensive.
 Hence, clever optimizers strive the minimize the  budget required to find solutions.
-  - See below: sequential model optimization.
+     - See below: sequential model optimization.
 - The `epsilon` variable. 
-  In domains where near-enough is good-enough, or when there is an inherently
+  - In domains where near-enough is good-enough, or when there is an inherently
   large variance in any conclusion, `epsilon` is large so  optimization can stop early.
   - Note <img src="../etc/img/epsilon.png" width=400 align=right> 
     that  [epsilon domination algorithms](https://www.iitk.ac.in/kangal/papers/k2003002.pdf)
@@ -192,6 +193,9 @@ Hence, clever optimizers strive the minimize the  budget required to find soluti
 
 It is  good practice to avoid too many calls to the model evaluation function _f_ .
 
+- In many cases, - evaluating a candidate using the _f_ function is very slow
+  (e.g. we are running an expensive computation, or asking a human their opinion, or we have to [rebuild a new version of the software to test some configuration options](https://arxiv.org/pdf/1801.02175.pdf)).
+- If humans want to audit/debug the conclusions from an optimizer, then they would prefer to explore fewer options.
 
 Hence, clever optimizers strive the minimize the  budget required to find solutions.
 
@@ -199,8 +203,7 @@ Hence, clever optimizers strive the minimize the  budget required to find soluti
 _Sequential  model optimizers_ run a  data miner in parallel with the optimizer. Such optimizer assumes that:
 
 - jiggling (i.e. candidate generation) is very fast
-- evaluating a candidate using the _f_ function is very slow
-  (e.g. we are running an expensive computation, or asking a human their opinion, or we have to build a new car to test some new design).  
+
 - in this domain, data miners can build models very quickly
 
 Under those assumptions, then the best way to build a model is to reflect on what has been seen so far (using a data miner)
