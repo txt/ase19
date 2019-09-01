@@ -11,6 +11,51 @@
 
 #  Evolutionary Optimization
 
+## Preamble
+
+Here's a very simple optimizer that tries to find what `x` values
+lead to better `y` values.
+
+```python
+import math,random
+r = random.random
+sq= math.sqrt; e= math.e; log= math.log; cos= math.cos; pi= math.pi
+
+def model(x):
+  "just some function that we need to minimize"
+  return e**(-(x-2)**2) + 0.8 * e**(-(x+2)**2)
+
+class Num:
+  def __init__(i,inits=[],mu=0, sd=0):
+    i.mu,i.sd = mu,sd
+    # the stuff you coded before
+    [i + x for x in inits]
+  # all the other stuff you coded
+  def any(i):
+    "pull a random number from this distribution"
+    return i.mu + i.sd * sq(-2*log(r()))*cos(2*pi*r())
+
+def optimize(f       = model,
+             epsilon = 0.0000001,
+             n       = 100,
+             best    = 10,
+             mu      = -6,
+             sd      = 100):
+  pop = Num(mu=mu, sd=sd)
+  for _ in range(n):
+    if pop.sd <= epsilon: break
+    xs  = [ pop.any() for _ in range(n) ] # draw from before
+    ys  = [ f(x) for x in some ]          # find new values
+    ys  = sorted(ys)[:best]               # rank them, find best
+    pop = Num( ys[:best] )                # reset, using best 
+  return pop.mu
+```
+
+There is much that can be improved here:
+
+- 
+
+## GA
 - An EO procedure does not usually use gradient information in its
 search process. Thus, EO methodologies are direct search procedures,
 allowing them to be applied to a wide variety of optimization
