@@ -139,14 +139,14 @@ def optimize(f       = model1,
              sd      = 100):
   dist = Num(mu=mu, sd=sd)
   while True:
+    if dist.sd < epsilon: break    # close enough. exit
+    if budget  < 0      : break    # taking too long. exit
     xs = [ dist.any() 
           for _ in range(samples)] # jiggle
     ys = [ f(x) for x in xs ]      # score
     budget -= samples              # track how many times we called the model
     ys  = sorted(ys)[:best]        # select "best" smallest values
     dist = Num( ys )               # get set for more jiggling
-    if dist.sd > epsilon: break
-    if budget  < 0      : break
   return dist.mu
 ```
 
