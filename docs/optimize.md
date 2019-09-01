@@ -93,8 +93,8 @@ def model2(b):
    data=[ # data generated using b=2
           (-4.5, 0.01) ,(  -4, 0.04) ,(-3.5, 0.14) ,(  -3, 0.37) ,(-2.5, 0.66) 
          ,(  -2, 0.80) ,(-1.5, 0.66) ,( -1,  0.37) ,(-0.5, 0.15) ,(   0, 0.08) 
-         ,( 0.5, 0.18) ,(  1, 0.46)  ,( 1.5, 0.82) ,(   2, 1.00) ,( 2.5, 0.82) 
-         ,(   3, 0.46) ,( 3.5, 0.17) ,(   4, 0.05) ,(4.5, 0.01) ]
+         ,( 0.5, 0.18) ,(   1, 0.46) ,( 1.5, 0.82) ,(   2, 1.00) ,( 2.5, 0.82) 
+         ,(   3, 0.46) ,( 3.5, 0.17) ,(   4, 0.05) ,( 4.5, 0.01) ]
    err=0
    for x,actual in data:
      predict = model1(x,b)
@@ -112,21 +112,20 @@ called the unit normal or the Z-curve).  Such a distribution has a
 import math random
 r = random.random
 
-function z():
+def z():
   return math.sqrt(-2*math.log(r()))*math.cos(2*math.pi*r())
 ```
 
-iNext, we use a `Num` class that knows how to accept initial values for `mu,sd`. 
+Next, we use a `Num` class that knows how to accept initial values for `mu,sd`. 
+With that class, we can `jiggle` by pull values across the normal bell curve.
 
+```python
 class Num:
   def __init__(i,inits=[],mu=0, sd=0):
-    i.mu,i.sd = mu,sd
-    # the stuff you coded before
-    [i + x for x in inits]
-  # all the other stuff you coded
+    # all the usual stuff
   def any(i):
     "pull a random number from this distribution"
-    return i.mu + i.sd * sq(-2*log(r()))*cos(2*pi*r())
+    return i.mu + i.sd * z()
 
 def optimize(f       = model1,
              epsilon = 0.0000001,
@@ -137,10 +136,10 @@ def optimize(f       = model1,
   pop = Num(mu=mu, sd=sd)
   for _ in range(n):
     if pop.sd <= epsilon: break
-    xs  = [ pop.any() for _ in range(n) ] # draw from before
-    ys  = [ f(x) for x in some ]          # find new values
-    ys  = sorted(ys)[:best]               # rank them, find best
-    pop = Num( ys[:best] )                # reset, using best 
+    xs  = [ pop.any() for _ in range(n) ] # jiggling
+    ys  = [ f(x) for x in some ]          # scoring
+    ys  = sorted(ys)[:best]               # selecting
+    pop = Num( ys[:best] )                # get set for more jiggling
   return pop.mu
 ```
 
