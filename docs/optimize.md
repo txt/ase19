@@ -28,11 +28,24 @@ Optimization is a process that happens all the time;
 - In a matter of days, these bugs learn how to grow even in the 
   presence of massive amounts of antibiotics.
 
-How do they do this? Well:
+How do they do this? Well,
+all
+need 
+is a _jiggler_ and a _selector_ and enough time to
+
+1. jiggle some stuff, 
+2. select the better stuff, 
+3. go to 1
+
+For the E.coli in the video,
+bugs are _selected _to make more bugs if they are
+not killed by some antibiotic. 
+As to the jiggling: 
 
 - E.coli are what's know as prokaryotic cells 
-- Prokaryotes have no nucleus or any internal membrane-bounded organelle.  
-  In essence, they are just simple bags of water containing floating strands of DNA 
+- Prokaryotes have no internal membrane-bounded organelles; 
+  i.e. very little internal structure.  For the most part,  
+  they are just mostly  bags of water containing floating strands of DNA 
 - At the start of this video, all the bacteria are just a little bit different (due to random mutations, which occur once [every .4 to 170 hours](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC33863/))
 - Later on, when two prokaryotes rub into each each other, they exchange material 
   just by mixing the floating bits (and 
@@ -42,6 +55,8 @@ How do they do this? Well:
   that they meet along the way.
 - So its like the agar plate is a big blender that
   keeps mixing and matching all the different bits of all the different bugs.
+- If any of the bugs get lucky, and learn how to handle more antibiotics, those bugs move into a new band (where there is less competition for food).  Hence, the new band gets full of bugs
+  that can better handle that higher level of antibiotic.
 
 
 <img src="../etc/img/eukprok.png" width=400 align=right>
@@ -57,16 +72,6 @@ living things.  For example, in marine environments, the prokaryotes
 add up to [six times the mass of the larger eukaryotic
 organisms](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC33863/).)
 
-
-There are many ways to build an optimizer, all you 
-need
-is a _jiggler_ step and a _selector_. 
-
-For the E.coli in this video, bugs are selected to make more bugs if they are
-not killed by some antibiotic. As to jiggling, 
-
-if you put a lot of E.coli into a tub (or, in the above case, a large agar plate)
-everything.
 
 
 ## Preamble
