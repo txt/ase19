@@ -9,10 +9,15 @@
 
 
 
+The two standard algorithms everyone beginning data mining and optimizer persons uses
+are LSR and NSGA-II.
+
+LSR was discussed [before](lsr.md). Here, we introduce optimizing and NSGA-II.
+
 #   Optimization
 
-Having read [lst](lsr.md), we have some idea how data miners can find the structure within data.
-How is that different to Optimizers? Well:
+Having read [lsr](lsr.md), we have some idea how data miners can find the structure within data.
+How is that different to optimizers? Well:
 
 - Data miners report "what is"
 - Optimizers report "what to do",  in order to reach some goal.
@@ -85,12 +90,12 @@ Here's a very simple optimizer that explores:
 e=2.718281828459045
 
 def model1(x, b=2):
-  "just some function that weweeed to minimize"
+  "just some function that we want to minimize"
   return e**(-(x-b)**2) + 0.8 * e**(-(x+b)**2)
 
 def model2(b):
-   "trying to guess b to best fit model to data"
-   data=[ # data generated using b=2
+   "trying to guess what b best fits the data to the model"
+   data=[ # data generated using b=2 (but the optimizer does not know that)
           (-4.5, 0.01) ,(  -4, 0.04) ,(-3.5, 0.14) ,(  -3, 0.37) ,(-2.5, 0.66) 
          ,(  -2, 0.80) ,(-1.5, 0.66) ,( -1,  0.37) ,(-0.5, 0.15) ,(   0, 0.08) 
          ,( 0.5, 0.18) ,(   1, 0.46) ,( 1.5, 0.82) ,(   2, 1.00) ,( 2.5, 0.82) 
