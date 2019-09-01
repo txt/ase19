@@ -44,6 +44,7 @@ How do they do this? Well:
   keeps mixing and matching all the different bits of all the different bugs.
 
 
+<img src="assets/img/eukprok.png" width=400 align=right>
 (Just so you know, everything that is alive and big enough to be
 seen with the naked eye, including you,  has "eukaryote" cells.
 Such  cells are more structured and include nucleus and varying
