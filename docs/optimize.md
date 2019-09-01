@@ -11,21 +11,40 @@
 
 #   Optimization
 
-Having read [lst](lsr.md), we have some idea how data miners reoort the structure within data.
-How is that different to optimizers? Well:
+Having read [lst](lsr.md), we have some idea how data miners can find the structure within data.
+How is that different to Optimizers? Well:
 
 - Data miners report "what is"
 - Optimizers report "what to do",  in order to reach some goal.
 
-Optimization happens all the time. Here's a little video show how life optimizes to make more life. All you need
-for an optimizer is a _jiggle_ step and a _select_ step. For the E.coli in this video, bugs are selected to make more bugs if they are
-not killed by some antibiotic. As to jiggling, E.coli are what's know as prokaryotic cells which means that they are simple bags of water contain floating strands of DNA. When to 
-prokaryotes rub, they can exchange material just by mixing this floating bigs. 
-At the start of this video, all the bacteria are just a little bit different (due to random mutations)
-So in the following video, all the bacteria and floating in a blender that keeps mixing and matching
-everything.
+Optimization is a process that happens all the time;
+
+-  Here's a little video show how life optimizes to make more life. 
+- In the video, bands of antibiotics of increasing concentration and smeared across a large plate of bug food (4 feet long, 2 feet wide).
+- E.coli are added to the two end zones (that have no antibiotics),
+- In a matter of days, these bugs learn how to grow even in the presence of massive amounts of antibiotics.
+  E.coli are what's know as prokaryotic cells which means that they are simple bags of water containing floating strands of DNA (they have no nucleus or any internal membrane-bounded organelle). 
+  - When two prokaryotes rub against each other, they can exchange material just by mixing this floating bits.  
+  - That means that as E.coli grow across the agar plate in the above video, they keep exchanging genetic material with the other bugs that they meet along the way.
+  - So its like the bacteria and floating around in a kind of  a blender that keeps mixing and matching all the different bits.
+  - (For your information, you are a eukaryote which means your cells are far more structured and include nucleus and varying organelles including, 
+     something called mitochondria-- which are the batteries that give us the juice needed to build large structures, then
+    run them around, quickly. And you should not be too proud about being a eukaryote since, across the whole planet, yours is the least successful way to organizing living things. In marine environments, prokaryotes 
+   [out-number everything else by a ratio of 6 to 1](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC33863/).
+
 
 [![Agar plate](https://img.youtube.com/vi/plVk4NVIUh8/0.jpg)](https://www.youtube.com/watch?v=plVk4NVIUh8)
+
+All you need
+for an optimizer is a _jiggle_ step and a _select_ step. 
+At the start of this video, all the bacteria are just a little bit different (due to random mutations, which occur once [every .4 to 170 hours](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC33863/))
+
+For the E.coli in this video, bugs are selected to make more bugs if they are
+not killed by some antibiotic. As to jiggling, 
+
+if you put a lot of E.coli into a tub (or, in the above case, a large agar plate)
+everything.
+
 
 ## Preamble
 
