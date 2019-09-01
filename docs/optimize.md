@@ -172,16 +172,18 @@ Note:
 
 - The `select` step in the above (we keep the `best` smallest values). This
 is used to train a new distribution, which sets us up for more `jiggling`, and so on.
-- The `epsilon` variable. In domains where near-enough is good-enough, or when there is an inherently
-  large variance in any conclusion, `epsilon` is large and optimization can stop early.
-  - Note that  [epsilon domination algorithms](https://www.mitpressjournals.org/doi/abs/10.1162/106365605774666895) 
-    can be used to reduce the internal search space of an optimizer.
-  - If a new solution falls within `epsilon` of an old solution, just skip it and [deprecate
-    the choices that lead to that solution](https://arxiv.org/pdf/1902.01838.pdf).
 - The `budget` variable. While the above `model1` and `model2` are very fast to run,
 in the general case, running the model to evaluate a candidate solution is usually very expensive.
 Hence, clever optimizers strive the minimize the  budget required to find solutions.
-
+  - See below: sequential model optimization.
+- The `epsilon` variable. 
+  <img src="../etc/img/epsilon.png" width=300 align=right> To `jiggle`,
+  In domains where near-enough is good-enough, or when there is an inherently
+  large variance in any conclusion, `epsilon` is large and optimization can stop early.
+  - Note that  [epsilon domination algorithms](https://www.mitpressjournals.org/doi/abs/10.1162/106365605774666895) 
+    can be used to reduce the internal search space of an optimizer.
+  - If a new solution falls within `epsilon` of an old solution, just skip it and [deprecate the choices that lead to that solution](https://arxiv.org/pdf/1902.01838.pdf).
+  - So don't reason about _all_. Rather, just reason sample around a little.
 
 ## Issues with Software Optimizers
 
