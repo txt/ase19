@@ -183,11 +183,18 @@ Hence, clever optimizers strive the minimize the  budget required to find soluti
   - Note <img src="../etc/img/epsilon.png" width=400 align=right> 
     that  [epsilon domination algorithms](https://www.iitk.ac.in/kangal/papers/k2003002.pdf)
     can be used to reduce the internal search space of an optimizer.
-    - If a new solution falls within `epsilon` of an old solution, just skip one (selected and random). Also, if you can,  [deprecate the choices that lead to that solution](https://arxiv.org/pdf/1902.01838.pdf).
-    - So don't reason about _all_. Rather, just reason sample around a little. And above choices that lead to redundant conclusions.
+    - If a new solution falls within `epsilon` of an old solution, then it is _redundant_.
+    - So don't reason about _all_. Rather, just reason sample around a little. And steer clear of  choices that lead to redundant conclusions.
+      - Ignore redundant solutions.
+      - Also, if you can,  [deprecate the choices that lead to that solution](https://arxiv.org/pdf/1902.01838.pdf).
 
 ## Issues with Software Optimizers
 
+### Local Optima
+
+### Too few Solutions
+
+### Variable Dependence
 
 ### Minimizing Evaluations
 
