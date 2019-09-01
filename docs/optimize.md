@@ -24,14 +24,18 @@ Optimization is a process that happens all the time;
 - In the video, bands of antibiotics of increasing concentration and smeared across a large plate of bug food (4 feet long, 2 feet wide).
 - E.coli are added to the two end zones (that have no antibiotics),
 - In a matter of days, these bugs learn how to grow even in the presence of massive amounts of antibiotics.
-  E.coli are what's know as prokaryotic cells which means that they are simple bags of water containing floating strands of DNA (they have no nucleus or any internal membrane-bounded organelle). 
-  - When two prokaryotes rub against each other, they can exchange material just by mixing this floating bits.  
+  E.coli are what's know as prokaryotic cells 
+  - Prokaryotes have no nucleus or any internal membrane-bounded organelle.  In essence, they are just simple bags of water containing floating strands of DNA 
+  - When two prokaryotes rub against each other, they can exchange material just by mixing the floating bits.  
   - That means that as E.coli grow across the agar plate in the above video, they keep exchanging genetic material with the other bugs that they meet along the way.
-  - So its like the bacteria are floating around in a kind of  a blender that keeps mixing and matching all the different bits.
-  - (For your information, you are a eukaryote which means your cells are far more structured and include nucleus and varying organelles including, 
+  - So its like the bacteria live and grow in a kind of  a blender that keeps mixing and matching all their different bits.
+
+
+(Just so you know, you are a eukaryote which means your cells are far more structured and include nucleus and varying organelles including, 
      something called mitochondria-- which are the batteries that give us the juice needed to build large structures, then
-    run them around, quickly. And you should not be too proud about being a eukaryote since, across the whole planet, yours is the least successful way to organizing living things. In marine environments, prokaryotes 
-   [out-number everything else by a ratio of 6 to 1](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC33863/).
+    run them around, quickly. And you should not be too proud about being a eukaryote since, across the whole planet, yours is the least successful way to organizing living things. 
+For example, In marine environments, prokaryotes 
+   [out-number everything else by a ratio of 6 to 1](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC33863/).)
 
 
 
