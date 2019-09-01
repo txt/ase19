@@ -11,21 +11,63 @@
 
 #   Optimization
 
-Having read [lst](lsr.md), we have some idea how data miners reoort the structure within data.
-How is that different to optimizers? Well:
+Having read [lst](lsr.md), we have some idea how data miners can find the structure within data.
+How is that different to Optimizers? Well:
 
 - Data miners report "what is"
 - Optimizers report "what to do",  in order to reach some goal.
 
-Optimization happens all the time. Here's a little video show how life optimizes to make more life. All you need
-for an optimizer is a _jiggle_ step and a _select_ step. For the E.coli in this video, bugs are selected to make more bugs if they are
-not killed by some antibiotic. As to jiggling, E.coli are what's know as prokaryotic cells which means that they are simple bags of water contain floating strands of DNA. When to 
-prokaryotes rub, they can exchange material just by mixing this floating bigs. 
-At the start of this video, all the bacteria are just a little bit different (due to random mutations)
-So in the following video, all the bacteria and floating in a blender that keeps mixing and matching
+Optimization is a process that happens all the time;
+
+-  Here's a little video show how life optimizes to make more life. 
+   [![Agar plate](https://img.youtube.com/vi/plVk4NVIUh8/0.jpg)](https://www.youtube.com/watch?v=plVk4NVIUh8)
+- In the video, bands of antibiotics of increasing concentration are 
+  smeared across a large plate of bug food (4 feet long, 2 feet wide).
+- E.coli (which are little bugs) are added to the two end zones 
+  (that have no antibiotics),
+- In a matter of days, these bugs learn how to grow even in the 
+  presence of massive amounts of antibiotics.
+
+How do they do this? Well:
+
+- E.coli are what's know as prokaryotic cells 
+- Prokaryotes have no nucleus or any internal membrane-bounded organelle.  
+  In essence, they are just simple bags of water containing floating strands of DNA 
+- At the start of this video, all the bacteria are just a little bit different (due to random mutations, which occur once [every .4 to 170 hours](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC33863/))
+- Later on, when two prokaryotes rub into each each other, they exchange material 
+  just by mixing the floating bits (and 
+  [a few other tricks](https://www.khanacademy.org/science/biology/bacteria-archaea/prokaryote-structure/a/genetic-variation-in-prokaryotes).  
+- That means that as E.coli grow across the agar plate in the above 
+  video, they keep exchanging genetic material with the other bugs 
+  that they meet along the way.
+- So its like the agar plate is a big blender that
+  keeps mixing and matching all the different bits of all the different bugs.
+
+
+<img src="assets/img/eukprok.png" width=400 align=right>
+(Just so you know, everything that is alive and big enough to be
+seen with the naked eye, including you,  has "eukaryote" cells.
+Such  cells are more structured and include nucleus and varying
+organelles including, something called
+[mitochondria](https://en.wikipedia.org/wiki/Mitochondrion)-- which
+give eukaryotes  the extra juice they need to build large structures,
+and run them around, quickly. You should not be too proud about
+being a eukaryote--  they are the least successful way to organizing
+living things.  For example, in marine environments, the prokaryotes
+add up to [six times the mass of the larger eukaryotic
+organisms](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC33863/).)
+
+
+There are many ways to build an optimizer, all you 
+need
+is a _jiggler_ step and a _selector_. 
+
+For the E.coli in this video, bugs are selected to make more bugs if they are
+not killed by some antibiotic. As to jiggling, 
+
+if you put a lot of E.coli into a tub (or, in the above case, a large agar plate)
 everything.
 
-[![Agar plate](https://img.youtube.com/vi/plVk4NVIUh8/0.jpg)](https://www.youtube.com/watch?v=plVk4NVIUh8)
 
 ## Preamble
 
