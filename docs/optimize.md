@@ -121,29 +121,39 @@ With that class, we can `jiggle` by pull values across the normal bell curve.
 
 ```python
 class Num:
-  def __init__(i,inits=[],mu=0, sd=0):
-    # all the usual stuff
+  def __init__(i,inits=[],mu=0, sd=1):
+    # all the usual initializations
+    i.mu, i.sd = mu.sd
+    [i + x for x in inits]
   def any(i):
     "pull a random number from this distribution"
     return i.mu + i.sd * z()
+  # all the other methods
 
 def optimize(f       = model1,
              epsilon = 0.0000001,
-             n       = 100,
+             budget  = 10**4,
+             samples = 100
              best    = 10,
-             mu      = -6,
+             mu      = 0,
              sd      = 100):
-  pop = Num(mu=mu, sd=sd)
-  for _ in range(n):
-    if pop.sd <= epsilon: break
-    xs  = [ pop.any() for _ in range(n) ] # jiggling
-    ys  = [ f(x) for x in some ]          # scoring
-    ys  = sorted(ys)[:best]               # selecting
-    pop = Num( ys[:best] )                # get set for more jiggling
-  return pop.mu
+  dist = Num(mu=mu, sd=sd)
+  while True:
+    xs = [ dist.any() 
+          for _ in range(samples)] # jiggle
+    ys = [ f(x) for x in xs ]      # score
+    budget -= samples              # track how many times we called the model
+    ys  = sorted(ys)[:best]        # select "best" smallest values
+    dist = Num( ys )               # get set for more jiggling
+    if dist.sd > epsilon: break
+    if budget  < 0      : break
+  return dist.mu
 ```
 
-There is much that can be improved here:
+Note the `select` step in the above (we keep the `best` smallest values). This
+is used to train a new distribution, which sets us up for more `jiggling`, and so on.
+
+
 
 - 
 
