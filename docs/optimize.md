@@ -266,11 +266,8 @@ def sa(s0,              # some intial guess; e.g. all rands
 Initially, `t` is large so this algorithm will often jump to sub-optimal solutions. But as things "cool", this algorithm becomes a 
 hill climber that just steps up to the next solution. In the following, just to confuse you, we score things by 1-f (so _better_ means _larger_): 
 
-<img src="../etc/img/Hill_Climbing_with_Simulated_Annealing.gif" width=400 align=right> 
+<img src="../etc/img/Hill_Climbing_with_Simulated_Annealing.gif" width=600 > 
 
-- Explore multiple solutions:
-  -  For example, we can cluster solutions and run optimizers per cluster.
-  - Or don't even bother clustering. Just start at N random locations
 
 XX hsitorical note
 
