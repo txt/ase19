@@ -233,12 +233,12 @@ this code assumes we want to minimize the scores.
 import math,random
 r = random.random
 
-def saMutate(s,lo,hi,p,k,f):
+def saMutate(s,lo,hi,p,b,f):
   sn=s[:]
   for  i,x in enumerate(sn):
     if p < r(): 
       sn[i] = lo[i] + (hi[i] - lo[i]) * r()
-  return sn, f(sn), k - 1
+  return sn, f(sn), b - 1
 
 def sa(s0,              # some intial guess; e.g. all rands
        f,               # how we score a solution
@@ -246,19 +246,19 @@ def sa(s0,              # some intial guess; e.g. all rands
        budget=1000,     # how many solutions we will explore
        mutate=saMutate, # how we mutate solutions 
        p=0.2,           # odds of mutate one attribute
-       cooling=2):      # controls jumps to worse things
+       cooling=2):      # controls if we dont jump to worse things
   #--------------------------------------------------------
   s  = sb = s0   # s,sb = solution,best
   e  = eb = f(s) # e,eb = energy, bestEnergy
-  k  = 1
-  while k < budget:
-    sn, en, k = mutate(s,lo,hi,p,k,f)   # next solution
+  b  = 1
+  while b < budget:
+    sn, en, b = mutate(s,lo,hi,p,b,f)   # next solution
     if en < eb:  # if next better than best
       sb,eb = s,e = sn,en 
     elif en < e: # if next better than last
       s,e = sn, en 
     else:  # maybe jump to a worse solution
-      t = k/budget
+      t = b/budget
       if math.exp((e - en)/t) < r()**cooling: 
         s,e   = sn, en
   return sb,eb
