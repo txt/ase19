@@ -199,12 +199,12 @@ There are several known solutions to the problem of local minima including
 
 - Add restart-retries. 
   - Restart to a random point and see if you get back to the old solution (if so, it really was the best).
-  - MaxWalkSat (MWS) routinely performs dozens of retries.
-- Explore a population,m not just one thing. 
+  - _MaxWalkSat_ (MWS) routinely performs dozens of retries.
+- Explore a population, not just one thing. 
   - That is, run many times with different starting positions (where as restart-retry only needs memory for one solution, population-based methods exploit cheap memory).
 - Add a momentum factor to sail through the local maxima:
-  - Neural  nets use such a factor as they adjust their weights
-  - Particle swam optimizers (PSO) 
+  - _Neural  nets_ use such a factor as they adjust their weights
+  - _Particle swam optimizers_ (PSO) 
     <img src="../etc/img/pso101.gif" width=400 align=right> 
     - PSO runs (say) 30 "particles"
     - Each particle mutates a solution in a direction determined by 
@@ -214,6 +214,7 @@ There are several known solutions to the problem of local minima including
     - So when it finds a better best, it just sails on by 
       - but it might circle back to them
       - kind of like a restart-retry and a populuation and a momentum approach all rolled into one.
+    - Which means it may not find one solution-- but a set of interesting (but slightly different) solutions
 - Add some random jiggle to the search.
   - e.g. _simulated annealling_
   - For example, 
@@ -258,6 +259,9 @@ hill climber that just steps up to the next solution. In the following, just to 
 - Explore multiple solutions:
   -  For example, we can cluster solutions and run optimizers per cluster.
   - Or don't even bother clustering. Just start at N random locations
+
+XX hsitorical note
+
 ### Too few Solutions
 
 ### Variable Dependence
@@ -284,7 +288,7 @@ in order to select what to do next.
 
 1. First, we quickly generate a large numher of _xs_ candidates.
     - This is usually <u>**VERY FAST**</u>.
-2. Using some evalaution function _f_, we  evaluated some small subset _xs[:n]_) to generate _n_ sets of _ys_ results 
+2. Using some evaluation function _f_, we  evaluated some small subset _xs[:n]_) to generate _n_ sets of _ys_ results 
    -  _ys[i] = f( xs[i] )_ for _i &lt; n_
    - This step can be <u>**VERY SLOW**</u> if _f_ is very slow to execute. 
    - So here, we keep _n_ small (e.g. _n &le; 30_).
