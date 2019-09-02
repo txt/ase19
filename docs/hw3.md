@@ -11,7 +11,7 @@
 
 Here's the new work (in red)
 
-<img src="http://yuml.me/diagram/plain;dir:lr/class/[Tbl|oid|read(file); dump();]++rows-1..*[Row|oid; cells:list; cooked:list; dom = 0],[Tbl]++cols-1..*[Col|oid; col; txt ], [Col]^-[Num| hi = -10^32 ; lo = 10^32 ; m2 = 0; mu = 0; n = 0; sd = 0; |Num1()],[Num]-[note: one Num for each column in the rows{bg:orange}], [Col]^-[Sym|n=0;model;most; cnt: Dict|SymEnd{bg:red}]">
+<img src="http://yuml.me/diagram/plain;dir:lr/class/[Tbl|oid|read(file); dump();]++rows-1..*[Row|oid; cells:list; cooked:list; dom = 0],[Tbl]++cols-1..*[Col|oid; col; txt ], [Col]^-[Num| hi = -10^32 ; lo = 10^32 ; m2 = 0; mu = 0; n = 0; sd = 0; |Num1()],[Num]-[note: one Num for each column in the rows{bg:orange}], [Col]^-[Sym|n=0;mode;most; cnt: Dict|SymEnd{bg:red}],[Sym]-[note:entropy is analagous to standard deviation{bg:orange}]">
 
 Create a class `Tbl` `Col` `Row` (and reuse `Num` from last time).
 Do not use any built-in CSV class (and definitely do not use Pandas).
