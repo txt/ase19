@@ -247,7 +247,7 @@ def saMutate(s,lo,hi,p,b,f):
   for  i,x in enumerate(sn):
     if p < r(): 
       sn[i] = lo[i] + (hi[i] - lo[i]) * r()
-  return sn, f(sn), b - 1
+  return sn, f(sn), b + 1
 
 def sa(s0,              # some intial guess; e.g. all rands
        f,               # how we score a solution
@@ -257,19 +257,19 @@ def sa(s0,              # some intial guess; e.g. all rands
        p=0.2,           # odds of mutate one attribute
        cooling=2):      # controls if we dont jump to worse things
   #--------------------------------------------------------
-  s  = sb = s0   # s,sb = solution,best
-  e  = eb = f(s) # e,eb = energy, bestEnergy
-  b  = 1
+  s = sb = s0   # s,sb = solution,best
+  e = eb = f(s) # e,eb = energy, bestEnergy
+  b = 1
   while b < budget:
     sn, en, b = mutate(s,lo,hi,p,b,f)   # next solution
     if en < eb:  # if next better than best
       sb,eb = s,e = sn,en 
     elif en < e: # if next better than last
-      s,e = sn, en 
+      s,e = sn,en 
     else:  # maybe jump to a worse solution
       t = b/budget
       if math.exp((e - en)/t) < r()**cooling: 
-        s,e   = sn, en
+        s,e = sn,en
   return sb,eb
 ```
 Initially, `t` is large so this algorithm will often jump to sub-optimal solutions. But as things "cool", this algorithm becomes a 
