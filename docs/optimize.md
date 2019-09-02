@@ -192,12 +192,24 @@ Hence, clever optimizers strive the minimize the  budget required to find soluti
 
 ### Local Optima
 
-  - Note <img src="../etc/img/moment.png" width=400 align=right> 
+<img src="../etc/img/moment.gig" width=400 align=right> 
 The above code chases down to lower and lower values... which makes this  a greedy search that can get trapped in local optima. There are several known solutions to the problem of local optima including
 
 - Add restart-retries. 
- - Restart to a random point and see if you get back to the old solution (if so, it really was the best).
-- Explore a population,m not just one thing. That is, Run many times with different starting positions
+  - Restart to a random point and see if you get back to the old solution (if so, it really was the best).
+  - MaxWalkSat (MWS) routinely performs dozens of retries.
+- Explore a population,m not just one thing. 
+  - That is, run many times with different starting positions (where as restart-retry only needs memory for one solution, population-based methods exploit cheap memory).
+- Add a momentum factor to sail through the local maxima:
+  - Neural  nets use such a factor as they adjust their weights
+  - Particle swam optimizers (PSO) 
+    <img src="../etc/img/pso101.gif" width=400 align=right> 
+    just sail past the best solution, but might circle back to them
+    - PSO runs (say) 30 "particles"
+    - Each particle mutates a solution in a direction determined by 
+      - its prior velocity
+      - a pull back towards the best solution ever seen by this particle
+      - a pull towards the best solution ever seen by any particle
 - Add some random jiggle to the search.
   - e.g. _simulated annealling_
   - For example, 
