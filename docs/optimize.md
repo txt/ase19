@@ -226,7 +226,8 @@ There are several known solutions to the problem of local minima including
       - This algorithm replaces the current solution `s` with `sn`
     - But as `t` "cools", the algorithm becomes a hill climber that only moves to better solutions. 
 
-In the following simulated annealer, `sb` is the best solution seen so far (with energy `eb`).
+In the following simulated annealer, `sb` is the best solution seen so far (with energy `eb`). Also,
+this code assumes we want to minimize the scores.
 
 ```python
 import math,random
@@ -243,9 +244,10 @@ def sa(s0,              # some intial guess; e.g. all rands
        f,               # how we score a solution
        lo,hi,           # attribute i has ranage lo[i]..hi[i] 
        budget=1000,     # how many solutions we will explore
-       mutate=saMutate, # how we change things 
-       cooling=2,       # controls jumps to worse things
-       p=0.2):          # odds of changing one attribute
+       mutate=saMutate, # how we mutate solutions 
+       p=0.2,           # odds of mutate one attribute
+       cooling=2):      # controls jumps to worse things
+  #--------------------------------------------------------
   s  = sb = s0   # s,sb = solution,best
   e  = eb = f(s) # e,eb = energy, bestEnergy
   k  = 1
