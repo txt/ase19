@@ -38,6 +38,7 @@ This subject will explore methods to augment standard software engineering pract
   [ethics](docs/ethics.md#top) |
   [naive?](docs/ethics.md#top)
 - Algorithms:
+    - Evaluation: [eval101](docs/eval101.md#top)
     - Data mining: [lsr](docs/lsr.md#top) | baselines | discretization | basic | advanced
     - Optimizers : landscapes | basic | advanced | opt+mine
     - Theorem provers: [basic](docs/provers.md#top) | advanced
