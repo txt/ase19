@@ -192,7 +192,7 @@ Hence, clever optimizers strive the minimize the  budget required to find soluti
 
 ### Local Optima
 
-<img src="../etc/img/moment.gig" width=400 align=right> 
+<img src="../etc/img/moment.gif" width=400 align=right> 
 The above code chases down to lower and lower values... which makes this  a greedy search that can get trapped in local optima. There are several known solutions to the problem of local optima including
 
 - Add restart-retries. 
