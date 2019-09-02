@@ -232,15 +232,25 @@ In the following simulated annealer, `sb` is the best solution seen so far (with
 import math,random
 r = random.random
 
-def sa(s0,f,lo,hi, budget=1000, cooling=2, p=0.2):
-  "Initialize with some guess for the solution, s0"
+def saMutate(s,lo,hi,p,k,f):
+  sn=s[:]
+  for  i,x in enumerate(sn):
+    if p < r(): 
+      sn[i] = lo[i] + (hi[i] - lo[i]) * r()
+  return sn, f(sn), k - 1
+
+def sa(s0,              # some intial guess; e.g. all rands
+       f,               # how we score a solution
+       lo,hi,           # attribute i has ranage lo[i]..hi[i] 
+       budget=1000,     # how many solutions we will explore
+       mutate=saMutate, # how we change things 
+       cooling=2,       # controls jumps to worse things
+       p=0.2):          # odds of changing one attribute
   s  = sb = s0   # s,sb = solution,best
   e  = eb = f(s) # e,eb = energy, bestEnergy
-  for k in range(budget): 
-    sn = s[:]  # next solution
-    for  i,x in enumerate(sn):
-      if p < r(): sn[i] = lo[i] + (hi[i] - lo[i]) * r()
-    en = f(sn)
+  k  = 1
+  while k < budget:
+    sn, en, k = mutate(s,lo,hi,p,k,f)   # next solution
     if en < eb:  # if next better than best
       sb,eb = s,e = sn,en 
     elif en < e: # if next better than last
