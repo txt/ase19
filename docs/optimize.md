@@ -190,6 +190,12 @@ Hence, clever optimizers strive the minimize the  budget required to find soluti
 
 ## Issues with Software Optimizers
 
+### no function
+
+### dsicontonuitnies
+
+### constraints
+
 ### Local Minima
 
 <img src="../etc/img/moment.gif" width=400 align=right> 
@@ -295,7 +301,7 @@ _Sequential  model optimizers_ run a  data miner in parallel with the optimizer.
 Under those assumptions, then the best way to build a model is to reflect on what has been seen so far (using a data miner)
 in order to select what to do next.
 
-1. First, we quickly generate a large numher of _xs_ candidates.
+1. First, we quickly generate a large number of _xs_ candidates (say, 512).
     - This is usually <u>**VERY FAST**</u>.
 2. Using some evaluation function _f_, we  evaluated some small subset _xs[:n]_) to generate _n_ sets of _ys_ results 
    -  _ys[i] = f( xs[i] )_ for _i &lt; n_
@@ -307,6 +313,9 @@ in order to select what to do next.
      - Build a committee of learners `M1,M2,M3,...`; each time using 90% of the data, selected at random;
      - Generate predictions across each member of the committee
      - Report the mean and variance of those predictions
+   - Another way is to use a "gaussian process model" (GPM) which is like regression, but it offers a mean and standard deviation
+     on every prediction
+     - GPMs have scale up problems (more than 12 attribtues can be a bother).
 4. Using that model make approximate guesses _ys[n:]_ about the remaining candidates _xs[n:]_
    -  _ys[i] = M( xs[i] )_ for _i &ge; n_.
    - This step can be <u>**VERY FAST**</u> since we are just calling a very small model `M`.
