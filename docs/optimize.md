@@ -190,10 +190,12 @@ Hence, clever optimizers strive the minimize the  budget required to find soluti
 
 ## Issues with Software Optimizers
 
-### Local Optima
+### Local Minima
 
 <img src="../etc/img/moment.gif" width=400 align=right> 
-The above code chases down to lower and lower values... which makes this  a greedy search that can get trapped in local optima. There are several known solutions to the problem of local optima including
+The above code chases down to lower and lower values... which makes this  a greedy search that can get trapped in local minima. 
+
+There are several known solutions to the problem of local minima including
 
 - Add restart-retries. 
   - Restart to a random point and see if you get back to the old solution (if so, it really was the best).
@@ -204,12 +206,14 @@ The above code chases down to lower and lower values... which makes this  a gree
   - Neural  nets use such a factor as they adjust their weights
   - Particle swam optimizers (PSO) 
     <img src="../etc/img/pso101.gif" width=400 align=right> 
-    just sail past the best solution, but might circle back to them
     - PSO runs (say) 30 "particles"
     - Each particle mutates a solution in a direction determined by 
       - its prior velocity
       - a pull back towards the best solution ever seen by this particle
       - a pull towards the best solution ever seen by any particle
+    - So when it finds a better best, it just sails on by 
+      - but it might circle back to them
+      - kind of like a restart-retry and a populuation and a momentum approach all rolled into one.
 - Add some random jiggle to the search.
   - e.g. _simulated annealling_
   - For example, 
