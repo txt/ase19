@@ -192,6 +192,9 @@ Hence, clever optimizers strive the minimize the  budget required to find soluti
 
 ### no function
 
+e,g, probing some pooly understand effort
+
+
 ### dsicontonuitnies
 
 ### constraints
