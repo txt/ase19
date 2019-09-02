@@ -36,7 +36,7 @@ the dumbest thing you can":
 - _Standardised accuracy_ = (1- x/y) * 100
     - Larger values are better
 
-![](../etc/img/sa.png)
+![](../etc/img/rank101.png)
 
 ## Discrete goals
 
