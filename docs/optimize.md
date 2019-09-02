@@ -221,29 +221,26 @@ The above code chases down to lower and lower values... which makes this  a gree
       - This algorithm replaces the current solution `s` with `sn`
     - But as `t` "cools", the algorithm becomes a hill climber that only moves to better solutions. 
 
-In the following code, `sb` is the best solution seen so far (with energy `eb`).
+In the following simulated annealer, `sb` is the best solution seen so far (with energy `eb`).
 
 ```python
 import math,random
+r = random.random
 
-def mutates(s,p,lo,hi):
-  return [mutate(x,p,lo1,hi1) for x,lo1,hi1 in zip(s,lo, hi)]
-
-def mutate(x,p,lo,hi):
-  return  lo + (hi - lo) * r() if p<r() else x
-    
 def sa(s0,f,lo,hi, budget=1000, cooling=2, p=0.2):
   "Initialize with some guess for the solution, s0"
   s  = sb = s0   # s,sb = solution,best
   e  = eb = f(s) # e,eb = energy, bestEnergy
-  for k  in range(budget): 
-    sn = mutates(s,p,lo,hi)  # next solution
+  for k in range(budget): 
+    sn = s[:]  # next solution
+    for  i,x in enumerate(sn):
+      if p < r(): sn[i] = lo[i] + (hi[i] - lo[i]) * r()
     en = f(sn)
     if en < eb:  # if next better than best
       sb,eb = s,e = sn,en 
     elif en < e: # if next better than last
       s,e = sn, en 
-    else: 
+    else:  # maybe jump to a worse solution
       t = k/budget
       if math.exp((e - en)/t) < r()**cooling: 
         s,e   = sn, en
