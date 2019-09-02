@@ -38,11 +38,25 @@ the dumbest thing you can":
 
 ![](../etc/img/rank101.png)
 
+## Statistical Ranking
+
+In the above diagram, the left-hand-side _rank_ column comes from statistical tests over each row.
+After sorting on the median score, we compare row _i_ with _i+1_L
+
+- Rows that are statistically indistinguishable  are ranked together,
+- Otherwise, the rank of row _i+1_ is one plus the rank of the row before it.
+
+
+This ranking trick is a great way to simplify reasoning about complex problems.  It turns out that many 
+treatments have indistinguishable performance (to say that another way, data sneers at excessive cleverness).
+
+- To distinguish  two populations, we have to look at the overlap between their distributions.
+- If we assume that the distributions iare nornal, we can 
 ## Discrete goals
 
-(For code to implment the following, see [abcd.lua](http://menzies.us/lean/abcd.lua).
+(For code to implement the following, see [abcd](http://menzies.us/fun/abcd).
 
-Consdier the output stream,
+Consider the output stream,
 
 ```
 %are you a dog?
@@ -55,7 +69,7 @@ Consdier the output stream,
  no        no
  ...       ...
 ```
-Note that somethimes `dog`s are correctly predicted and sometimes
+Note that sometimes `dog`s are correctly predicted and sometimes
 they ain't (line one).
 
 How do we convert these pairs into evaluation measures?
