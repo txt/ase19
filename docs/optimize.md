@@ -165,7 +165,7 @@ def optimize(f       = model1,
     dist = Num( ys )               # get set for more jiggling
     if budget  < 0      : break    # taking too long. exit
     if dist.sd < epsilon: break    # close enough. exit
-  return dist.mu
+  return di current solutionst.mu
 ```
 
 Note:
@@ -192,6 +192,59 @@ Hence, clever optimizers strive the minimize the  budget required to find soluti
 
 ### Local Optima
 
+  - Note <img src="../etc/img/moment.png" width=400 align=right> 
+The above code chases down to lower and lower values... which makes this  a greedy search that can get trapped in local optima. There are several known solutions to the problem of local optima including
+
+- Add restart-retries. 
+ - Restart to a random point and see if you get back to the old solution (if so, it really was the best).
+- Explore a population,m not just one thing. That is, Run many times with different starting positions
+- Add some random jiggle to the search.
+  - e.g. _simulated annealling_
+  - For example, 
+    given a current solution  `s` 
+    that is  an array of numeric value with mins and maximums of `lo,hi`
+    and some score `e=f(s)` (known as the "energy") 
+    -  Simulated annealers perturb `p`% of those values to generate a new  solution `sn` with a score of `en` .
+    - At a probability `2.7183^(e-en)/t)`  determined  by a temperature  value `t`
+      - This algorithm replaces the current solution `s` with `sn`
+    - But as `t` "cools", the algorithm becomes a hill climber that only moves to better solutions. 
+
+In the following code, `sb` is the best solution seen so far (with energy `eb`).
+
+```python
+import math,random
+
+def mutates(s,p,lo,hi):
+  return [mutate(x,p,lo1,hi1) for x,lo1,hi1 in zip(s,lo, hi)]
+
+def mutate(x,p,lo,hi):
+  return  lo + (hi - lo) * r() if p<r() else x
+    
+def sa(s0,f,lo,hi, budget=1000, cooling=2, p=0.2):
+  "Initialize with some guess for the solution, s0"
+  s  = sb = s0   # s,sb = solution,best
+  e  = eb = f(s) # e,eb = energy, bestEnergy
+  for k  in range(budget): 
+    sn = mutates(s,p,lo,hi)  # next solution
+    en = f(sn)
+    if en < eb:  # if next better than best
+      sb,eb = s,e = sn,en 
+    elif en < e: # if next better than last
+      s,e = sn, en 
+    else: 
+      t = k/budget
+      if math.exp((e - en)/t) < r()**cooling: 
+        s,e   = sn, en
+  return sb,eb
+```
+Initially, `t` is large so this algorithm will often jump to sub-optimal solutions. But as things "cool", this algorithm becomes a 
+hill climber that just steps up to the next solution. In the following, just to confuse you, we score things by 1-f (so _better_ means _larger_): 
+
+<img src="../etc/img/Hill_Climbing_with_Simulated_Annealing.gif" width=400 align=right> 
+
+- Explore multiple solutions:
+  -  For example, we can cluster solutions and run optimizers per cluster.
+  - Or don't even bother clustering. Just start at N random locations
 ### Too few Solutions
 
 ### Variable Dependence
