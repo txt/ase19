@@ -149,7 +149,7 @@ Another example, from [Chen et al.](https://www.researchgate.net/publication/324
 <img src="../etc/img/effort2.png" width=400 >
 
 <img src="../etc/img/papa.png" align=right width=400>
-Results from [Papakroni](https://oatd.org/oatd/record?record=oai%5C%3Awvuscholar.wvu.edu%5C%3A28332)'s masters thesis
+Results from [Papakroni](https://researchrepository.wvu.edu/etd/3399/)'s masters thesis:
 
 
 - TRAIN:
