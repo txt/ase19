@@ -161,6 +161,7 @@ Project 21 features onto first 2 components of PCA
 - TEST: Estimate = interpolate 2 near centroids
 - Performs no worse, and sometimes better, than Random forests, NaiveBayes
 
+<br clear=both>
 
 
 In summary, especially for SE, 
