@@ -148,7 +148,7 @@ Another example, from [Chen et al.](https://www.researchgate.net/publication/324
 <img src="../etc/img/effort1.png" width=400 ><br>
 <img src="../etc/img/effort2.png" width=400 >
 
-<img src="../etc/img/papa.png" align=right width=400>
+<img src="../etc/img/papa.png" align=right width=300>
 Results from 
 [Papakroni](https://researchrepository.wvu.edu/etd/3399):
 
