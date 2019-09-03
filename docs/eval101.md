@@ -68,7 +68,6 @@ the dumbest thing you can":
 - _Standardised accuracy_ = (1- x/y) * 100
     - Larger values are better
 
-Lets compute some e
 ![](../etc/img/rank101.png)
 
 ## Statistical Ranking
@@ -217,25 +216,35 @@ First, we need a _pareto frontier_ "_P_".
 - The frontier are  the solutions that "dominate" the rest
   - Informally, the dominating solutions are those with a clear line of sight to heaven (the point of best goals)
   - More formally, for binary domination, 
-    - X dominates Y if none of X's objectives are worst than in Y, and at least one objective score in X is better than Y.
+    - _None worse_: X dominates Y if none of X's objectives are worst than in Y, 
+    - _One better_: And at least one objective score in X is better than Y.
   - More formally, for indicator  domination, X dominates Y if we sum the difference in the goals, raised to some power.
     - see [RowDom](http://menzies.us/fun/row.html#scoring-rows).
 
-Given N optimizers which achieved frontiers of A<sub>1</sub>, A<sub>2</sub>, ....
+Given multiple optimizers which achieved frontiers of A<sub>1</sub>, A<sub>2</sub>, ....
 
 - the reference frontier is the dominating examples of _R=dom(&Union;A<sub>i</sub>)_ 
-  -  i.e. you throw together all the A<sub>i<</sub> together and discard anything worse than anything else.
+  -  i.e. you throw together all the A<sub>i</sub> together and discard anything worse than anything else.
 
 <img src="../etc/img/evalmoea.png" width=500 align=right>
 
-- _Generational Distance:_ Generational distance is the measure of convergence: how close is the predicted Pareto front is to the actual Pareto front. It is defined to measure (using Euclidean distance) how far are the solutions that exist in P from the nearest solutions in A. In an ideal case, the GD is 0, which means the predicted PF is a subset of the actual PF. Note that it ignores how well the solutions are spread out. 
+- _Generational Distance:_ Generational distance is the measure of convergence: how close is the predicted Pareto front A<sub>i</sub> is to the actual Pareto front. 
+It is defined to measure (using Euclidean distance) how far are the solutions that exist in _R_  to the nearest solutions in A<sub>i</sub>. 
+   - In an ideal case, the GD is 0, which means the predicted fronter is a subset of the actual reference froniter. 
+   - Note that GD ignores how well the solutions are spread out. 
 
-_Spread:_ Spread is a measure of diversity—how well the solutions in P are spread. An ideal case is when the solutions in P is spread evenly across the Predicted Pareto Front.
+_Spread:_ Spread is a measure of diversity—how well the solutions in A<sub>i</sub> are spread. This measure reports the gaps between nearest solutions on the froniter A<sub>i</sub>.
+  - An ideal case is when the solutions in are spread evenly across the Predicted Pareto Front; i.e. there are no
+    large gaps in the members of A<sub>i</sub>. 
+  - So smaller values of Spread and better.
 
-- _ Inverted Generational Distance:_ Inverted Generational distance measures both convergence as well as the diversity of the solutions—measures the shortest distance from each solution in the Actual PF to the closest solution in Predicted PF. Like Generational distance, the distance is measured in Euclidean space. In an ideal case, IGD is 0, which means the predicted PF is same as the actual PF.
+- _ Inverted Generational Distance:_ Inverted Generational distance measures both convergence as well as the diversity of the solutions—measures the shortest distance from each solution in the Actual frontier A<sub>i</sub> to the closest solution in _R_.  Like Generational distance, the distance is measured in Euclidean space. I
+  - In an ideal case, IGD is 0, which means the predicted PF is same as the actual PF.
 
 _Hypervolume:- Hypervolume measures both convergence as well as the diversity of the solutions— hypervolume is the union of the cuboids w.r.t. to a reference point. Note that the hypervolume implicitly defines an arbitrary aim of optimization. Also, it is not efficiently computable when the number of dimensions is large, however, approximations exist.
 Approximation: Additive/multiplicative Approximation is an alternative measure which can be computed in linear time (w.r.t. to the number of objectives). It is the multi-objective extension of the concept of approximation encountered in theoretical computer science.
+
+- And [many other ways](http://www.optimization-online.org/DB_FILE/2018/10/6887.pdf), as well.
 
 <br clear=both>
 
