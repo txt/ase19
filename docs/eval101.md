@@ -228,21 +228,23 @@ Given multiple optimizers which achieved frontiers of A<sub>1</sub>, A<sub>2</su
 
 <img src="../etc/img/evalmoea.png" width=500 align=right>
 
-- _Generational Distance:_ Generational distance is the measure of convergence: how close is the predicted Pareto front A<sub>i</sub> is to the actual Pareto front. 
+_Generational Distance:_ Generational distance is the measure of convergence: how close is the predicted Pareto front A<sub>i</sub> is to the actual Pareto front. 
 It is defined to measure (using Euclidean distance) how far are the solutions that exist in _R_  to the nearest solutions in A<sub>i</sub>. 
-   - In an ideal case, the GD is 0, which means the predicted fronter is a subset of the actual reference froniter. 
-   - Note that GD ignores how well the solutions are spread out. 
 
-_Spread:_ Spread is a measure of diversity—how well the solutions in A<sub>i</sub> are spread. This measure reports the gaps between nearest solutions on the froniter A<sub>i</sub>.
-  - An ideal case is when the solutions in are spread evenly across the Predicted Pareto Front; i.e. there are no
+- In an ideal case, the GD is 0, which means the predicted fronter is a subset of the actual reference froniter. 
+- Note that GD ignores how well the solutions are spread out. 
+
+_Spread:_ Spread is a measure of diversity—how well the solutions in A<sub>i</sub> are spread. This measure reports the gap distance D<sub>i</sub> between nearest solutions on the froniter A<sub>i</sub>.
+
+- An ideal case is when the solutions in are spread evenly across the Predicted Pareto Front; i.e. there are no
     large gaps in the members of A<sub>i</sub>. 
-  - So smaller values of Spread and better.
+- So smaller values of Spread and better.
 
-- _ Inverted Generational Distance:_ Inverted Generational distance measures both convergence as well as the diversity of the solutions—measures the shortest distance from each solution in the Actual frontier A<sub>i</sub> to the closest solution in _R_.  Like Generational distance, the distance is measured in Euclidean space. I
-  - In an ideal case, IGD is 0, which means the predicted PF is same as the actual PF.
+_Inverted Generational Distance:_ Inverted Generational distance measures both convergence as well as the diversity of the solutions—measures the shortest distance from each solution in the Actual frontier A<sub>i</sub> to the closest solution in _R_.  Like Generational distance, the distance is measured in Euclidean space. 
+
+- In an ideal case, IGD is 0, which means the frontier found by this optimizer is the same as the one found by all optimizers.
 
 _Hypervolume:- Hypervolume measures both convergence as well as the diversity of the solutions— hypervolume is the union of the cuboids w.r.t. to a reference point. Note that the hypervolume implicitly defines an arbitrary aim of optimization. Also, it is not efficiently computable when the number of dimensions is large, however, approximations exist.
-Approximation: Additive/multiplicative Approximation is an alternative measure which can be computed in linear time (w.r.t. to the number of objectives). It is the multi-objective extension of the concept of approximation encountered in theoretical computer science.
 
 - And [many other ways](http://www.optimization-online.org/DB_FILE/2018/10/6887.pdf), as well.
 
