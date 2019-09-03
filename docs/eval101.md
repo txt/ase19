@@ -227,7 +227,7 @@ Given N optimizers which achieved frontiers of A<sub>1</sub>, A<sub>2</sub>, ...
 - the reference frontier is the dominating examples of _R=&union;A<sub>i</sub>_ 
    (i.e. you throw together all the A<sub>i<</sub> together and discard anything worse than anything else).
 
-<img src="../etc/img/evalmoea.png" wdith=500 align=right>
+<img src="../etc/img/evalmoea.png" width=500 align=right>
 
 - _Generational Distance:_ Generational distance is the measure of convergence: how close is the predicted Pareto front is to the actual Pareto front. It is defined to measure (using Euclidean distance) how far are the solutions that exist in P from the nearest solutions in A. In an ideal case, the GD is 0, which means the predicted PF is a subset of the actual PF. Note that it ignores how well the solutions are spread out. 
 
