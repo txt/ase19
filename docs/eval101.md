@@ -223,8 +223,8 @@ First, we need a _pareto frontier_ "_P_".
 
 Given N optimizers which achieved frontiers of A<sub>1</sub>, A<sub>2</sub>, ....
 
-- the reference frontier is the dominating examples of _R=&Union;A<sub>i</sub>_ 
-   (i.e. you throw together all the A<sub>i<</sub> together and discard anything worse than anything else).
+- the reference frontier is the dominating examples of _R=dom(&Union;A<sub>i</sub>)_ 
+  -  i.e. you throw together all the A<sub>i<</sub> together and discard anything worse than anything else.
 
 <img src="../etc/img/evalmoea.png" width=500 align=right>
 
