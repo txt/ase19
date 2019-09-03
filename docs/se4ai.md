@@ -122,7 +122,46 @@ the other four days of the week.
 
 We've been applying SE tools to AI for decades now are there are
 some strange results suggesting that SE needs its own special kinds
-of AI:
+of AI
+
+
+
+<img src="../etc/img/nomo1.png" width=500i align=right>
+- Given classes x,y then Fx, Fy is frequency of some ranges in x,y, then  the _log odds ratio_ = log(Fx/Fy ). 
+  If zero  if no difference in x,y
+- Results:
+  - Data from Norman Fenton’s Bayes nets discussing software defects = yes, no
+  - Most variables do not contribute to determination of defects
+
+
+Another example, from [Chen et al.](https://www.researchgate.net/publication/3248296_Finding_the_Right_Data_for_Software_Cost_Modeling)
+
+- given 20+ vsariables describing software projects,
+- and different sites with 20 to 200 projects each,
+- most of those variables are not needed for redicting the effort required to complete a project
+- In the following, red and green shows the performance before/after applying alogithms to remove superflous attributes
+  - PRED(30) is the percent ot projects that complete within 30% of the predicted budget (so _larger_ is _better_)
+
+
+<img src="../etc/img/papa.png" align=right width=500>
+Results from [Papakroni](https://oatd.org/oatd/record?record=oai%5C%3Awvuscholar.wvu.edu%5C%3A28332)'s masters thesis
+
+
+- TRAIN:
+Project 21 features onto first 2 components of PCA
+    - Recursively divide two dimensions (at median)
+    - Stopping a SQRT(N)
+    - In each leaf, replace N projects with median centroid
+- TEST: Estimate = interpolate 2 near centroids
+- Performs no worse, and sometimes better, than Random forests, NaiveBayes
+
+
+
+In summary, especially for SE, 
+<em> the secret of big data is [small data](https://www.forbes.com/sites/rogerdooley/2016/02/16/small-data-lindstrom/#711873e37870)</em> since
+the best thing to do with data is to ignore most of it.
+For more, on how to learn less, see [Data Mining for very busy people](http://menzies.us/pdf/03tar2.pdf)
+
 
 There are some good reasons for this.:
 
