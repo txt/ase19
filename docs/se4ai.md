@@ -135,8 +135,6 @@ of AI
   - Most variables do not contribute to determination of defects
 <br clear=both>
 
-<img src="../etc/img/effort1.png" width=400 align=right><br>
-<img src="../etc/img/effort2.png" width=400 align=right>
 
 Another example, from [Chen et al.](https://www.researchgate.net/publication/3248296_Finding_the_Right_Data_for_Software_Cost_Modeling)
 
@@ -147,7 +145,8 @@ Another example, from [Chen et al.](https://www.researchgate.net/publication/324
   - PRED(30) is the percent of projects that complete within 30% of the predicted budget (so _larger_ is _better_)
 
 
-<br clear=both>
+<img src="../etc/img/effort1.png" width=400 ><br>
+<img src="../etc/img/effort2.png" width=400 >
 
 <img src="../etc/img/papa.png" align=right width=400>
 Results from [Papakroni](https://oatd.org/oatd/record?record=oai%5C%3Awvuscholar.wvu.edu%5C%3A28332)'s masters thesis
