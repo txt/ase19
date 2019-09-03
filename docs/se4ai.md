@@ -136,9 +136,10 @@ of AI
 <br clear=both>
 
 
+Another example, from [Chen et al.](https://www.researchgate.net/publication/3248296_Finding_the_Right_Data_for_Software_Cost_Modeling)
+
 <img src="../etc/img/effort1.png" align=right width=500 >
 <img src="../etc/img/effort2.png" align=right width=500 >
-Another example, from [Chen et al.](https://www.researchgate.net/publication/3248296_Finding_the_Right_Data_for_Software_Cost_Modeling)
 
 - given 20+ variables describing software projects,
 - and different sites with 20 to 200 projects each,
@@ -148,10 +149,11 @@ Another example, from [Chen et al.](https://www.researchgate.net/publication/324
 
 
 
-<img src="../etc/img/papa.png" align=right width=300>
 Results from 
 [Papakroni](https://researchrepository.wvu.edu/etd/3399):
 
+
+<img src="../etc/img/papa.png" align=right width=300>
 
 - TRAIN:
 Project 21 features onto first 2 components of PCA
