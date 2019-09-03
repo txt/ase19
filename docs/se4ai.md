@@ -139,9 +139,11 @@ Another example, from [Chen et al.](https://www.researchgate.net/publication/324
 - given 20+ vsariables describing software projects,
 - and different sites with 20 to 200 projects each,
 - most of those variables are not needed for redicting the effort required to complete a project
-- In the following, red and green shows the performance before/after applying alogithms to remove superflous attributes
-  - PRED(30) is the percent ot projects that complete within 30% of the predicted budget (so _larger_ is _better_)
+- In the following, red and green shows the performance before/after applying algorithms to remove superfluous attributes
+  - PRED(30) is the percent of projects that complete within 30% of the predicted budget (so _larger_ is _better_)
 
+<img src="../etc/img/effort1.png" align=right><br>
+<img src="../etc/img/effort2.png" align=right>
 
 <img src="../etc/img/papa.png" align=right width=500>
 Results from [Papakroni](https://oatd.org/oatd/record?record=oai%5C%3Awvuscholar.wvu.edu%5C%3A28332)'s masters thesis
@@ -165,19 +167,26 @@ For more, on how to learn less, see [Data Mining for very busy people](http://me
 
 There are some good reasons for this.:
 
+- <a href="https://scx2.b-cdn.net/gfx/news/hires/2008/zipfslaw.gif"><img src="https://scx2.b-cdn.net/gfx/news/hires/2008/zipfslaw.gif" align=right width=300></a>
+[Naturalness:](REFS.md@hindle-2012). 
+" <em>Programming languages, in theory, are complex, flexible and powerful, but the programs that real people actually write are mostly simple and rather repetitive, and 
+thus they have usefully predictable statistical properties that can be captured in statistical language models and leveraged for software engineering task.</em>
+Software is written in a language. Languages have use a few repeated structures that [occur with high frequency, and many more structures with much lower frequency](https://phys.org/news/2008-12-linux-evolution-reveals-curious-mathematical.html). This changes the nature of the analysis since just a few things cover the most of the mass of possibilities.
+For example, at right, we see Linux packages
+ranked by their number of incoming links from other packages.  <br clear=both>
+- A repeated result is that the   <a href="https://raw.githubusercontent.com/txt/ase19/master/etc/img/bugs.png"><img src="../etc/img/bugs.png" align=right width=400></a> internal behavior of software often clumps.
+Software does not spent all its time roaming over
+  all its internal state space. Rather, there are a few things that happen nearly all the time and many things that happen rarely (more finally, given N possible states,
+most of the probability mass  is associated with with a vanishingly  small number of them; see [Druzdel, fig5](https://arxiv.org/pdf/1302.6802.pdf))
+states, only a very small fraction of the possible
+states are probably next states).  One result
+of this is (e.g.) bugs cluster such that most of the bugs are found in a  very small part of the code.
 - Strange to say, software does not correspond to the mathematical definition of a function; i.e. outputs determined by some input.
      - In pratice, one piece of software has many if-statemebts which means that the whole state space of the system divides into thousands to millions of tiny pieces,
 each with their own properites. 
      - Which means that when (e.g.) optimizing, then rule-based methods (that divide their knowledge
        into multiple regions) [can do better](https://www.umsec.umn.edu/sites/www.umsec.umn.edu/files/10tar3.pdf) than numeric optimizers (that tend to reason about the
        program as one global space).
-- Another <a href="https://scx2.b-cdn.net/gfx/news/hires/2008/zipfslaw.gif"><img src="https://scx2.b-cdn.net/gfx/news/hires/2008/zipfslaw.gif" align=right width=300></a>
-thing is [naturalness](REFS.md@hindle-2012). Software is written in a language. Languages have use a few repeated structures that [occur with high frequency, and many more structures with much lower frequency](https://phys.org/news/2008-12-linux-evolution-reveals-curious-mathematical.html). This changes the nature of the analysis since just a few things cover the most of the mass of possibilities.
-For example, at right, we see Linux packages
-ranked by their number of incoming links from other packages.  <br clear=both>
-- Because <a href="https://raw.githubusercontent.com/txt/ase19/master/etc/img/bugs.png"><img src="../etc/img/bugs.png" align=right width=400></a> of the other two points, or perhaps because of them, software's internal behavior clumps. Software does not spent all its time roaming over
-  all its internal state space. Rather, there are a few things that happen nearly all the time and many things that happen rarely. One result
-of this is (e.g.) bugs cluster such that most of the bugs are found in a  very small part of the code.
 
 All the above changes the nature of how we analyse software, of how we apply AI to SE and how SE can inform the process of building and use AI software. 
 
