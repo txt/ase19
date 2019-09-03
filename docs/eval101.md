@@ -214,7 +214,7 @@ For single objective problems, measures such as absolute residual or rank-differ
 
 First, we need a _pareto frontier_ "_P_".
 
-- The frontier are the solutions that "dominate" the rest
+- The frontier are  the solutions that "dominate" the rest
   - Informally, the dominating solutions are those with a clear line of sight to heaven (the point of best goals)
   - More formally, for binary domination, 
     - X dominates Y if none of X's objectives are worst than in Y, and at least one objective score in X is better than Y.
@@ -223,7 +223,7 @@ First, we need a _pareto frontier_ "_P_".
 
 Given N optimizers which achieved frontiers of A<sub>1</sub>, A<sub>2</sub>, ....
 
-- the reference frontier is the dominating examples of _R=&union;A<sub>i</sub>_ 
+- the reference frontier is the dominating examples of _R=&Union;A<sub>i</sub>_ 
    (i.e. you throw together all the A<sub>i<</sub> together and discard anything worse than anything else).
 
 <img src="../etc/img/evalmoea.png" width=500 align=right>
