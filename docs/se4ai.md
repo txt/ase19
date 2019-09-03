@@ -128,7 +128,7 @@ of AI
 
 <img src="../etc/img/nomo1.png" width=500i align=right>
 
-- Given classes x,y then F<sub>x</sub>, F<sub>y</sub>  are the  frequencies of some ranges in x,y, then  the _log odds ratio_ = log(hF<sub>x</sub>/F<sub>y</sub>).
+- Given classes x,y then F<sub>x</sub>, F<sub>y</sub>  are the  frequencies of some ranges in x,y, then  the _log odds ratio_ = log(F<sub>x</sub>/F<sub>y</sub>).
   If zero  if no difference in x,y
 - Results:
   - Data from Norman Fenton’s Bayes nets discussing software defects = yes, no
@@ -136,6 +136,8 @@ of AI
 <br clear=both>
 
 
+<img src="../etc/img/effort1.png" width=500 >
+<img src="../etc/img/effort2.png" width=500 >
 Another example, from [Chen et al.](https://www.researchgate.net/publication/3248296_Finding_the_Right_Data_for_Software_Cost_Modeling)
 
 - given 20+ variables describing software projects,
@@ -145,8 +147,6 @@ Another example, from [Chen et al.](https://www.researchgate.net/publication/324
   - PRED(30) is the percent of projects that complete within 30% of the predicted budget (so _larger_ is _better_)
 
 
-<img src="../etc/img/effort1.png" width=400 ><br>
-<img src="../etc/img/effort2.png" width=400 >
 
 <img src="../etc/img/papa.png" align=right width=300>
 Results from 
