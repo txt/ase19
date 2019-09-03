@@ -136,8 +136,8 @@ of AI
 <br clear=both>
 
 
-<img src="../etc/img/effort1.png" width=500 >
-<img src="../etc/img/effort2.png" width=500 >
+<img src="../etc/img/effort1.png" align=right width=500 >
+<img src="../etc/img/effort2.png" align=right width=500 >
 Another example, from [Chen et al.](https://www.researchgate.net/publication/3248296_Finding_the_Right_Data_for_Software_Cost_Modeling)
 
 - given 20+ variables describing software projects,
