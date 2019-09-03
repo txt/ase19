@@ -128,7 +128,7 @@ of AI
 
 <img src="../etc/img/nomo1.png" width=500i align=right>
 
-- Given classes x,y then Fx, Fy is frequency of some ranges in x,y, then  the _log odds ratio_ = log(Fx/Fy ). 
+- Given classes x,y then F<sub>x</sub>, F<sub>y</sub>  are the  frequencies of some ranges in x,y, then  the _log odds ratio_ = log(hF<sub>x</sub>/F<sub>y</sub>).
   If zero  if no difference in x,y
 - Results:
   - Data from Norman Fenton’s Bayes nets discussing software defects = yes, no
