@@ -138,7 +138,7 @@ of AI
 
 Another example, from [Chen et al.](https://www.researchgate.net/publication/3248296_Finding_the_Right_Data_for_Software_Cost_Modeling)
 
-- given 20+ vsariables describing software projects,
+- given 20+ variables describing software projects,
 - and different sites with 20 to 200 projects each,
 - most of those variables are not needed for redicting the effort required to complete a project
 - In the following, red and green shows the performance before/after applying algorithms to remove superfluous attributes
@@ -149,7 +149,8 @@ Another example, from [Chen et al.](https://www.researchgate.net/publication/324
 <img src="../etc/img/effort2.png" width=400 >
 
 <img src="../etc/img/papa.png" align=right width=400>
-Results from [Papakroni](https://researchrepository.wvu.edu/etd/3399/)'s masters thesis:
+Results from 
+[Papakroni](https://researchrepository.wvu.edu/etd/3399):
 
 
 - TRAIN:
