@@ -161,9 +161,10 @@ Results from
 Project 21 features onto first 2 components of PCA
     - Recursively divide two dimensions (at median)
     - Stopping a SQRT(N)
-    - In each leaf, replace N projects with median centroid
+    - For  each of the 30 leaves, replace N projects with median centroid
 - TEST: Estimate = interpolate between 2 nearest  centroids
-- Performs no worse, and sometimes better, than Random forests, NaiveBayes
+- Just using these 30 points performs no worse, and sometimes better, than Random forests, NaiveBayes reasoning over 800+ projects.
+  - For more on this, read up on [prototype selection](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.459.7736&rep=rep1&type=pdf)
 
 <br clear=both>
 

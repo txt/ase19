@@ -19,6 +19,38 @@ So
 
 But what are the goals often seen in practice?
 
+## Cross-validation
+
+Usual practice (strongly recommended) is the train on some data and test on some other.
+
+- e.g. given a  data set, shuffle its order 5 times
+  - each time, divide into 5 bins
+  - train on four bins, test on the remaining
+  - 25 repeated results
+- e.g. given data divided into times T1, T2, T3,... (e.g. software relased as different versions)
+  - train on the past (time T<sub>i</sub>) and test on the future (time T<sub>j&gt;i</sub>)
+
+## Multiple Trials
+
+For any algorithm with a stochastic component, it is got practice to repeat mulitple times,w ith different random seeds
+
+- e.g. 20 repeats (if algorithm not too slow)
+- strive for at least 10
+
+## Comparing distributions
+
+<img src="http://menzies.us/fun/assets/img/normalbell.png" align=right width=400>
+
+This means that when we compare different learners/ optimizers,w e are mot compare one value but rather ranges of values from each treatment.
+
+For example, if our data came from normal bell shaped curves, we would apply statistical tests called [Hedges and ttests](http://menzies.us/fun/nums.html) to check the overlap between the curves
+
+- and if that overlap was small, then we could say the distributions are different
+- after which point, we can compare the median/mean values.
+
+If doubt the normality assumption, then use tests that do not assume normal bell shaped curves like [Cliff's Delta and bootstrap](http://menzies.us/fun/sk.html). These are _sampling_
+methods that draw values from one distributions, then see where these values fall in other distribution. 
+
 ## Numeric Goals
 
 - residual = RE = predicted - actual
@@ -36,6 +68,7 @@ the dumbest thing you can":
 - _Standardised accuracy_ = (1- x/y) * 100
     - Larger values are better
 
+Lets compute some e
 ![](../etc/img/rank101.png)
 
 ## Statistical Ranking
@@ -50,8 +83,10 @@ After sorting on the median score, we compare row _i_ with _i+1_L
 This ranking trick is a great way to simplify reasoning about complex problems.  It turns out that many 
 treatments have indistinguishable performance (to say that another way, data sneers at excessive cleverness).
 
-- To distinguish  two populations, we have to look at the overlap between their distributions.
-- If we assume that the distributions iare nornal, we can 
+- E.g. see figure 3c and 3d of [Yan et al.](https://xin-xia.github.io/publication/esem17.pdf)
+where dozens of treatments form just 4-5  ranks.
+
+
 ## Discrete goals
 
 (For code to implement the following, see [abcd](http://menzies.us/fun/abcd).
@@ -173,9 +208,41 @@ pf = pos / neg * (1-prec)/prec * recall
 
 ![](../etc/img/versus.png)
 
+## Evaluation measures for optimizers:
+
+For single objective problems, measures such as absolute residual or rank-difference can be very useful but cannot be used for multi-objective problems. The following are the measures used for such problems. 
+
+First, we need a _pareto frontier_ "_P_".
+
+<img src="evalmoea.png" wdith=500 align=right>
+- The frontier are the solutions that "dominate" the rest
+  - Informally, the dominating solutions are those with a clear line of sight to heaven (the point of best goals)
+  - More formally, for binary domination, 
+    - X dominates Y if none of X's objectives are worst than in Y, and at least one objective score in X is better than Y.
+  - More formally, for indicator  domination, X dominates Y if we sum the difference in the goals, raised to some power.
+    - see [`RowDom`](http://menzies.us/fun/row.html#scoring-rows).
+
+Given N optimizers which achieved frontiers of A<sub>1</sub>, A<sub>2</sub>, ....
+
+- the reference frontier is the dominating examples of _R=&union;A<sub>i</sub>_ 
+   (i.e. you throw together all the A<sub>i<</sub> together and discard anything worse than anything else).
+
+<img src="../etc/img/evalmoea.png" wdith=500 align=right>
+
+- _Generational Distance:_ Generational distance is the measure of convergence: how close is the predicted Pareto front is to the actual Pareto front. It is defined to measure (using Euclidean distance) how far are the solutions that exist in P from the nearest solutions in A. In an ideal case, the GD is 0, which means the predicted PF is a subset of the actual PF. Note that it ignores how well the solutions are spread out. 
+
+_Spread:_ Spread is a measure of diversity—how well the solutions in P are spread. An ideal case is when the solutions in P is spread evenly across the Predicted Pareto Front.
+
+- _ Inverted Generational Distance:_ Inverted Generational distance measures both convergence as well as the diversity of the solutions—measures the shortest distance from each solution in the Actual PF to the closest solution in Predicted PF. Like Generational distance, the distance is measured in Euclidean space. In an ideal case, IGD is 0, which means the predicted PF is same as the actual PF.
+
+_Hypervolume:- Hypervolume measures both convergence as well as the diversity of the solutions— hypervolume is the union of the cuboids w.r.t. to a reference point. Note that the hypervolume implicitly defines an arbitrary aim of optimization. Also, it is not efficiently computable when the number of dimensions is large, however, approximations exist.
+Approximation: Additive/multiplicative Approximation is an alternative measure which can be computed in linear time (w.r.t. to the number of objectives). It is the multi-objective extension of the concept of approximation encountered in theoretical computer science.
+
+<br clear=both>
+
 ## Special Measures for SE
 
-Softare engineering, we might have some other measures.
+Software engineering, we might have some other measures.
 
 ### IFA
 
