@@ -133,6 +133,7 @@ of AI
 - Results:
   - Data from Norman Fenton’s Bayes nets discussing software defects = yes, no
   - Most variables do not contribute to determination of defects
+
 <br clear=both>
 
 
