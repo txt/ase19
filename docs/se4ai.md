@@ -173,7 +173,7 @@ For more, on how to learn less, see [Data Mining for very busy people](http://me
 There are some good reasons why, at least in SE, we can ignore most of data:
 
 - At least some  of that data collection was inspired by decades-old truisms of SE that are now  known to be wildly inaccurate (see [Menzies  and Zimmermann](http://menzies.us/pdf/18analytics.pdf),
- especially the smaller figure on page 3, or [Devanbu et al.](ihttps://web.cs.ucdavis.edu/~devanbu/belief+evidence.pdf)).
+ especially the smaller figure on page 3, or [Devanbu et al.](https://web.cs.ucdavis.edu/~devanbu/belief+evidence.pdf)).
 - <a href="https://scx2.b-cdn.net/gfx/news/hires/2008/zipfslaw.gif"><img src="https://scx2.b-cdn.net/gfx/news/hires/2008/zipfslaw.gif" align=right width=300></a>
 [Naturalness:](REFS.md@hindle-2012). 
 " <em>Programming languages, in theory, are complex, flexible and powerful, but the programs that real people actually write are mostly simple and rather repetitive, and 
