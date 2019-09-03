@@ -214,13 +214,12 @@ For single objective problems, measures such as absolute residual or rank-differ
 
 First, we need a _pareto frontier_ "_P_".
 
-<img src="evalmoea.png" wdith=500 align=right>
 - The frontier are the solutions that "dominate" the rest
   - Informally, the dominating solutions are those with a clear line of sight to heaven (the point of best goals)
   - More formally, for binary domination, 
     - X dominates Y if none of X's objectives are worst than in Y, and at least one objective score in X is better than Y.
   - More formally, for indicator  domination, X dominates Y if we sum the difference in the goals, raised to some power.
-    - see [`RowDom`](http://menzies.us/fun/row.html#scoring-rows).
+    - see [RowDom](http://menzies.us/fun/row.html#scoring-rows).
 
 Given N optimizers which achieved frontiers of A<sub>1</sub>, A<sub>2</sub>, ....
 
