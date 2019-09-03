@@ -148,6 +148,7 @@ Another example, from [Chen et al.](https://www.researchgate.net/publication/324
   - PRED(30) is the percent of projects that complete within 30% of the predicted budget (so _larger_ is _better_)
 
 
+<br clear=both>
 
 Results from 
 [Papakroni](https://researchrepository.wvu.edu/etd/3399):
