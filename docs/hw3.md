@@ -39,7 +39,7 @@ recall, the f-measure, and the g-measurea
  
 To test your code, then something like this:
 
-```
+```python
 function _abcd(f,i,j) {
   Abcd(i)
   for(j=1; j<=6; j++) Abcd1(i,"yes", "yes")
