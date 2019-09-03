@@ -127,12 +127,16 @@ of AI
 
 
 <img src="../etc/img/nomo1.png" width=500i align=right>
+
 - Given classes x,y then Fx, Fy is frequency of some ranges in x,y, then  the _log odds ratio_ = log(Fx/Fy ). 
   If zero  if no difference in x,y
 - Results:
   - Data from Norman Fenton’s Bayes nets discussing software defects = yes, no
   - Most variables do not contribute to determination of defects
+<br clear=both>
 
+<img src="../etc/img/effort1.png" width=400 align=right><br>
+<img src="../etc/img/effort2.png" width=400 align=right>
 
 Another example, from [Chen et al.](https://www.researchgate.net/publication/3248296_Finding_the_Right_Data_for_Software_Cost_Modeling)
 
@@ -142,10 +146,10 @@ Another example, from [Chen et al.](https://www.researchgate.net/publication/324
 - In the following, red and green shows the performance before/after applying algorithms to remove superfluous attributes
   - PRED(30) is the percent of projects that complete within 30% of the predicted budget (so _larger_ is _better_)
 
-<img src="../etc/img/effort1.png" align=right><br>
-<img src="../etc/img/effort2.png" align=right>
 
-<img src="../etc/img/papa.png" align=right width=500>
+<br clear=both>
+
+<img src="../etc/img/papa.png" align=right width=400>
 Results from [Papakroni](https://oatd.org/oatd/record?record=oai%5C%3Awvuscholar.wvu.edu%5C%3A28332)'s masters thesis
 
 
