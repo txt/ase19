@@ -61,6 +61,6 @@ This subject will explore methods to augment standard software engineering pract
 
 ## Review
 
--  [one](docs/review1.md#top) |
+-  [one](docs/review1.md#top) 
 
 ## Links
