@@ -57,7 +57,7 @@ For each of _TOOL_ &isin; (blusterers, classifiers, regressors,  and multi-objec
     - What is the false alarm rate for "no"?
     - What is the precision for "maybe"?
 
-```python
+```awk
 function _abcd(f,i,j) {
   Abcd(i)
                              # want,    got
@@ -68,6 +68,7 @@ function _abcd(f,i,j) {
   for(j=1; i<=1; j++) Abcd1(i,"maybe",  "no")
   AbcdReport(i)
 }
+```
 
 Multi-objective optimization
 
