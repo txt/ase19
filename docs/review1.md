@@ -72,16 +72,16 @@ function _abcd(f,i,j) {
 
 Multi-objective optimization
 
-- define the booleana domination predicate suitable for two objectives
+- define the Boolean domination predicate suitable for two objectives
 - Assuming we want to minimize power consumption and cost
-  - draw 20 dots on a two-d grid. Mark the pareto frontier.
+  - draw 20 dots on a two-d grid. Mark the Pareto frontier.
     - on that first drawn, draw a tiny square around any dot "_X_" then draw the (much larger)
       rectangle indicating which other
       dots are dominated by "_X_" 
-  - Make a second drawing (on a new pience of paper)
+  - Make a second drawing (on a new pierce of paper)
     - draw 10 circles from optimizer one and 10 crosses from optimizer two
     - draw the reference frontier
-- Define hypervolumns, spread, generational distance (GD), inverse generational distance (IGD)
+- Define hypervolume, spread, generational distance (GD), inverse generational distance (IGD)
   - On the second drawing, show one distance measurement that would be make for GD but not for IGD
 - (Here are  two questions you may not be able to answer... yet) 
   - define a domination predicate suitable for 3,4,5 objectives.
