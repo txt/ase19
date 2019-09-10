@@ -51,7 +51,7 @@ For each of _TOOL_ &isin; (blusterers, classifiers, regressors,  and multi-objec
     usually misses the target concept (i.e. high accuracy, low recall)
   - When is "precision not precise"? i.e. Give a specific example where a classifier has a very low
     precision, yet still might be considered useful.
-  The following question using the following function.
+  - The following question using the following function.
     - What is the accuracy seen below?
     - What is the recall for "yes"?
     - What is the false alarm rate for "no"?
