@@ -9,6 +9,8 @@
 
 ## Homework 4
 
+<em>WARNING! Now things are getting...interesting. This might take 2 weeks to complete. But make you must hand in something each week, even if it is incomplete (else you will lose points).</em>
+
 Using the `Abcd` class, score the performance of
 
 - `ZeroR`
