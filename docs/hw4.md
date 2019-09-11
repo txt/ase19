@@ -34,7 +34,7 @@ see [Abcd1](http://menzies.us/fun/abcd).
 
 `ZeroR` predicts that the class of the next row is the mode of the classes seen so far.
 
-- A sample `ZeroR` implementation is given at [here](http://menzies.us/fun/zeror).
+- A sample `ZeroR` implementation is given [here](http://menzies.us/fun/zeror).
 
 ### NB
 
@@ -50,7 +50,7 @@ see [Abcd1](http://menzies.us/fun/abcd).
   1. One table, just for the class of that row
      - So if the data contains 5 classes, we maintain five tables.
   2. A second table that stores info on all rows
-- A sample `Nb` implementation is given at [here](http://menzies.us/fun/nb).
+- A sample `Nb` implementation is given [here](http://menzies.us/fun/nb#code).
   - The main loop of this `Nb` looks at each row. For each row, it then looks
     at each class table and finds the one that "likes" this row the most.
   - Note that, at its core, this code asks each column of each class how much
