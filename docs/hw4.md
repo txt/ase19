@@ -92,6 +92,7 @@ we read 4/20 rows of weathernon/diabetes
 before doing any classification. Note now the recall (pd) and
 false alarms (pf) for testedpositive and much healthier.
 
+```
 #--- nbok -----------------------
 
 weathernon
@@ -105,4 +106,4 @@ diabetes
   ---- |  ---- |  ---- |  ---- |  ---- |  ---- |  ---- | ---- | ---- | ---- | ---- | ---- | ---- |-----
   data |    rx |   765 |   176 |   115 |    90 |   384 | 0.73 | 0.81 | 0.77 | 0.34 | 0.79 | 0.71 | tested_negative
   data |    rx |   765 |   384 |    90 |   115 |   176 | 0.73 | 0.60 | 0.66 | 0.23 | 0.63 | 0.71 | tested_positive
-
+```
