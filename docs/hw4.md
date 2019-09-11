@@ -25,29 +25,30 @@ In all cases:
     predictions, then do that before the update). Why? Well, this ensures that you
     are not using data from the row to predict for that row.
 
-For sample implementation of this see [Abcd1](http://menzies.us/fun/abcd.md).
+For sample implementation of this 
+see [Abcd1](http://menzies.us/fun/abcd).
 
 ### ZeroR
 
 `ZeroR` predicts that the class of the next row is the mode of the classes seen so far.
 
-- A sample `ZeroR` implementation is given at [here](http://menzies.us/fun/zeror.md).
+- A sample `ZeroR` implementation is given at [here](http://menzies.us/fun/zeror).
 
 ### NB
 
-`Nb` (Naive Bayes) builds one table for each seperate class. So:
+`Nb` (Naive Bayes) builds one table for each separate class. So:
 
 - Each time a row is read
 - Look at its class
 - Ensure that you have a table from that class. That is:
   - If you have _not_ seen that class before, then create a new table.
 - Add the new row to the table for that row's class.
-- Also, maintain a seperate table for "overall"; i.e. each new row
+- Also, maintain a separate table for "overall"; i.e. each new row
   updates 
   1. One table, just for the class of that row
      - So if the data contains 5 classes, we maintain five tables.
   2. A second table that stores info on all rows
-- A sample `Nb` implementation is given at [here](http://menzies.us/fun/nb.md).
+- A sample `Nb` implementation is given at [here](http://menzies.us/fun/nb).
   - The main loop of this `Nb` looks at each row. For each row, it then looks
     at each class table and finds the one that "likes" this row the most.
   - Note that, at its core, this code asks each column of each class how much
