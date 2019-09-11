@@ -54,9 +54,9 @@ see [Abcd1](http://menzies.us/fun/abcd).
   - Note that, at its core, this code asks each column of each class how much
     it likes some column of the current row.
   - My code spreads out that `like` implemetnation between 
-    [NumLike](http://menzies.us/fun/num.md#numlike) 
+    [NumLike](http://menzies.us/fun/num#like) 
     and 
-    [SymLike](http://menzies.us/fun/sym.md#symlike) 
+    [SymLike](http://menzies.us/fun/sym#like) 
     each row how much it "likes" this
 
 ### Output
