@@ -68,3 +68,5 @@ This subject will explore methods to augment standard software engineering pract
 -  [one](docs/review1.md#top) 
 
 ## Links
+
+[scikit learn tutorial](https://github.com/rshu/Tutorials_ASEFall19/tree/master/sklearn) 
