@@ -66,6 +66,7 @@ This subject will explore methods to augment standard software engineering pract
 ## Review
 
 -  [one](docs/review1.md#top) 
+   [tutorial](https://github.com/rshu/Tutorials_ASEFall19/blob/master/sklearn/Review.ipynb)
 
 ## Links
 
