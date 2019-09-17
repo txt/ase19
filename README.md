@@ -41,7 +41,9 @@ This subject will explore methods to augment standard software engineering pract
     - Code: 
        - Learners: [ZeroR](http://menzies.us/fun/zeror) |  [Naive Bayes](http://menzies.us/fun/nb)
        - Support: [Abcd](http://menzies.us/fun/abcd) 
-    - Evaluation: [eval101](docs/eval101.md#top)
+    - Evaluation:  
+       [evalabc](docs/evalabc.md#top)
+       [eval101](docs/eval101.md#top)
     - Data mining: [lsr](docs/lsr.md#top) | baselines | discretization | basic | advanced
     - Optimizers : landscapes | basic | advanced | opt+mine
     - Theorem provers: [basic](docs/provers.md#top) | advanced
@@ -65,8 +67,8 @@ This subject will explore methods to augment standard software engineering pract
 
 ## Review
 
+-  [two](docs/review2.md#top) 
 -  [one](docs/review1.md#top) 
--  [tutorial](https://github.com/rshu/Tutorials_ASEFall19/blob/master/sklearn/Review.ipynb)
 
 ## Links
 
