@@ -38,6 +38,9 @@ This subject will explore methods to augment standard software engineering pract
   [ethics](docs/ethics.md#top) |
   [naive?](docs/ethics.md#top)
 - Algorithms:
+    - Code: 
+       - Learners: [ZeroR](http://menzies.us/fun/zeror) |  [Naive Bayes](http://menzies.us/fun/nb)
+       - Support: [Abcd](http://menzies.us/fun/abcd) 
     - Evaluation: [eval101](docs/eval101.md#top)
     - Data mining: [lsr](docs/lsr.md#top) | baselines | discretization | basic | advanced
     - Optimizers : landscapes | basic | advanced | opt+mine
@@ -51,12 +54,20 @@ This subject will explore methods to augment standard software engineering pract
   [deply](docs/deply.md#top) |
   [monitor](docs/monitor.md#top)
 
-## Homework / Project
+## Homework 
 
--  [three](docs/hw3.md#top) |
+-  [four](docs/hw4.md#top) |
+   [three](docs/hw3.md#top) |
    [two](docs/hw2.md#top) |
    [one](docs/hw1.md#top) 
 
 ## Project
 
+## Review
+
+-  [one](docs/review1.md#top) 
+-  [tutorial](https://github.com/rshu/Tutorials_ASEFall19/blob/master/sklearn/Review.ipynb)
+
 ## Links
+
+[scikit learn tutorial](https://github.com/rshu/Tutorials_ASEFall19/tree/master/sklearn) 
