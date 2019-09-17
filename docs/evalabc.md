@@ -12,8 +12,10 @@
 # Evaluation (abc)
 
 
+Things to watch for:
 
-On the following, cross-val and round-robin and leave-one-out add extensively to the cost of validation.
+-  at some point, the "verification" rig starts becoming the learner.
+- Of the following, cross-val and round-robin and leave-one-out add extensively to the cost of validation.
 
 ## Cross-validation:
 
@@ -359,7 +361,6 @@ rank                                                  5     25     50     75    
 ```
 ## From "verification" to "inference"
 
-Note: at some point, the "verification" rig starts becoming the learner.
 
 ### Example1: from cross-validation to bagging
 
