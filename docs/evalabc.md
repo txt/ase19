@@ -362,6 +362,25 @@ rank                                                  5     25     50     75    
 ## From "verification" to "inference"
 
 
+### Example0: near enoguh is Good Enough
+
+The above figure shows that many choices lead to very similar results
+- i.e. they are _redundant_
+
+So, one way to do inference is
+
+- Weight all choices _w=0_
+- Pick choices at random. Run learner, get performance score _P1_.
+- Pick another choice at random. Run learner, get performance score _Pi_
+  - If _Pi_ within &Epsilon; of some prior score
+    - Then _w = w - 1_
+    - Else _w = w + 1_
+- Keep picking, favoring choices with greatest weight (i.e. steer clear of  choices that lead to redundant conclusions).
+- [Crazy effective](ftp://ftp.ncsu.edu/pub/unity/lockers/ftp/csc_anon/tech/2019/TR-2019-4.pdf)
+  - Orders of magnitude faster than other configuration tools
+  - Yields better configurations 
+  - But only for SE data. So strange! 
+
 ### Example1: from cross-validation to bagging
 
 - After a decade of using cross-validation to test learners, researchers stated to notice that they're learning more from N models (build via cross-validation) than from any single model
