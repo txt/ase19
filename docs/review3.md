@@ -13,7 +13,7 @@
 ## KNN
 
 - Define
-- Here is a distance function that might be used in KNN : &sum; (x-y)<sup>p</sub>))<sup>1/p</sup>
+- Here is a distance function that might be used in KNN : &sum; (x-y)<sup>p</sup>))<sup>1/p</sup>
     - At p=2, does this function have another name?
     - Assuming p=2, what is the distance between (1,0,0) and (0,1,0)?
 - Explain the following terms: KNN grabs some **smaple** of all the data then applies a **kernel** to summarize then **k** neighbors
@@ -132,6 +132,7 @@ Cliffs-Delta
 - The above code shows the cliff's Delta effect size test for checking if one list of numbers is different to another
   - Explain this code.
 - Explain: "Cliff's Delta  is a non-parametric test"
+- What is the computational complexity of the above cliff's Delta code? How might that complexity be reduced?
 
 Scott-Knott:
 
