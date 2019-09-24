@@ -15,7 +15,7 @@
 - Define
 - Here is a distance function that might be used in KNN : &sum; (x-y)<sup>p</sup>))<sup>1/p</sup>
     - At p=2, does this function have another name?
-    - Assuming p=2, what is the distance between (1,0,0) and (0,1,0)?
+    - Assuming p=2, what is the distance between (1,0,0) and (0,1,0)? Feel free to leave your answer partially incomplete (just show me how you would do it).
 - Explain the following terms: KNN grabs some **smaple** of all the data then applies a **kernel** to summarize then **k** neighbors
 - What are some possible values for
    - **kernel**
