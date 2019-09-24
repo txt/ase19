@@ -285,6 +285,6 @@ Implement part2 and Part2 in the same code base where `Div2` accepts another arg
 
 If successful, then the above two examples should run as follows:
 
-	Div2lst,x=first, y=last,yis=Num) # for part1
-	Div2lst,x=first, y=last,yis=Sym) # for part2
+	Div2(lst,x=first, y=last,yis=Num) # for part1
+	Div2(lst,x=first, y=last,yis=Sym) # for part2
 
