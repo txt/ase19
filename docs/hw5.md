@@ -106,7 +106,7 @@ When I run it, I get three splits (and your results may vary).
 1 x.n    9 | x.lo 0.01275 x.hi 0.23944 | y.lo 0.00290 y.hi 0.0496
 2 x.n    5 | x.lo 0.40011 x.hi 0.44179 | y.lo 0.40215 y.hi 0.4838
 3 x.n   10 | x.lo 0.60153 x.hi 0.84696 | y.lo 0.81209 y.hi 0.8993
-
+```
 
 ## Part2
 
