@@ -9,9 +9,21 @@
 
 # Clustering
 
+(What to do when you have no labels for classification/regression.)
+
 https://scikit-learn.org/stable/auto_examples/cluster/plot_cluster_comparison.html:
 
 ![](https://scikit-learn.org/stable/_images/sphx_glr_plot_cluster_comparison_0011.png)
+
+BTW, once you get these clusters, you can use them to guide your search for labels
+
+- e.g. just ask about a few (maybe eve just one)  label cluster
+
+And you are haff way to an optimizer:
+
+- If you are in clusterX, and you don't like it
+- And you want to be in clusterY
+- Then just run a  decision tree algorithm with 2 classes, this cluster and the other one.
 
 ## Distance functions.
 
@@ -47,10 +59,34 @@ Distance gets weird for high dimensions
 - volume of the space increases so fast that the available data become sparse.
 - amount of data needed to support the result grows exponentially with dimensions
 
+## KD-trees
+
+Simplicity itself (much faster than KD trees)
+
+- Find wildest dimension 
+    - e.g. Most variance, 
+    - e.g. Greatest max - mix
+- Divide in two on that dimension
+    - e.g. At median point
+- Recurs on both halves
+- Stop when you've found, say,sqrt(N) of the data
+
+Problem: curse of dimensionality
+
+- For large dimensional problems
+- After a few cuts, each cut is now to small to separated
+   - and the data in each cut is still wildly variable since we've missed important dimensions
+
+<img src="../etc/img/kdtree.png">
+
 ## Random Projections
 
 - technique used to reduce the dimensionality of a set of points
 -  known for their power, simplicity, and low error rates when compared to other methods
+- if n randomly selected dimension say you are similar to something else
+    - then you are probably similar
+
+![](https://ars.els-cdn.com/content/image/1-s2.0-S0031320315003945-gr2.jpg)
 
 - Method one: Guassian random projections
    - Matrix = rows \* cols
@@ -82,37 +118,19 @@ Distance gets weird for high dimensions
       - But less exact
       - still, darn useful
 
-![](https://ars.els-cdn.com/content/image/1-s2.0-S0031320315003945-gr2.jpg)
- 
-## KD-trees
 
-Simplicity itself
+BTW, now we can solve the KD tree dimensionality problem.
 
-- Find wildest dimension 
-    - e.g. Most variance, 
-    - e.g. Greatest max - mix
-- Divide in two on that dimension
-    - e.g. At median point
-- Recurs on both halves
-- Stop when you've found, say,sqrt(N) of the data
-
-Problem: curse of dimensionality
-
-- For large dimensional problems
-- After a few cuts, each cut is now to small to separated
-   - and th data in each cut is still wildly variable since we've missed important dimensions
-
-Solution:
-
-- Random projections:
+- Using random projection:
    - To find wildest dimension
-   - At each level, do LSH 30 times and select the points that are most distant (*)
+   - At each level, do LSH  30 times and select the points that are most distant (*)
 
 
 (*) beware outliers :  
 
 - A safe thing might be to sort the pivots  by their distance and take something that is
   90% of max distance
+
 
 ## Kmeans: 
 
