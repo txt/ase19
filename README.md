@@ -45,7 +45,7 @@ This subject will explore methods to augment standard software engineering pract
        [evalabc](docs/evalabc.md#top) |
        [eval101](docs/eval101.md#top)
        - Code: [sk.py](https://gist.github.com/timm/41b3a8790c1adce26d63c5874fbea393)
-    - Data mining: [lsr](docs/lsr.md#top) | baselines | discretization | basic | advanced
+    - Data mining: [clustering](docs/cluster.md#top) | [lsr](docs/lsr.md#top) | baselines | discretization | basic | advanced
     - Optimizers : landscapes | basic | advanced | opt+mine
     - Theorem provers: [basic](docs/provers.md#top) | advanced
 - Process: [requirements](docs/requirements.md#top) | 
