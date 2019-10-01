@@ -51,7 +51,7 @@ A bootstrap is a non-parametric test of statistically significant difference:
 
 - What is the role of the "test statistic" in the bootstrap?
 - What is the role of "sampling with replacement" in the bootstrap? 
-     -     Given the list of numbers [10,20,30,40] write down 5 such samples
+  -     Given the list of numbers [10,20,30,40] write down 5 such samples
 - Using the terms "test statistic" and "sample with replacement", describe
   the bootstrap (note: your description should be high-level: no formulas required).
 
@@ -87,8 +87,8 @@ Cliff's Delta is a non-parametric effect size test:
 - Given the distance measure described above
     -  describe a random projections clustering algorithm that divides 900 examples into clusters of  around size 30
      - Describe how to reduce the curse of dimensionality in KD-trees
-- Given a matrix generation algorithm that files columns with gaussians pulled from (mean,sd)=0,1 describe how to
-     - reduce a matrix A with m × n rows and columns
+- Given a matrix generation algorithm that files columns with gaussians pulled from (mean,sd)=0,1 describe how to reduce
+     - a matrix A with m × n rows and columns
      - to a narrower matrix B with m × p rows and columns (p &lt; n)
 
 Aside:
