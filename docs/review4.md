@@ -51,7 +51,7 @@ A bootstrap is a non-parametric test of statistically significant difference:
 
 - What is the role of the "test statistic" in the bootstrap?
 - What is the role of "sampling with replacement" in the bootstrap? 
-  -     Given the list of numbers [10,20,30,40] write down 5 such samples
+  - Given the list of numbers [10,20,30,40] write down 5 such samples
 - Using the terms "test statistic" and "sample with replacement", describe
   the bootstrap (note: your description should be high-level: no formulas required).
 
