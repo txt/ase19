@@ -95,8 +95,8 @@ Aside:
 
 For this kind of RP, it has shown that the Gaussian distribution can be replaced by a much simpler distribution such as
 
-R[i,j] = sqrt(3) with probability 1/6, zero with probability 2/3, and -sqrt(3) with  probability 1/6.
- 
-$$
-{\displaystyle R_{i,j}={\sqrt {3}}\times {\begin{cases}+1&{\text{with probability }}{\frac {1}{6}}\\0&{\text{with probability }}{\frac {2}{3}}\\-1&{\text{with probability }}{\frac {1}{6}}\end{cases}}}
-$$
+R[i,j] = 
+
+- sqrt(3) with probability 1/6, 
+- zero with probability 2/3, 
+- and -sqrt(3) with  probability 1/6.
