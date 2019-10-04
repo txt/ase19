@@ -39,7 +39,7 @@ This subject will explore methods to augment standard software engineering pract
   [naive?](docs/ethics.md#top)
 - Algorithms:
     - Code: 
-       - Learners: [ZeroR](http://menzies.us/fun/zeror) |  [Naive Bayes](http://menzies.us/fun/nb)
+       - Learners: [ZeroR](http://menzies.us/fun/zeror) |  [Naive Bayes](http://menzies.us/fun/nb) | [Random projections](https://gist.github.com/timm/17ecaac48307ccc6c6f88bd229701ec0)
        - Support: [Abcd](http://menzies.us/fun/abcd) 
     - Evaluation:
        [evalabc](docs/evalabc.md#top) |
