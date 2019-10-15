@@ -10,9 +10,9 @@
 
 
 When people start using Optimizers and data miners, the algorithms that beginners find easiest to use are
-LSR and NSGA-II.
+LSR and NSGA-II 
 
-LSR was discussed [before](lsr.md). Here, we introduce optimizing and NSGA-II.
+LSR was discussed [before](lsr.md) and NSGA-II, later. Here, we introduce optimizing.
 
 #   Optimization
 
