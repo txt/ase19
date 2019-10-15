@@ -122,7 +122,7 @@ In software, every if and case statement divides internal state space of program
 
 - So not one global model, but model(s)
 
-![](https://dr282zn36sxxg.cloudfront.net/datastreams/f-d%3A21aeecf43049c589c2d512f7ce3d6a4fd441377ee5128a5e627104f8%2BIMAGE_THUMB_POSTCARD%2BIMAGE_THUMB_POSTCARD.1)
+![](../etc/img/distcont.png)
 
 ### Constraints
 
