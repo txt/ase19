@@ -45,7 +45,7 @@ is a _jiggler_ and a _selector_ and enough time to
 3. go to 1
 
 For the E.coli in the video,
-bugs are _selected _to make more bugs if they are
+bugs are _selected_ to make more bugs if they are
 not killed by some antibiotic. 
 As to the jiggling: 
 
@@ -88,6 +88,142 @@ being a eukaryote--  they are the least successful way to organizing
 living things.  For example, in marine environments, the prokaryotes
 add up to [six times the mass of the larger eukaryotic
 organisms](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC33863/).)
+
+## Optimization is easy, right?
+
+Just take the function, find its first derivative, solve for `dy/dx=0` and go there. 
+
+Or, in the local region, compute the local partial deriviaties and take the direction of fastest descent
+
+- a.k.a. if youa re sking, look around for the steepest direction, go there.
+
+<img width=500 src="https://calcworkshop.com/wp-content/uploads/first-derivative-test.png">
+
+Right?
+
+### Problems with Symbols
+
+Humans love their non-numeric knowledge. How to do optimization when everything is not numbers?
+
+e.g. what-if queries across large fault trees:
+
+![](https://www.researchgate.net/publication/324426610/figure/fig1/AS:614050153132063@1523412373801/Fault-Tree-of-Molding-Process.png)
+
+### Problems with Ill-defined (or Missing) Functions
+
+e.g. probing some poorly understand effort
+
+- i.e. you are writing software precisely because you don't know enough and you want to know more
+- Many variables not known, or not known with certainty
+
+### Discontinuities
+
+In software, every if and case statement divides internal state space of program into seperate regions, each with their own properties.o
+
+- So not one global model, but model(s)
+
+![](https://dr282zn36sxxg.cloudfront.net/datastreams/f-d%3A21aeecf43049c589c2d512f7ce3d6a4fd441377ee5128a5e627104f8%2BIMAGE_THUMB_POSTCARD%2BIMAGE_THUMB_POSTCARD.1)
+
+### Constraints
+
+Too many of them ! Competing!
+
+![](../etc/img/fm.png)
+
+In modern product lines, only 1\% or less of randomly generated solutions satisfy known domain constraints
+
+- Hence, we often use Sat-solvers to generated some initial population
+- But be warned: SAT solvers do not generate random instances across the while space
+  - Their solutions "clump"
+
+### Problems with Local Minima
+
+<img src="../etc/img/moment.gif" width=400 align=right> 
+The above code chases down to lower and lower values... which makes this  a greedy search that can get trapped in local minima. 
+
+There are several known solutions to the problem of local minima including
+
+- Add restart-retries. 
+  - Restart to a random point and see if you get back to the old solution (if so, it really was the best).
+  - _MaxWalkSat_ (MWS) routinely performs dozens of retries.
+- Explore a population, not just one thing. 
+  - That is, run many times with different starting positions (where as restart-retry only needs memory for one solution, population-based methods exploit cheap memory).
+- Add a momentum factor to sail through the local maxima:
+  - _Neural  nets_ use such a factor as they adjust their weights
+  - _Particle swam optimizers_ (PSO) 
+    <img src="../etc/img/pso101.gif" width=400 align=right> 
+    - PSO runs (say) 30 "particles"
+    - Each particle mutates a solution in a direction determined by 
+      - its prior velocity
+      - a pull back towards the best solution ever seen by this particle
+      - a pull towards the best solution ever seen by any particle
+    - So when it finds a better best, it just sails on by 
+      - but it might circle back to them
+      - kind of like a restart-retry and a populuation and a momentum approach all rolled into one.
+    - Which means it may not find one solution-- but a set of interesting (but slightly different) solutions
+- Add some random jiggle to the search.
+  - e.g. _simulated annealling_
+  - For example, 
+    given a current solution  `s` 
+    that is  an array of numeric value with mins and maximums of `lo,hi`
+    and some score `e=f(s)` (known as the "energy") 
+    -  Simulated annealers perturb `p`% of those values to generate a new  solution `sn` with a score of `en` .
+    - At a probability `2.7183^(e-en)/t)`  determined  by a temperature  value `t`
+      - This algorithm replaces the current solution `s` with `sn`
+    - But as `t` "cools", the algorithm becomes a hill climber that only moves to better solutions. 
+
+### Minimizing Evaluations
+
+It is  good practice to avoid too many calls to the model evaluation function _f_ 
+
+In many cases, - evaluating a candidate using the _f_ function is very slow
+  (e.g. we are running an expensive computation, or asking a human their opinion, or we have to [rebuild a new version of the software to test some configuration options](https://arxiv.org/pdf/1801.02175.pdf)).
+- e.g.  "buy a new car, drive it for 100,000 miles with _this_ strategy, check the wear and tear on the tires".
+- If humans want to audit/debug the conclusions from an optimizer, then they would prefer to explore fewer options.
+
+Hence, clever optimizers strive the minimize the  budget required to find solutions.
+
+
+_Sequential  model optimizers_ run a  data miner in parallel with the optimizer. Such optimizer assumes that:
+
+- jiggling (i.e. Candidate generation) is very fast
+
+- in this domain, data miners can build models very quickly
+
+Under those assumptions, then the best way to build a model is to reflect on what has been seen so far (using a data miner)
+in order to select what to do next.
+
+1. First, we quickly generate a large number of _xs_ candidates (say, 512).
+    - This is usually <u>**VERY FAST**</u>.
+2. Using some evaluation function _f_, we  evaluated some small subset _xs[:n]_) to generate _n_ sets of _ys_ results 
+   -  _ys[i] = f( xs[i] )_ for _i &lt; n_
+   - This step can be <u>**VERY SLOW**</u> if _f_ is very slow to execute. 
+   - So here, we keep _n_ small (e.g. _n &le; 30_).
+3. Next, using  a data miner (e.g. least squares regression, decision trees, whatever), we build a model M from _xs[:n],ys[:n]_. 
+   - This step can be <u>**VERY FAST**</u> since we are learning a  small model from just a few examples.
+   - In step (v), we will need to know the mean and variance of the predictions from this model. One way to do that is to 
+     - Build a committee of learners `M1,M2,M3,...`; each time using 90% of the data, selected at random;
+     - Generate predictions across each member of the committee
+     - Report the mean and variance of those predictions
+   - Another way is to use a "Gaussian process model" (GPM) which is like regression, but it offers a mean and standard deviation
+     on every prediction
+     - GPMs have scale up problems (more than 12 attribtues can be a bother).
+4. Using that model make approximate guesses _ys[n:]_ about the remaining candidates _xs[n:]_
+   -  _ys[i] = M( xs[i] )_ for _i &ge; n_.
+   - This step can be <u>**VERY FAST**</u> since we are just calling a very small model `M`.
+5. Pick 
+   <img src="../etc/img/gp_opt.png" width=500 align=right>
+   the  strangest guess (e.g. the largest  outlier, has most variance) for guess _g &in; i &ge; n_. 
+   - For example, in the picture at right, we have build a curve from _n=5_ observations.
+   - The red line shows where the curve plus variance is greatest.
+     <br clear=all>
+6. Evaluate the strangest guess
+   -  _ys[n+1] = f( xs[g] )_.
+   - This is a <u>**SLOW**</u> step, but since we are only evaluating one example, its usually not particularly slow.
+      
+6. Then _n=n+1_ and we loop back to step 3.
+
+Note that the above uses a data miner inside an optimizer. As mentioned before, data mining and optimization are linked.
 
 
 ## Software Optimizers
@@ -188,52 +324,8 @@ Hence, clever optimizers strive the minimize the  budget required to find soluti
       - Ignore redundant solutions.
       - Also, if you can,  [deprecate the choices that lead to that solution](https://arxiv.org/pdf/1902.01838.pdf).
 
-## Issues with Software Optimizers
 
-### no function
-
-e,g, probing some pooly understand effort
-
-
-### dsicontonuitnies
-
-### constraints
-
-### Local Minima
-
-<img src="../etc/img/moment.gif" width=400 align=right> 
-The above code chases down to lower and lower values... which makes this  a greedy search that can get trapped in local minima. 
-
-There are several known solutions to the problem of local minima including
-
-- Add restart-retries. 
-  - Restart to a random point and see if you get back to the old solution (if so, it really was the best).
-  - _MaxWalkSat_ (MWS) routinely performs dozens of retries.
-- Explore a population, not just one thing. 
-  - That is, run many times with different starting positions (where as restart-retry only needs memory for one solution, population-based methods exploit cheap memory).
-- Add a momentum factor to sail through the local maxima:
-  - _Neural  nets_ use such a factor as they adjust their weights
-  - _Particle swam optimizers_ (PSO) 
-    <img src="../etc/img/pso101.gif" width=400 align=right> 
-    - PSO runs (say) 30 "particles"
-    - Each particle mutates a solution in a direction determined by 
-      - its prior velocity
-      - a pull back towards the best solution ever seen by this particle
-      - a pull towards the best solution ever seen by any particle
-    - So when it finds a better best, it just sails on by 
-      - but it might circle back to them
-      - kind of like a restart-retry and a populuation and a momentum approach all rolled into one.
-    - Which means it may not find one solution-- but a set of interesting (but slightly different) solutions
-- Add some random jiggle to the search.
-  - e.g. _simulated annealling_
-  - For example, 
-    given a current solution  `s` 
-    that is  an array of numeric value with mins and maximums of `lo,hi`
-    and some score `e=f(s)` (known as the "energy") 
-    -  Simulated annealers perturb `p`% of those values to generate a new  solution `sn` with a score of `en` .
-    - At a probability `2.7183^(e-en)/t)`  determined  by a temperature  value `t`
-      - This algorithm replaces the current solution `s` with `sn`
-    - But as `t` "cools", the algorithm becomes a hill climber that only moves to better solutions. 
+## Simulated Annealing
 
 In the following simulated annealer, `sb` is the best solution seen so far (with energy `eb`). Also,
 this code assumes we want to minimize the scores.
@@ -278,82 +370,34 @@ hill climber that just steps up to the next solution. In the following, just to 
 <img src="../etc/img/Hill_Climbing_with_Simulated_Annealing.gif" width=600 > 
 
 
-XX hsitorical note
-
-### Too few Solutions
-
-### Variable Dependence
-
-### Minimizing Evaluations
-
-It is  good practice to avoid too many calls to the model evaluation function _f_ .
-
-- In many cases, - evaluating a candidate using the _f_ function is very slow
-  (e.g. we are running an expensive computation, or asking a human their opinion, or we have to [rebuild a new version of the software to test some configuration options](https://arxiv.org/pdf/1801.02175.pdf)).
-- If humans want to audit/debug the conclusions from an optimizer, then they would prefer to explore fewer options.
-
-Hence, clever optimizers strive the minimize the  budget required to find solutions.
-
-
-_Sequential  model optimizers_ run a  data miner in parallel with the optimizer. Such optimizer assumes that:
-
-- jiggling (i.e. candidate generation) is very fast
-
-- in this domain, data miners can build models very quickly
-
-Under those assumptions, then the best way to build a model is to reflect on what has been seen so far (using a data miner)
-in order to select what to do next.
-
-1. First, we quickly generate a large number of _xs_ candidates (say, 512).
-    - This is usually <u>**VERY FAST**</u>.
-2. Using some evaluation function _f_, we  evaluated some small subset _xs[:n]_) to generate _n_ sets of _ys_ results 
-   -  _ys[i] = f( xs[i] )_ for _i &lt; n_
-   - This step can be <u>**VERY SLOW**</u> if _f_ is very slow to execute. 
-   - So here, we keep _n_ small (e.g. _n &le; 30_).
-3. Next, using  a data miner (e.g. least squares regression, decision trees, whatver), we build a model M from _xs[:n],ys[:n]_. 
-   - This step can be <u>**VERY FAST**</u> since we are learning a  small model from just a few examples.
-   - In step (v), we will need to know the mean and variance of the predictions from this model. One way to do that is to 
-     - Build a committee of learners `M1,M2,M3,...`; each time using 90% of the data, selected at random;
-     - Generate predictions across each member of the committee
-     - Report the mean and variance of those predictions
-   - Another way is to use a "gaussian process model" (GPM) which is like regression, but it offers a mean and standard deviation
-     on every prediction
-     - GPMs have scale up problems (more than 12 attribtues can be a bother).
-4. Using that model make approximate guesses _ys[n:]_ about the remaining candidates _xs[n:]_
-   -  _ys[i] = M( xs[i] )_ for _i &ge; n_.
-   - This step can be <u>**VERY FAST**</u> since we are just calling a very small model `M`.
-5. Pick 
-   <img src="../etc/img/gp_opt.png" width=500 align=right>
-   the  strangest guess (e.g. the largest  outlier, has most variance) for guess _g &in; i &ge; n_. 
-   - For example, in the picture at right, we have build a curve from _n=5_ observations.
-   - The red line shows where the curve plus variance is greatest.
-     <br clear=all>
-6. Evaluate the strangest guess
-   -  _ys[n+1] = f( xs[g] )_.
-   - This is a <u>**SLOW**</u> step, but since we are only evaluating one example, its usually not particularly slow.
-      
-6. Then _n=n+1_ and we loop back to step 3.
-
-Note that the above uses a data miner inside an optimizer. As mentioned before, data mining and optimization are linked.
-
 
 ## GA
-- An EO procedure does not usually use gradient information in its
-search process. Thus, EO methodologies are direct search procedures,
-allowing them to be applied to a wide variety of optimization
-problems.
 
-- An EO procedure uses more than one solution (a population approach)
-in an iteration, unlike in most classical optimization algorithms
-which updates one solution in each iteration (a point approach).
-The use of a population has a number of advantages: (i) it provides
-an EO with a parallel processing power achieving a computationally
-quick overall search, (ii) it allows an EO to find multiple optimal
-solutions, thereby facilitating the solution of multi-modal and
-multi-objective optimization problems, and (iii) it provides an EO
-with the ability to normalize decision variables (as well as objective
+Simulated annealing assumed we were mutating one solution.
+
+- a useful assumption for a 1951 computer
+
+Genetic algorithms assume we are stochastic ally mutating _populations_ of solutions
+
+- some we could do, once computers had more memory.
+
+
+Why use a population?
+
+-  It let us exploit
+parallel processing power achieving a computationally
+quick overall search (BTW, rarely done...) 
+- It let us  
+normalize decision variables (as well as objective
 and constraint functions) within an evolving population using the
-population-best minimum and maximum values.
+population-best minimum and maximum values (x = (x-min)/(max-min))
+-  It generates   multiple optimal
+solutions, thereby facilitating the solution of multi-modal and
+multi-objective optimization problems, 
+
+![](https://infoscience.epfl.ch/record/163038/files/26_2011_JBPS-GenerativeDesign_1.png)
+
+Why stochastic mutate?
 
 - An EO procedure uses stochastic operators, unlike deterministic
 operators used in most classical optimization methods. The operators
@@ -376,4 +420,3 @@ a global perspective in their search.
 6. **Loop:** Go to step 2
 
 
-Examples:
