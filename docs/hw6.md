@@ -122,33 +122,10 @@ So, your task:
 3. write one algorithm that does it for both
    - If you are brave, you'll just do this 3rd part
    - If you are humble, you do it one at a time, then refactor the two separate implementations into the third one.
-
-## Some engineering tips:
-
-- Column column values many be "?". Be careful never to make them splitters.
-- For part3 (one code base that does decision trees or regression trees)
-    - I added a `variety` method to  my `Num` and `Sym` class 
-      - Num.variety = standard deviation
-      - Sym.variety = entropy
-    - I have a `trivial=1.05` variable that tells me when variety reduction is some proposed splits is only trivially better than the _Prior_ variety that was `best` before:
-      - i.e. trivial if 	`new.variety*trivial < prior`
-- For tree learning:
-  - I have a `minObs=4` variable that tells me when there are too few data points to merit splitting the data into subtrees
-  - To rank sort columns (to find the thing that is best to split on), I have a `div` method that is different for `Num` and `Sym`:
-    - The '`Num` div does the supervised descritzation for each column, then returns the expected value of `variety` after the split
-     - The `Sym` div builds on `Sym` or `Num` object for each unique value in each column. So if we are doing regression trees and the column has values "yes" and "no"
-       - "yes" has a `Num` object storing that `variety` of the target class when for the rows with "yes" in this column
-       - "yes" has a `Num` object storing that `variety` of the target class when for the rows with "no" in this column
-       - Note:`Sym.div` is optional for this homework. Feel free to ony andle classes with numeric data
-  - I used a  `Range` object that has `lo` and `hi` bounds that are initialized to negative and positive infinity
-    - Can you see the use of that object in the tree, above?
-    - These have their own print methods (`__repr__` for Python programmers), sot he tree can print easy
-- For column discretization
-  - I have a `min=0.5` variable that tells me when to stop splitting the numeric independent variables (so a split has to have at least _N<sup>min</sup>_ rows from _N_ rows in total)
-  - I have a `cohen=0.3` variable that tells me when to stop splitting the n of one split is not different to the next one.
-    - So the means have to be different by more than `sd*cohen`.
+4. Hand in all the code in the usual way (github). Include files showing the output trees.
 
 ## Code tips
+
 
 My tree learner are methods inside my `Tbl` class.
 
@@ -223,3 +200,29 @@ def showt(tree,pre= '',rnd=THE.tree.rnd):
        print(pre + s,after)
        showt(x.kids,pre + '|   ')
 ```
+## Some engineering tips:
+
+- Column column values many be "?". Be careful never to make them splitters.
+- For part3 (one code base that does decision trees or regression trees)
+    - I added a `variety` method to  my `Num` and `Sym` class 
+      - Num.variety = standard deviation
+      - Sym.variety = entropy
+    - I have a `trivial=1.05` variable that tells me when variety reduction is some proposed splits is only trivially better than the _Prior_ variety that was `best` before:
+      - i.e. trivial if 	`new.variety*trivial < prior`
+- For tree learning:
+  - I have a `minObs=4` variable that tells me when there are too few data points to merit splitting the data into subtrees
+  - To rank sort columns (to find the thing that is best to split on), I have a `div` method that is different for `Num` and `Sym`:
+    - The '`Num` div does the supervised descritzation for each column, then returns the expected value of `variety` after the split
+     - The `Sym` div builds on `Sym` or `Num` object for each unique value in each column. So if we are doing regression trees and the column has values "yes" and "no"
+       - "yes" has a `Num` object storing that `variety` of the target class when for the rows with "yes" in this column
+       - "yes" has a `Num` object storing that `variety` of the target class when for the rows with "no" in this column
+       - Note:`Sym.div` is optional for this homework. Feel free to ony andle classes with numeric data
+  - I used a  `Range` object that has `lo` and `hi` bounds that are initialized to negative and positive infinity
+    - Can you see the use of that object in the tree, above?
+    - These have their own print methods (`__repr__` for Python programmers), sot he tree can print easy
+- For column discretization
+  - I have a `min=0.5` variable that tells me when to stop splitting the numeric independent variables (so a split has to have at least _N<sup>min</sup>_ rows from _N_ rows in total)
+  - I have a `cohen=0.3` variable that tells me when to stop splitting the n of one split is not different to the next one.
+    - So the means have to be different by more than `sd*cohen`.
+
+
