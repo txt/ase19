@@ -349,12 +349,16 @@ But note the computational cost of the above:
 
 ## Latest results
 
+So many variants of ye olde DE:
+
 ![](../etc/img/de.png)
 
 
-[Recent advances in differential evolution–an updated survey (2016)](https://www.researchgate.net/profile/Swagatam_Das/publication/292616241_Recent_Advances_in_Differential_Evolution_-_An_Updated_Survey/links/5abcce72aca27222c753f36a/Recent-Advances-in-Differential-Evolution-An-Updated-Survey.pdf)
+Recent surveys on DE: 
 
+- [Recent advances in differential evolution–an updated survey (2016)](https://www.researchgate.net/profile/Swagatam_Das/publication/292616241_Recent_Advances_in_Differential_Evolution_-_An_Updated_Survey/links/5abcce72aca27222c753f36a/Recent-Advances-in-Differential-Evolution-An-Updated-Survey.pdf)
+- [Al-Dabbagh, R. D., Neri, F., Idris, N., & Baba, M. S. (2018). Algorithmic design issues in adaptive differential evolution schemes: Review and taxonomy. Swarm and Evolutionary Computation, 43, 284-311.](https://dora.dmu.ac.uk/bitstream/handle/2086/15528/SWEVO_2017_529_Revision%202_V0%20%283%29.pdf?sequence=1&isAllowed=y)
 
-[Al-Dabbagh, R. D., Neri, F., Idris, N., & Baba, M. S. (2018). Algorithmic design issues in adaptive differential evolution schemes: Review and taxonomy. Swarm and Evolutionary Computation, 43, 284-311.](https://dora.dmu.ac.uk/bitstream/handle/2086/15528/SWEVO_2017_529_Revision%202_V0%20%283%29.pdf?sequence=1&isAllowed=y)
+A subjective opinion on what DE variants work best:
 
 ![](../etc/img/deBetter.png)
