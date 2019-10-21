@@ -61,7 +61,7 @@ The POM3 and XOMO models distinguish between waterfall and agile development pro
 
 ### XOMO (estimation methods for waterfall projects)
 
-<img src="../etc/img/cocomo.png">
+<img width=500 align=right src="../etc/img/cocomo.png">
 
 - According to Norman Fenton, software project descriptors divide into _personnel_ attributes (that discuss who
   is doing the work) and _product_ attributes (that discusses what is being built) and _process_ attributes
@@ -88,11 +88,19 @@ risktable['sced','cplx'] = ("0 0 0 1 2 4,"
                               "0 0 0 0 0 0")
 ```
 
-<img src="http://www.projectmanagers.net/i/wp-content/uploads/2015/12/image001-600x343.jpg">
-
 ### POM3 (estimation for agile methods)
 
+<img align=right width=600 src="http://www.projectmanagers.net/i/wp-content/uploads/2015/12/image001-600x343.jpg">
+
+
 - In POM3, what is the "requirements tree"?
-  - Why can't develoers see all ther equirements at tstart of agile project
-- One of the  POM3 outputs is `idle`. Why is `idleness` a problem when teams coordinage on agile projects,
-  all the while reorgaizng their work as new requirements emerge?
+  - Why can't developers see all the requirements at the start of agile project
+- One of the  POM3 outputs is `idle`. Why is `idleness` a problem when teams coordinate on agile projects,
+  all the while reorganizing  their work as new requirements emerge?
+- What steps could an organization take to change:
+  - team size
+  - failure consequence
+  - stability of requirements
+  - worker skill level level
+  - organization culture
+  
