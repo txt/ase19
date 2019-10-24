@@ -59,7 +59,8 @@ This subject will explore methods to augment standard software engineering pract
 
 ## Homework 
 
--  [six](docs/hw6.md#top) |
+-  [seven](docs/hw7.md#top) |
+   [six](docs/hw6.md#top) |
   [five](docs/hw5.md#top) |
   [four](docs/hw4.md#top) |
    [three](docs/hw3.md#top) |
