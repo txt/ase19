@@ -110,7 +110,7 @@ This is a heuristic to decide which two clusters we will comapre
 
 Note that there will be one cluster that we will never contrast (the best cluster).
 
-## Step5 Learn a Contrast Set
+## Step6 Learn a Contrast Set
 
 For the [auto.csv](../data/auto.csv) data, cluster the data.
 For each cluster, build a two class data set:
@@ -127,7 +127,7 @@ Hand in a file `trees.md` showing  a  print out of the trees
 Hand in a  file `comment.md`:
  good knowledge is succinct knowledge. Are the trees generated in this homework "good"?
 
-## Comment on Local vs Global Reasoning:
+## Step 7: Comment on Local vs Global Reasoning:
 
 You have just built a local reasoner that produces N different models for each N clusters.
 
