@@ -15,6 +15,11 @@ Last week you did divided up decision space (unsupervised recursive partitioning
 
 This week you will learn deltas in the objective (a.k.a. goal) space.
 
+- You will combining code from 2 prior homeworks
+- Have we avoided  used globals in our code? Humm?
+
+![](https://ievgensaxblog.files.wordpress.com/2018/09/v2pos5d.jpg)
+
 ## Step1: divide decision space (done! see last week)
 
 ## Step2: find centroids
@@ -101,9 +106,12 @@ For each cluster, build a two class data set:
 
 Learn a decision tree that seperates the two clusters.
 
+- Important: learn from _all_ the data in cluster1 and cluster2 (not just the centroids)
+ 
 Hand in the print out of the trees
 
-Comment: good knowledge is succinct knowledge. Are the trees generated in this way "good"?
+Hand in a  file `comment.md`:
+ good knowledge is succinct knowledge. Are the trees generated in this way "good"?
 
 ## Comment on Local vs Global Reasoning:
 
@@ -118,6 +126,7 @@ The opposite approach would be to build one global by, say:
 
 The great philosopher of knowledge Rui Shu, has comments on the value 
 of local vs global reasoning in 
-[sections 2.1 and 2,2](../etc/img/rui.pdf). Read those sections and write about a page of ascii text commenting on the value (or otherwise) of your local reasoner. Feel free with disagree with Rui. After all, he only did this class a year ago.
+[sections 2.1 and 2,2](../etc/img/rui.pdf). Read those sections and hand ina  file `comment2.txt`
+ about a page of ascii text commenting on the value (or otherwise) of your local reasoner. Feel free with disagree with Rui. After all, he only did this class a year ago.
 
 
