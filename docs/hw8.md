@@ -20,17 +20,10 @@ This week you will learn deltas in the objective (a.k.a. goal) space.
 
 ![](https://ievgensaxblog.files.wordpress.com/2018/09/v2pos5d.jpg)
 
-## Step1: divide decision space (done! see last week)
-
-## Step2: find centroids
-
-- Mean/mode of independent variables
-
-## Step3: Envy
-
 For each leaf cluster, find out who you envy. 
-    We  envy things that are close by and which are much better than us
 
+-    We  envy things that are close by and which are much better than us
+- We could also add a minimum goal if we wanted too (e.g. only be envious of the best half of the data).
 
 For each pair of centroids _(C1,C2)_:
 
@@ -44,6 +37,15 @@ supervised tree learning on raw attributes.
 - Envy can now be calculated  many ways  
     - We will use _envy = (1-&Delta;) - &epsilon;_
        - The minus sign on &epsilon; comes from below.
+
+
+## Step1: divide decision space (done! see last week)
+
+## Step2: find centroids
+
+- Mean/mode of independent variables
+
+## Step3 Build a Domination Predicate
 
 To compute domination:
 
@@ -72,7 +74,7 @@ def dominates(i,j,goals): # i and j are rows.
     return s1/n - s2/n # i is better if it losses least (i.e. this number under 0)
 ```
 
-## Check your Domination Predicate
+## Step 4: Test  your Domination Predicate
 
 For the [auto.csv](../data/auto.csv) data, sort each row by
 
@@ -100,7 +102,15 @@ containing the first 4 and the last 4 rows in that sort. You should be seeing  s
 
 (And you do not need to copy the above format exactly. Near enough is good enough)
 
-## Learn a Contrast Set
+## Step 5: Look at Envy amongst the centroids
+
+Just compare the centroids of each cluster (mean/mode values)
+
+This is a heuristic to decide which two clusters we will comapre
+
+Note that there will be one cluster that we will never contrast (the best cluster).
+
+## Step5 Learn a Contrast Set
 
 For the [auto.csv](../data/auto.csv) data, cluster the data.
 For each cluster, build a two class data set:
@@ -115,7 +125,7 @@ Learn a decision tree that seperates the two clusters.
 Hand in a file `trees.md` showing  a  print out of the trees
 
 Hand in a  file `comment.md`:
- good knowledge is succinct knowledge. Are the trees generated in this way "good"?
+ good knowledge is succinct knowledge. Are the trees generated in this homework "good"?
 
 ## Comment on Local vs Global Reasoning:
 
@@ -131,6 +141,7 @@ The opposite approach would be to build one global by, say:
 The great philosopher of knowledge Rui Shu, has comments on the value 
 of local vs global reasoning in 
 [sections 2.1 and 2,2](../etc/img/rui.pdf). Read those sections and hand ina  file `comment2.txt`
- about a page of ascii text commenting on the value (or otherwise) of your local reasoner. Feel free with disagree with Rui. After all, he only did this class a year ago.
+ about a page of ascii text commenting on the value (or otherwise) of your local reasoner versus a more global approach.
+Feel free with disagree with Rui. After all, he only did this class a year ago.
 
 
