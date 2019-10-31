@@ -80,7 +80,8 @@ For the [auto.csv](../data/auto.csv) data, sort each row by
 - Count how often this row `i` has dominates(i,j) <0` with the other 100 rows
 - Sort this rows by that count
 
-Hand in the first 4 and the last 4 rows in that sort. You should be seeing  something like the following
+Hand in a file `rowsBestRest.md`
+containing the first 4 and the last 4 rows in that sort. You should be seeing  something like the following
 (i.e.  the best rws have lowest weight , faster acceleration, longest miles per hour).
 
 
@@ -97,8 +98,11 @@ Hand in the first 4 and the last 4 rows in that sort. You should be seeing  some
 |worst|8       | >383      | >165  | 4955  |  11.5   |  <71 |  1   |   10  |
 |     |        |           |       | minimize| maximize|    |       | maximize      |
 
+(And you do not need to copy the above format exactly. Near enough is good enough)
+
 ## Learn a Contrast Set
 
+For the [auto.csv](../data/auto.csv) data, cluster the data.
 For each cluster, build a two class data set:
 
 - class1= this cluster
@@ -108,7 +112,7 @@ Learn a decision tree that seperates the two clusters.
 
 - Important: learn from _all_ the data in cluster1 and cluster2 (not just the centroids)
  
-Hand in the print out of the trees
+Hand in a file `trees.md` showing  a  print out of the trees
 
 Hand in a  file `comment.md`:
  good knowledge is succinct knowledge. Are the trees generated in this way "good"?
