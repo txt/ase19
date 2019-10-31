@@ -71,7 +71,6 @@ The POM3 and XOMO models distinguish between waterfall and agile development pro
   - two XOMO personnel attributes
   - two XOMO product attributes
   - two XOMO process attributes
-- Define and distinguish between `months` and `effort`. Given `effort`, show how to calculate `months`.
 - In the  COCOMO, some attributes effect the effort estimate by a _linear_ amount and some by an _exponetial_ amount:
   - Describe two COCOMO attributes with an exponential effect
   - Describe two COCOMO attributes with an linear effect
