@@ -138,10 +138,10 @@ The opposite approach would be to build one global by, say:
 - Learn a tree from those classes
 
 
-The great philosopher of knowledge Rui Shu, has comments on the value 
+The great philosopher of knowledge Suvodeep Majumder, has comments on the value 
 of local vs global reasoning in 
-[sections 2.1 and 2,2](../etc/img/rui.pdf). Read those sections and hand ina  file `comment2.txt`
+[sections 2.1 and 2,2](../etc/img/general.pdf). Read those sections and hand in a  file `comment2.txt`
  about a page of ascii text commenting on the value (or otherwise) of your local reasoner versus a more global approach.
-Feel free with disagree with Rui. After all, he only did this class a year ago.
+Feel free with disagree with Suvodeep. After all, he only did this class a year ago.
 
 
