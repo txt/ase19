@@ -33,7 +33,7 @@ then checking that code,
 
 Now this approach is not cheap. There are many such costs:
 
-<img src="../etc/img/test101.png" align=right width=600>
+<img src="../etc/img/test101.png" align=right width=700>
 
 There is the _modeling cost_ to build a _systems
   model_(summarizing some situation)
