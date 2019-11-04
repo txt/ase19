@@ -17,23 +17,19 @@ data miners let us divide that space, and optimizers tells us how
 to jump around that space.
 
 - Which begs the question: how do we generate that space in the first place?
-
 - Welcome to the wonderful world of modeling; i.e.:
 
 What is modeling:
 
-- take all you know
-or imagine or guess about a domain, 
-- then committing that to some executable,
-then checking that code, 
-- then running that code
-- then trusting the conclusions that come from that code,
+- take all you know or imagine or guess about a domain; 
+- then committing that to some executable, then checking that code; 
+- then running that code;
+- then trusting the conclusions that come from that code.
 
 ## Modeling is Hard
 
 Now this approach is not cheap. There are many such costs:
 
-<img src="../etc/img/test101.png" align=right width=700>
 
 There is the _modeling cost_ to build a _systems
   model_(summarizing some situation)
@@ -49,12 +45,14 @@ There is the _modeling cost_ to build a _systems
    systems modeling cost (you do not need to specify everything
    exactly-- near enough is good enough). But this approach is still
    highly experimental.
+   <img src="../etc/img/test101.png" align=right width=700>
 -  Some recent work suggests that we can get these models for free, in 
    [Cloud environments](https://github.com/txt/ase19/blob/master/etc/img/whalen.pdf).  
    In that world, users are always writing configuration files describing how
    to set up and run their systems. Those descriptions _must_ be right (otherwise
    the cloud won't run) and automatic tools can derive properties models
    automatically from those descriptions.
+-  Also, sometimes, we can generate formal models from other software artifacts.
 
 There there is  the _execution cost_ of searching
   through the models. 
