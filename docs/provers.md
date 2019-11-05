@@ -297,10 +297,10 @@ edge starts here:
       (by finding all differences between all pairs of _&alpha;_).
       - _Score_ the mutants by their frequency
       - And the more frequent the mutant, the more we will use it.
-    - For _k_ centroids of _&alpha;:
+    - For _k_ centroids of _&alpha;_:
       - _N_ times,
         - _&beta;_ = apply mutants to centroids (selected, favoring _score_).
         - if sat solver verifies(_&beta;_), 
           - then print it
         - else 
-		  - _&alpha;_ add( _&beta;_ = repairs(_&beta;_) 
+		  - _&alpha;_ = _&alpha;_ + \[repairs(_&beta;_)\]
