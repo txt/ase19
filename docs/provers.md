@@ -45,13 +45,13 @@ There is the _modeling cost_ to build a _systems
    systems modeling cost (you do not need to specify everything
    exactly-- near enough is good enough). But this approach is still
    highly experimental.
-   <img src="../etc/img/test101.png" align=right width=700>
 -  Some recent work suggests that we can get these models for free, in 
    [Cloud environments](https://github.com/txt/ase19/blob/master/etc/img/whalen.pdf).  
    In that world, users are always writing configuration files describing how
    to set up and run their systems. Those descriptions _must_ be right (otherwise
    the cloud won't run) and automatic tools can derive properties models
    automatically from those descriptions.
+   <img src="../etc/img/test101.png" align=right width=700>
 -  Also, sometimes, we can generate formal models from other software artifacts.
 
 There there is  the _execution cost_ of searching
@@ -177,14 +177,14 @@ Another example (note picosat knows DIMACS):
 ```
 
 Here, we have 5 variables and 3 clauses, the first clause being
-(x\ :sub:`1`  or not x\ :sub:`5` or x\ :sub:`4`).
-Note that the variable x\ :sub:`2` is not used in any of the clauses,
-which means that for each solution with x\ :sub:`2` = True, we must
-also have a solution with x\ :sub:`2` = False.  In Python, each clause is
+(`x1`  or not `x5` or `x4`).
+Note that the variable `x2` is not used in any of the clauses,
+which means that for each solution with `x2` = True, we must
+also have a solution with `x2` = False.  In Python, each clause is
 most conveniently represented as a list of integers.  Naturally, it makes
 sense to represent each solution also as a list of integers, where the sign
 corresponds to the Boolean value (+ for True and - for False) and the
-absolute value corresponds to i\ :sup:`th` variable::
+absolute value corresponds to `i-th` variable::
 
 ```
    >>> import pycosat
@@ -231,7 +231,6 @@ a multi-objective search.
 
 #### Implementation of itersolve
 
-
 How does one go from having found one solution to another solution?
 The answer is surprisingly simple.  One adds the *inverse* of the already
 found solution as a new clause.  This new clause ensures that another
@@ -257,5 +256,51 @@ be modified.  In pycosat, `itersolve` is implemented on the C level,
 making use of the picosat C interface (which makes it much, much faster
 than the naive Python implementation above).
 
+## Tricks
+
+Note that the above is useful, in conjunction with other methods.
+Begin overlap of theorem provers and optimizers and data mining:
+
+e.g. for complex feature models:
+
+- use sat solvers to generate generation0
+- then explore variants via multi-objective optimizers to (say)
+  select variants that use features that cost less to build, have less of a history
+  of defects, etc.
+  - and when the objective space grows, use 
+    [indicator dominace rather than binary domiance](https://fada.birzeit.edu/jspui/bitstream/20.500.11889/4528/1/dcb6eddbdac1c26b605ce3dff62e27167848.pdf)
+  - and if that needs more help then you do things like:
+    - Find the goals that are hardest to achieve
+    - Optimize for those first
+    - Then use the new popualtion found in that way to seed the search from the 
+      [remaining objectives](https://fada.birzeit.edu/bitstream/20.500.11889/4529/1/176ef4196797603ae2ca68ff353bb4233668.pdf). 
+ 
 Note that there is no guarantee that the above is efficient.
-So in practice we 
+But, for certain applications (e.g.  optimizing 
+
+So in practice we have [tricks](../etc/img/snap.pdf). Warning, research bleeding
+edge starts here:
+
+- Mutate new things from pairs of existing valid things.
+- Do verification more than repair than generate
+  - verification is fast since we give the satsolver settings to all the variables
+  - generation is slow slow since we go to the model with no settings
+    - and ask what setting work across that model
+  - repair is halfway in the middle
+    - given parents _old1_ and _old2_ 
+    - and a _mutant_ generated from combations of _old1_ and _old2_. 
+    - then anything in the _mutant_ not in _old1_ and _old2_ is a candidate for repair points
+    - so cut out the candidates, then ask the satsolver to fill in the missing buts
+- To do very little geneation:
+    - Let _&alpha;_ =  a small set of  _m_ examples
+    - Generate large _m<sup>2</sup>_ mutations 
+      (by finding all differences between all pairs of _&alpha;_).
+      - _Score_ the mutants by their frequency
+      - And the more frequent the mutant, the more we will use it.
+    - For _k_ centroids of _&alpha;:
+      - _N_ times,
+        - _&beta;_ = apply mutants to centroids (selected, favoring _score_).
+        - if sat solver verifies(_&beta;_), 
+          - then print it
+        - else 
+		  - _&alpha;_ add( _&beta;_ = repairs(_&beta;_) 
