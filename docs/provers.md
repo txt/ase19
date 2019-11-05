@@ -115,10 +115,14 @@ Example:
 
 <img width=600 src="../etc/img/fm102.png">
 
+Other examples 
+
+<img width=600 src="https://github.com/ContinuumIO/pycosat/blob/master/examples/opium.py">
 
 More complex (with temporal operators):
 
 - [http://ext.math.umass.edu/~avrunin/papers/dwyer98-fmsp-patterns.pdf](http://ext.math.umass.edu/~avrunin/papers/dwyer98-fmsp-patterns.pdf)
+
 
 ## So Now we Have Clauses, What Next?
 
@@ -157,8 +161,7 @@ CNFs with conflicting requirements are not satisfiable. For example, the followi
 
 ### Picosat 
 
-
-[PicoSAT](http://fmv.jku.at/picosat/) is a popular
+[PicoSAT](../etc/img/pycosat.pdf) is a popular
 [SAT](http://en.wikipedia.org/wiki/Boolean_satisfiability_problem) solver
 written by Armin Biere in pure C.
 This package provides Python bindings to picosat on the C level,
@@ -228,7 +231,6 @@ they are not randomly distributed. So that raises an issue
 when using satsolvers to build some solutions to initialize
 a multi-objective search.
 
-
 #### Implementation of itersolve
 
 How does one go from having found one solution to another solution?
@@ -291,7 +293,7 @@ edge starts here:
     - and a _mutant_ generated from combations of _old1_ and _old2_. 
     - then anything in the _mutant_ not in _old1_ and _old2_ is a candidate for repair points
     - so cut out the candidates, then ask the satsolver to fill in the missing buts
-- To do very little geneation:
+- To do very little generation:
     - Let _&alpha;_ =  a small set of  _m_ examples
     - Generate large _m<sup>2</sup>_ mutations 
       (by finding all differences between all pairs of _&alpha;_).
@@ -303,4 +305,5 @@ edge starts here:
         - if sat solver verifies(_&beta;_), 
           - then print it
         - else 
-		  - _&alpha;_ = _&alpha;_ + \[repairs(_&beta;_)\]
+	  - _&alpha;_ = _&alpha;_ + \[repairs(_&beta;_)\]
+    - Magic numbers _(N,k) = (100,5)_.
