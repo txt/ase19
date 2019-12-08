@@ -70,5 +70,5 @@ In the above
   _&Phi;<sub>2</sub>_?
 - What is _X,Y_?
 - What is the role of the _v<sub>0</sub>_ term?
-- SA, DE, GAs, optimize to a plateau, and stop. PSO is a better way to continual
-  check and, maybe, update colutions.
+- Comments on the following: "While SA, DE, GAs, optimize to a plateau, and stop, PSO is a better way to continual
+  check and, maybe, update solutions".

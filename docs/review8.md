@@ -31,10 +31,10 @@
   - The systems model
   - The properties models
 
-- Given an example wehre the propoerites oldeing ahs to be processed via multi-obkjective optimziation
+- Given an example where the properties jave to be processed via multi-objective optimization
 
 - What is the relevant size of the systems and properties models?
-  - Explain, with an example. the systems model is about being inside the code and the properties model can be the connection to the external world.
+  - Explain, with an example:  :the systems model is about being inside the code and the properties model can be the connection to the external world".
 - What is the execution code of modeling?
   - When is that  cost be:
     - Very small (give an example)
@@ -47,7 +47,7 @@
 ## Feature Model Logic
 
 
-1a. Assuming x,y, z and variable numbers 0,1,2, write down the DIMACS CNF formula for each of the following.Recall 
+1a. Assuming x,y, z and variable numbers 0,1,2, write down the DIMACS CNF formula for each of the following. Recall 
 that  each line of the DIAMCNF
 is an "or" and all the lines are "and"ed together
 If any of the following are synonyms, write down (see "XXX" where "XXX" is the synonyms}
