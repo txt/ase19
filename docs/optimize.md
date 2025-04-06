@@ -395,7 +395,7 @@ population-best minimum and maximum values (x = (x-min)/(max-min))
 solutions, thereby facilitating the solution of multi-modal and
 multi-objective optimization problems, 
 
-![](https://infoscience.epfl.ch/record/163038/files/26_2011_JBPS-GenerativeDesign_1.png)
+![](/etc/img/houses2.png)
 
 Why stochastic mutate?
 
